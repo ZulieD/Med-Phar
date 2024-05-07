@@ -6,7 +6,8 @@ create table adresse_cabinet(
     Departement varchar(50),
     Pays varchar(50)
     );
-    
+
+
 create table Medecin ( 
 	id INT PRIMARY key, 
     prenom varchar(50), 
