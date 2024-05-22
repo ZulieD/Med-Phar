@@ -1,3 +1,17 @@
+create database if not exists medical_database
+USE medical_database;
+
+drop table if exists adresse_cabinet;
+drop table if exists Medecin;
+drop table if exists Patient;
+drop table if exists Medicament;
+drop table if exists Consultation;
+drop table if exists Maladie;
+drop table if exists Risque;
+drop table if exists Prescription;
+drop table if exists Effet_secondaire;
+drop table if exists Reaction;
+
 create table adresse_cabinet(
 	id int primary key, 
     numero int, 
@@ -20,8 +34,8 @@ create table Medecin (
     FOREIGN KEY (id_adresse) REFERENCES adresse_cabinet(id)
     );
     
-create table Patient( 
-	id int primary key, 
+create table patient( 
+	id_patient int primary key, 
     prenom varchar(50), 
     nom varchar(50),
     date_naissance date,
