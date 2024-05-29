@@ -1,17 +1,3 @@
-create database if not exists medical_database
-USE medical_database;
-
-drop table if exists adresse_cabinet;
-drop table if exists Medecin;
-drop table if exists Patient;
-drop table if exists Medicament;
-drop table if exists Consultation;
-drop table if exists Maladie;
-drop table if exists Risque;
-drop table if exists Prescription;
-drop table if exists Effet_secondaire;
-drop table if exists Reaction;
-
 create table adresse_cabinet(
 	id int primary key, 
     numero int, 
@@ -47,7 +33,7 @@ create table patient(
     activite_metier int,
     risque_metier int, 
     activite_quotidienne int,
-    qualite_alimentation int,
+    qualite_alimentation int
     );
     
 create table Medicament (
@@ -75,9 +61,9 @@ create table Consultation (
     id_patient int, 
     id_maladie int, 
     foreign key (id_medecin) references Medecin(id),
-    foreign key (id_patient) references Patient(id),
+    foreign key (id_patient) references Patient(id_patient),
     foreign key (id_maladie) references Maladie(id)
-)   
+) ;
 create table Maladie (
 	id int primary key, 
     symptome varchar(500),
@@ -86,7 +72,7 @@ create table Maladie (
     fin_prise date,
     maladie_correle varchar(500),
     id_medicament int,
-    foreign key (id_medicament) references Medicament(CIS)
+    foreign key (id_medicament) references Medicament(CODE_CIS)
     );  
     
 create table Risque(
@@ -97,8 +83,8 @@ create table Risque(
     cause varchar(100),
     hereditaire int,
     id_patient int,
-    foreign key (id_patient) references Patient(id)
-)
+    foreign key (id_patient) references Patient(id_patient)
+);
 
 create table Prescription(
     id int primary key,
@@ -108,14 +94,14 @@ create table Prescription(
     foreign key (id_maladie) references Maladie(id),
     foreign key (id_risque) references Risque(id),
     foreign key (code_cis) references Medicament(CODE_CIS)
-)
+);
 
 create table Effet_secondaire(
     id int primary key,
     nom varchar(50),
     durée varchar(50),
     frequence varchar(100)
-)
+);
 
 create table Reaction(
     id int primary key,
@@ -123,9 +109,9 @@ create table Reaction(
     id_patient int,
     id_effet_secondaire int, 
     foreign key (code_cis) references Medicament(CODE_CIS),
-    foreign key (id_patient) references Patient(id),
+    foreign key (id_patient) references Patient(id_patient),
     foreign key (id_effet_secondaire) references Effet_secondaire(id)
-)
+);
 
 INSERT INTO adresse_cabinet (id, numero, rue, ville, Departement, Pays)
 VALUES 
@@ -139,7 +125,7 @@ VALUES
 (2, 'Marie', 'Martin', '1975-10-20', 'marie.martin@example.com', 'mdp456', 'Pédiatre', 2),
 (3, 'Luc', 'Bernard', '1988-03-08', 'luc.bernard@example.com', 'mdp789', 'Dermatologue', 3);
 
-INSERT INTO Patient (id, prenom, nom, date_naissance, sexe, contraception, poids, taille, allergie, activite_metier, risque_metier, activite_quotidienne, qualite_alimentation)
+INSERT INTO Patient (id_patient, prenom, nom, date_naissance, sexe, contraception, poids, taille, allergie, activite_metier, risque_metier, activite_quotidienne, qualite_alimentation)
 VALUES 
 (1, 'Alice', 'Dubois', '1990-03-25', 'F', 'Pilule', 60, 1.65, 'Penicilline', 1, 0, 2, 3),
 (2, 'Thomas', 'Lefevre', '1985-08-12', 'M', 'Aucune', 80, 1.8, NULL, 2, 1, 3, 2),
