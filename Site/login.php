@@ -1,7 +1,7 @@
 <?php
     $host="localhost";
     $username="root";
-    $password="";//"T7sq6b982002";
+    $password="";
     $database="masterproject_database";
     $port = 3307;
     
