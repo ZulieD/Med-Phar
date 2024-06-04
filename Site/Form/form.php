@@ -1,17 +1,21 @@
 <?php
-$host = "localhost";
-$username = "root";
-$password = "";
-$database = "masterproject_database";
-$port = 3307;
+    $host = "localhost";
+    $username = "root";
+    $password = "";
+    $database = "masterproject_database";
+    $port = 3307;
 
-// Créer une connexion
-$conn = new mysqli($host, $username, $password, $database, $port);
+    // Créer une connexion
+    $conn = new mysqli($host, $username, $password, $database, $port);
 
-// Vérifier la connexion
-if ($conn->connect_error) {
-    die("Erreur de connexion : " . $conn->connect_error);
-}
+    // Vérifier la connexion
+    if ($conn->connect_error) {
+        die("Erreur de connexion : " . $conn->connect_error);
+    }
+    session_start();
+
+$sql = "SELECT * FROM patient";
+$result = $conn->query($sql);
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $prenom = $_POST['prenom'];
