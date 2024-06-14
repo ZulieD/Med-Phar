@@ -1,17 +1,16 @@
 <?php
-    $host="localhost";
-    $username="root";
-    $password="";
-    $database="masterproject_database";
-    $port = 3307;
+    $host='localhost:3306';
+    $username='root';
+    $password="Jdaniel2002";
+    $database="mastproject3";
     
-    // Créer une connection
-    $conn = new mysqli($host, $username, $password, $database);
+    $conn=mysqli_connect($host,$username,$password,$database);
     // Check connection
-    if ($conn->connect_error) {
-        die("Erreur de connexion : " . $conn->connect_error);
+    if ($conn==false)
+    {
+        die('Error in connection' .mysqli_connect_error()); // echo plusieur fois et ferme le programme
     }
-    session_start(); // Démarrer la session
+    session_start(); 
 
 
 $sql = "SELECT * FROM medecin";
@@ -31,22 +30,38 @@ if (isset($_POST['signin'])) {
     $uname = $_POST['uname'];
     $password = $_POST['password'];
 
-    $sql = "SELECT * FROM Medecin WHERE nom = ? AND mot_de_passe = ?";
+    $sql = "SELECT * FROM Medecin WHERE adresse_email = ? AND mot_de_passe = ?";
     $stmt = $conn->prepare($sql);
     $stmt->bind_param("ss", $uname, $password);
     $stmt->execute();
     $result = $stmt->get_result();
 
     if ($result->num_rows == 1) {
-        $_SESSION["Name"] = $uname;
-       // header("Location: Acceuil.php");
+        $_SESSION["id_Medecin"] = $row['id'];
+       header("Location: ../Accueil/accueil.php");
        echo 'succeed';
     } else {
         echo 'Invalid username or password, please try again';
     }
     $stmt->close();
 }
-
+function generateUniqueId($conn) {
+    $i=1;
+    do {
+        // Générer un ID unique
+        $uniqueId = $i;
+        
+        // Préparer une requête pour vérifier si cet ID est déjà utilisé
+        $sql="SELECT COUNT(*) as count FROM patient WHERE id_patient= $uniqueId";
+        $result = $conn->query($sql);
+        // Si l'ID n'est pas utilisé, quitter la boucle
+        $i++;
+        $row = $result->fetch_assoc();
+        $count = $row['count'];
+    } while ($count > 0);
+    
+    return $uniqueId;
+}
 // Connection création de compte
 if (isset($_POST['signup'])) {
     $fname = $_POST['fname'];
@@ -62,13 +77,15 @@ if (isset($_POST['signup'])) {
     $result = $stmt->get_result();
 
     if ($result->num_rows == 0) {
-        $sql = "INSERT INTO Medecin (prenom, nom, adresse_email, mot_de_passe, specialite) VALUES (?, ?, ?, ?, ?)";
+        $newid=generateUniqueId($conn);
+        $sql = "INSERT INTO Medecin (id, prenom, nom, adresse_email, mot_de_passe, specialite) VALUES (?, ?, ?, ?, ?)";
         $stmt = $conn->prepare($sql);
-        $stmt->bind_param("sssss", $fname, $lname, $email, $password, $speciality);
+        $stmt->bind_param("isssss", $newid, $fname, $lname, $email, $password, $speciality);
         $stmt->execute();
         echo 'Registration successful';
         $stmt->close();
-$conn->close();
+        $conn->close();
+        $_SESSION["id_Medecin"] = $newid;
     } else {
         echo 'Email already registered';
         $stmt->close();
