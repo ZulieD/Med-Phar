@@ -55,12 +55,10 @@
 
                 <button type="submit" name="signin">Submit</button>
             </form>
-            
-            <div class="Menu">
-                <ul class="menu">
-                    <li class="menuli"><a href="../Form/form.html">Enregistrer nouveau patient</a></li>
-                </ul>
-            </div>
+
+                    <a href="../Form/form.html">Enregistrer nouveau patient</a>
+
+                    
 
         <?php
             // Vérifier si une option a été sélectionnée
@@ -112,23 +110,124 @@
         }
 
         ?>
-    <br>
+    <br><br><br><br>
     <form action="#" method="post">
         Symptome
-        <input type="text" id="form1" placeholder="Quels sont les symptomes ?" name="uname" required>
+        <input type="text" id="form1" placeholder="Quels sont les symptomes ?" name="symptomes" required>
+        <br>
+        <label for="search">Choississez une pathologie :</label>
+        <input type="text" id="search" name="search" list="suggestions" autocomplete="off">
+        <datalist id="suggestions"></datalist>
+        <script>
+            document.addEventListener("DOMContentLoaded", function() {
+                fetch('../../Analyse/df_medicament.csv')
+                    .then(response => response.text())
+                    .then(data => {
+                        // Séparer les lignes du fichier CSV
+                        let rows = data.split('\n');
+                        
+                        // Enlever la première ligne (l'entête)
+                        rows.shift();
+                        
+                        // Enlever les lignes vides et traiter les données restantes
+                        let options = new Set();
+                        rows.forEach(row => {
+                            let trimmedRow = row.trim();
+                            if (trimmedRow.length > 0) {
+                                let columns = trimmedRow.split(','); // Sépare les colonnes par la virgule
+                                if (columns.length > 1) {
+                                    options.add(columns[1].trim()); // Ajoute la valeur de la colonne 2 à l'ensemble
+                                }
+                            }
+                        });
 
-        Maladie identifier 
-        <input type="text" id="form1" placeholder="Quel est la maladie ?" name="uname">
+                        // Créer les options dans le datalist
+                        let datalist = document.getElementById('suggestions');
+                        options.forEach(item => {
+                            let option = document.createElement('option');
+                            option.value = item;
+                            datalist.appendChild(option);
+                        });
+                    });
+            });
+        </script>
+        <br>
+        Cause de la maladie 
+        <input type="text" id="form1" placeholder="Cause de la maladie ?" name="cause">
+        <br>
+        Es-ce une maladie héréditaire ? 
+        <label>
+            <input type="checkbox" id="oui" name="choix" value="oui">
+            Oui
+        </label>
 
-        Lier à une autre maladie 
-        <input type="text" id="form1" placeholder="Corrélation maladie ?" name="uname">
-
+        <label>
+            <input type="checkbox" id="non" name="choix" value="non">
+            Non
+        </label>
+        <br>
+        <label for="date">Date début :</label>
+        <input type="date" id="date" name="date_d">
+        <label for="date">Date fin :</label>
+        <input type="date" id="date" name="date_f">
+        <br>
+        Lien avec une autre maladie 
+        <input type="text" id="form1" placeholder="Corrélation maladie ?" name="correlation">
+        <br>
         <button type="submit" name="consult">Sing In</button>
     </form>
     <?php
     // Vérifier si une option a été sélectionnée
     if (isset($_POST['consult'])) {
-        $_SESSION["Patient"] = "$nom";
-        header("Location:../Result/result.php");
+
+        $symptomes=$_POST['symptomes'];
+        $nom=$_POST['search'];
+        $date_debut=$_POST['date_d'];
+        $date_fin=$_POST['date_f'];
+        $maladie_correle=$_POST['correlation'];
+        $hereditaire=$_POST['choix'];
+        $cause=$_POST['cause'];
+
+        $sql_check = "SELECT id FROM Maladie WHERE symptome = ? AND nom = ? AND date_prise = ? AND fin_prise = ? AND maladie_correle = ? AND hereditaire = ? AND cause = ?";
+        $stmt_check = $connection->prepare($sql_check);
+        $stmt_check->bind_param("ssddsis", $symptome, $nom, $date_prise, $fin_prise, $maladie_correle, $hereditaire, $cause);
+        $stmt_check->execute();
+        $stmt_check->store_result();
+
+        if ($stmt_check->num_rows > 0) {
+            $stmt_check->bind_result($id);
+            $stmt_check->fetch();
+            
+            $_SESSION["id_Maladie"] = 
+            $stmt_check->close();
+            header("Location:../Result/result.php");
+        } else {
+            // Préparer la requête SQL
+            $newId = generateUniqueId($connection);
+
+            if ($newId !== null) {
+                // Préparer la requête d'insertion avec des placeholders sécurisés
+                $sql = "INSERT INTO Maladie (id, symptome, nom, date_prise, fin_prise, maladie_correle, hereditaire, cause) 
+                        VALUES (?, ?, ?, ?, ?, ?, ?, ?)";
+                
+                // Préparer et exécuter la requête préparée
+                $stmt = $connection->prepare($sql);
+                $stmt->bind_param("issddsis", $newId, $symptomes, $nom, $date_debut, $date_fin, $maladie_correle, $hereditaire, $cause);
+                
+                if ($stmt->execute()) {
+                    echo "Nouvelle maladie ajouté avec succès.";
+                } else {
+                    echo "Erreur lors de l'ajout de la maladie : " . $stmt->error;
+                }
+                
+                // Fermer le statement
+                $stmt->close();
+            } else {
+                echo "Erreur lors de la génération de l'ID unique.";
+            }
+
+            $_SESSION["id_Maladie"] = "$newId";
+            header("Location:../Result/result.php");
+        }
     }
     ?>
