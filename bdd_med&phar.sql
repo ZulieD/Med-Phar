@@ -64,7 +64,6 @@ create table Effet_secondaire(
     duree varchar(50),
     frequence varchar(100)
 );
-
 create table Reaction(
     id int primary key,
     id_medicament int, 
@@ -106,18 +105,17 @@ INSERT INTO Consultation (id, date_consult, id_medecin, id_patient, id_maladie) 
 (4, '2024-06-15', 1, 4, 4),
 (5, '2024-06-16', 2, 5, 5);
 
-INSERT INTO Reaction (id, id_medicament, id_patient, id_effet_secondaire) VALUES
-(1, 1, 1, 1),  -- Patient 1 a eu l'effet secondaire 'Nausées'
-(2, 2, 3, 2),  -- Patient 3 a eu l'effet secondaire 'Somnolence'
-(3, 3, 5, 3),  -- Patient 5 a eu l'effet secondaire 'Réaction allergique'
-(4, 4, 2, 4);  -- Patient 2 a eu l'effet secondaire 'Vertiges'
-
 INSERT INTO Effet_secondaire (id, nom, duree, frequence) VALUES
 (1, 'Nausées', '1-2 jours', 'Fréquent'),
 (2, 'Somnolence', 'quelques heures', 'Occasionnel'),
 (3, 'Réaction allergique', 'variable', 'Rare'),
 (4, 'Vertiges', 'quelques minutes à heures', 'Occasionnel');
 
+INSERT INTO Reaction (id, id_medicament, id_patient, id_effet_secondaire) VALUES
+(1, 1, 1, 1),  -- Patient 1 a eu l'effet secondaire 'Nausées'
+(2, 2, 3, 2),  -- Patient 3 a eu l'effet secondaire 'Somnolence'
+(3, 3, 5, 3),  -- Patient 5 a eu l'effet secondaire 'Réaction allergique'
+(4, 4, 2, 4);  -- Patient 2 a eu l'effet secondaire 'Vertiges'
 
 
 

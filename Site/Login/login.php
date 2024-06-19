@@ -2,7 +2,7 @@
     $host='localhost:3306';
     $username='root';
     $password="Jdaniel2002";
-    $database="mastproject3";
+    $database="masterproject4";
     
     $conn=mysqli_connect($host,$username,$password,$database);
     // Check connection
@@ -30,21 +30,19 @@ if (isset($_POST['signin'])) {
     $uname = $_POST['uname'];
     $password = $_POST['password'];
 
-    $sql = "SELECT * FROM Medecin WHERE adresse_email = ? AND mot_de_passe = ?";
-    $stmt = $conn->prepare($sql);
-    $stmt->bind_param("ss", $uname, $password);
-    $stmt->execute();
-    $result = $stmt->get_result();
+    $sql = "SELECT * FROM Medecin WHERE adresse_email = '$uname' AND mot_de_passe = '$password'";
+    $result = $conn->query($sql) or die($conn->error);
 
     if ($result->num_rows == 1) {
+        $row = $result->fetch_assoc();
         $_SESSION["id_Medecin"] = $row['id'];
-       header("Location: ../Accueil/accueil.php");
-       echo 'succeed';
+        $_SESSION['Nom_medecin'] = $row['nom'];
+        header("Location: ../Accueil/accueil.php");
     } else {
         echo 'Invalid username or password, please try again';
     }
-    $stmt->close();
 }
+
 function generateUniqueId($conn) {
     $i=1;
     do {
@@ -66,9 +64,12 @@ function generateUniqueId($conn) {
 if (isset($_POST['signup'])) {
     $fname = $_POST['fname'];
     $lname = $_POST['lname'];
+    $date_naissance=$_POST['date_naissance'];
     $email = $_POST['email'];
     $password = $_POST['password'];
     $speciality = $_POST['speciality'];
+
+    $date_naissance_formatted = date('Y-m-d', strtotime($date_naissance));
 
     $sql = "SELECT * FROM Medecin WHERE adresse_email = ?";
     $stmt = $conn->prepare($sql);
@@ -78,9 +79,9 @@ if (isset($_POST['signup'])) {
 
     if ($result->num_rows == 0) {
         $newid=generateUniqueId($conn);
-        $sql = "INSERT INTO Medecin (id, prenom, nom, adresse_email, mot_de_passe, specialite) VALUES (?, ?, ?, ?, ?)";
+        $sql = "INSERT INTO Medecin (id, prenom, nom, date_naissance, adresse_email, mot_de_passe, specialite) VALUES (?, ?, ?, ?, ?,?,?)";
         $stmt = $conn->prepare($sql);
-        $stmt->bind_param("isssss", $newid, $fname, $lname, $email, $password, $speciality);
+        $stmt->bind_param("issssss", $newid, $fname, $lname, $date_naissance_formatted, $email, $password, $speciality);
         $stmt->execute();
         echo 'Registration successful';
         $stmt->close();
@@ -89,7 +90,7 @@ if (isset($_POST['signup'])) {
     } else {
         echo 'Email already registered';
         $stmt->close();
-$conn->close();
+        $conn->close();
     }
 
     

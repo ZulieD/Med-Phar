@@ -2,7 +2,7 @@
     $host='localhost:3306';
     $username='root';
     $password="Jdaniel2002";
-    $database="mastproject3";
+    $database="masterproject4";
 
     $conn=mysqli_connect($host,$username,$password,$database);
     // Check connection

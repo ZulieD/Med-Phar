@@ -2,7 +2,7 @@
     $host='localhost:3306';
     $username='root';
     $password="Jdaniel2002";
-    $database="masterproject2";
+    $database="masterproject4";
     
     $connection=mysqli_connect($host,$username,$password,$database);
     // Check connection
@@ -25,23 +25,12 @@
 ?>
 <body>
 <h1>
-    Bonjour Docteur <?php
+     <?php
         // Vérifier d'abord si $_SESSION['id_Medecin'] est défini
-        if (isset($_SESSION['id_Medecin'])) {
+        if (!empty($_SESSION['Nom_medecin'])) {
             // Récupérer l'ID du médecin depuis la session
-            $id_medecin = $_SESSION['id_Medecin'];
-            
-            // Préparer la requête SQL pour obtenir le nom du médecin
-            $sql = "SELECT nom FROM Medecin WHERE id = $id_medecin";
-            $result = $conn->query($sql);
-            
-            if ($result && $result->num_rows > 0) {
-                // Récupérer la première ligne de résultat (normalement, il ne devrait y en avoir qu'une)
-                $row = $result->fetch_assoc();
-                echo htmlspecialchars($row['nom']);
-            } else {
-                echo "Médecin introuvable";
-            }
+            $nom = $_SESSION['Nom_medecin'];
+            echo "Bonjour Docteur $nom";
         } else {
             echo "ID de médecin non défini";
         }
