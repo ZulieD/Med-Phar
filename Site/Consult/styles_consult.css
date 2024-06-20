@@ -1,3 +1,7 @@
+.hidden {
+    display: none;
+}
+
 body {
     font-family: 'Arial', sans-serif;
     background-color: #f4e6a2; /* Light yellow background */
@@ -13,85 +17,16 @@ body {
     overflow-y: auto;
 }
 
-.navbar {
-    width: 100%;
-    background-color: #4CAF50;
-    overflow: hidden;
-    position: fixed; /* Fix the navbar to the top */
-    top: 0;
-    z-index: 1000; /* Ensure it sits above other content */
-    height: 60px;
-}
-
-.navbar a {
-    float: left;
-    display: block;
-    color: white;
-    text-align: center;
-    padding: 14px 20px;
-    text-decoration: none;
-    font-size: 17px;
-    line-height: 60px; /* Center align the text vertically */
-}
-
-.navbar a.logo {
-    font-size: 25px;
-    font-weight: bold;
-}
-
-.navbar-right {
-    float: right;
-}
-
-.container {
-    display: flex;
-    width: 100%;
-    max-width: 1200px;
-    margin: 60px auto 0 auto; /* Add top margin to account for fixed navbar */
-}
-
-.sidebar {
-    position: fixed;
-    top: 60px; /* Adjust to be below the navbar */
-    left: 0;
-    height: calc(100% - 60px); /* Adjust height to account for the navbar */
-    width: 250px; /* Set the width of the sidebar */
-    padding: 20px;
-    background: #fff;
-    border-right: 1px solid #ddd;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    overflow-y: auto; /* Add scroll if the content exceeds the viewport height */
-}
-
-.main-content {
-    margin-left: 270px; /* Add a left margin to accommodate the sidebar */
-    padding: 20px;
-    flex: 1;
-}
-.content-section {
-    background: white;
-    padding: 30px 50px;
-    border-radius: 15px;
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-    max-width: 800px;
-    width: 100%;
-    text-align: center;
-    margin: 20px auto;
-    transition: all 0.3s ease;
-}
-
-.content-section:hover {
-    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
-}
+/* Form Container */
 .form-container {
     background: white;
     padding: 30px 50px;
     border-radius: 15px;
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-    max-width: 600px;
+    max-width: 400px;
     width: 100%;
     text-align: center;
-    margin: 20px auto;
+    margin: 20px 0;
     transition: all 0.3s ease;
 }
 
@@ -104,14 +39,6 @@ h1 {
     margin-bottom: 20px;
     color: #4CAF50;
     font-weight: bold;
-}
-
-h2, h3 {
-    color: #4CAF50;
-}
-
-ul {
-    text-align: left;
 }
 
 .form-group {
@@ -152,7 +79,7 @@ ul {
     outline: none;
 }
 
-button {
+button[type="submit"] {
     background-color: #4CAF50;
     color: white;
     border: none;
@@ -164,12 +91,12 @@ button {
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-button:hover {
+button[type="submit"]:hover {
     background-color: #45a049;
     transform: translateY(-2px);
 }
 
-button:focus {
+button[type="submit"]:focus {
     outline: none;
 }
 

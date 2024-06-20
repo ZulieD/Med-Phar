@@ -1,21 +1,37 @@
 <?php
-    $host = "localhost";
-    $username = "root";
-    $password = "";
-    $database = "masterproject_database";
-    $port = 3307;
+    $host='localhost:3306';
+    $username='root';
+    $password="Jdaniel2002";
+    $database="masterproject4";
 
-    // Créer une connexion
-    $conn = new mysqli($host, $username, $password, $database, $port);
-
-    // Vérifier la connexion
-    if ($conn->connect_error) {
-        die("Erreur de connexion : " . $conn->connect_error);
+    $conn=mysqli_connect($host,$username,$password,$database);
+    // Check connection
+    if ($conn==false)
+    {
+        die('Error in connection' .mysqli_connect_error()); // echo plusieur fois et ferme le programme
     }
-    session_start();
+    session_start(); // connection avec tous les pages pour passer variable
 
 $sql = "SELECT * FROM patient";
 $result = $conn->query($sql);
+
+function generateUniqueId($conn) {
+    $i=1;
+    do {
+        // Générer un ID unique
+        $uniqueId = $i;
+        
+        // Préparer une requête pour vérifier si cet ID est déjà utilisé
+        $sql="SELECT COUNT(*) as count FROM patient WHERE id_patient= $uniqueId";
+        $result = $conn->query($sql);
+        // Si l'ID n'est pas utilisé, quitter la boucle
+        $i++;
+        $row = $result->fetch_assoc();
+        $count = $row['count'];
+    } while ($count > 0);
+    
+    return $uniqueId;
+}
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $prenom = $_POST['prenom'];
@@ -32,22 +48,31 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $qualite_alimentation = $_POST['qualite_alimentation'];
 
     // Préparer la requête SQL
-    $sql = "INSERT INTO patient (prenom, nom, date_naissance, sexe, contraception, poids, taille, allergie, activite_metier, risque_metier, activite_quotidienne, qualite_alimentation) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
+    $newId = generateUniqueId($conn);
 
-    $stmt = $conn->prepare($sql);
-    if ($stmt === false) {
-        die("Erreur de préparation de la requête : " . $conn->error);
-    }
-
-    $stmt->bind_param("sssssidiiiii", $prenom, $nom, $date_naissance, $sexe, $contraception, $poids, $taille, $allergie, $activite_metier, $risque_metier, $activite_quotidienne, $qualite_alimentation);
-
-    if ($stmt->execute()) {
-        echo "Les données du patient ont été enregistrées avec succès.";
+    if ($newId !== null) {
+        // Préparer la requête d'insertion avec des placeholders sécurisés
+        $sql = "INSERT INTO patient (id_patient, prenom, nom, date_naissance, sexe, contraception, poids, taille, allergie, activite_metier, risque_metier, activite_quotidienne, qualite_alimentation) 
+                VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
+        
+        // Préparer et exécuter la requête préparée
+        $stmt = $conn->prepare($sql);
+        $stmt->bind_param("isssssddssiss", $newId, $prenom, $nom, $date_naissance, $sexe, $contraception, $poids, $taille, $allergie, $activite_metier, $risque_metier, $activite_quotidienne, $qualite_alimentation);
+        
+        if ($stmt->execute()) {
+            echo "Nouveau patient ajouté avec succès.";
+        } else {
+            echo "Erreur lors de l'ajout du patient : " . $stmt->error;
+        }
+        
+        // Fermer le statement
+        $stmt->close();
     } else {
-        echo "Erreur lors de l'enregistrement des données du patient : " . $stmt->error;
+        echo "Erreur lors de la génération de l'ID unique.";
     }
 
-    $stmt->close();
+    $_SESSION["id_Patient"] = "$newId";
+    header("Location:../Consult/consult.php");
 }
 
 $conn->close();
