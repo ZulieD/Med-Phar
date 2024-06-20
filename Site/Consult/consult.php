@@ -43,7 +43,7 @@
     <header>
         <div class="Menu">
             <ul class="menu">
-                <li class="menuli"><a href="../Accueil/accueil.php">Retour</a></li>
+                <li class="menuli"><a href="../Accueil/accueil.php">Go back</a></li>
             </ul>
         </div>
 
@@ -54,7 +54,7 @@
         if (empty($_SESSION['id_Patient'])){
         ?>
             <form action="#" method="post">
-                <label for="dropdown">Choisissez un patient :</label>
+                <label for="dropdown">Pick a patient :</label>
                 <select name="dropdown" id="dropdown">
                 <?php
                     $id_medecin = $_SESSION["id_Medecin"];
@@ -73,7 +73,7 @@
                             echo '<option value="' . htmlspecialchars($row["id_patient"]) . '">' . htmlspecialchars($row["prenom"]) . ' ' . htmlspecialchars($row["nom"]) . '</option>';
                         }
                     } else {
-                        echo '<option value="">Aucune donnée trouvée</option>';
+                        echo '<option value="">No data found</option>';
                     }
 
                     $stmt->close();
@@ -85,7 +85,7 @@
                 <button type="submit" name="signin">Submit</button>
             </form>
 
-                    <a href="../Form/form.html">Enregistrer nouveau patient</a>
+                    <a href="../Form/form.html">Register a new patient</a>
 
                     
 
@@ -114,21 +114,21 @@
 
             if ($result->num_rows > 0){
                 $row = $result->fetch_assoc();
-                echo "<h2>Information personnel pour le patient : " . htmlspecialchars($row['nom']) . "</h2>";
+                echo "<h2>Personnal information of patient : " . htmlspecialchars($row['nom']) . "</h2>";
                 echo "<table border='1'>
                         <tr>
-                            <th>Prenom</th>
-                            <th>Nom</th>
-                            <th>Date de naissance</th>
-                            <th>Sexe</th>
+                            <th>Fisrt Name</th>
+                            <th>Last Name</th>
+                            <th>Date of birth</th>
+                            <th>Sex</th>
                             <th>Contraception</th>
-                            <th>Poids</th>
-                            <th>Taille</th>
-                            <th>Allergie</th>
-                            <th>Activité du métier</th>
-                            <th>Risque du métier</th>
-                            <th>Niveau d'activité quotidienne </th>
-                            <th>Niveau de la qualité alimentaire</th>
+                            <th>Weight</th>
+                            <th>Height</th>
+                            <th>Allergies</th>
+                            <th>Job activity level</th>
+                            <th>Job risk level </th>
+                            <th>Daily activity level </th>
+                            <th>Quality od diet</th>
                         </tr>";
                     echo "<tr>
                             <td>" . htmlspecialchars($row["prenom"]) . "</td>
@@ -150,7 +150,7 @@
 
             <br>
             <section class="faq-container">
-                <h3 class="faq-page"> Modifier les informations du patient </h3>
+                <h3 class="faq-page"> Change patient's informations</h3>
                 <form action="#" method="post" class="faq-body">
                     <label for="poids">Contraception :</label>
                     <input type="text" id="contraception" name="contraception" placeholder="Entrez la nouvelle contraception ">
@@ -205,7 +205,7 @@
             <script src="consult.js"></script>
             <?php
                 } else {
-                    echo "Aucune information trouvée pour ce patient.";
+                    echo "No data found for this patient.";
                 }
 
                 
@@ -280,16 +280,16 @@
                         
                         // Vérifier si la mise à jour a réussi
                         if ($stmt_update->affected_rows > 0) {
-                            echo "<p>Informations mises à jour avec succès.</p>";
+                            echo "<p>Information update.</p>";
                         } else {
-                            echo "<p>Aucune mise à jour effectuée ou erreur lors de la mise à jour.</p>";
+                            echo "<p>No change made.</p>";
                         }
                         $stmt_update->close();
                         header("Location: consult.php");
                         exit(); // Assurez-vous de sortir du script après la redirection
                         
                     } else {
-                        echo "<p>Erreur lors de la préparation de la requête de mise à jour.</p>";
+                        echo "<p>Error on the update.</p>";
                     }
 
                     
@@ -314,12 +314,12 @@
             // Afficher les résultats dans un tableau HTML
             if ($result->num_rows > 0) {
                 $row = $result->fetch_assoc();
-                echo "<h2>Historique des consultations pour le patient : " . htmlspecialchars($row['patient_nom']) . "</h2>";
+                echo "<h2>History of consultations for the patient : " . htmlspecialchars($row['patient_nom']) . "</h2>";
                 echo "<table border='1'>
                         <tr>
-                            <th>Date de Consultation</th>
-                            <th>Maladie</th>
-                            <th>ID Médicament</th>
+                            <th>Date of Consultation</th>
+                            <th>Disease</th>
+                            <th>Name Medicine</th>
                         </tr>";
                 do {
                     echo "<tr>
@@ -330,17 +330,17 @@
                 } while ($row = $result->fetch_assoc());
                 echo "</table>";
             } else {
-                echo "Aucune consultation trouvée pour ce patient.";
+                echo "No data found for this patient.";
             }
         }
         ob_end_flush();
         ?>
     <br><br><br><br>
     <form action="#" method="post">
-        Symptome
-        <input type="text" id="form1" placeholder="Quels sont les symptomes ?" name="symptomes" required>
+        Symptoms
+        <input type="text" id="form1" placeholder="What are the symptoms ?" name="symptomes" required>
         <br>
-        <label for="search">Choississez une pathologie :</label>
+        <label for="search">Choose a pathology:</label>
         <input type="text" id="search" name="search" list="suggestions" autocomplete="off">
         <datalist id="suggestions"></datalist>
         <script>
@@ -377,26 +377,26 @@
             });
         </script>
         <br>
-        Cause de la maladie 
-        <input type="text" id="form1" placeholder="Cause de la maladie ?" name="cause">
+        Cause of illness 
+        <input type="text" id="form1" placeholder="Cause of illness ?" name="cause">
         <br>
-        Es-ce une maladie héréditaire ? 
+        Is it a hereditary disease?
         <label>
             <input type="checkbox" id="oui" name="choix" value="oui">
-            Oui
+            Yes
         </label>
 
         <label>
             <input type="checkbox" id="non" name="choix" value="non">
-            Non
+            No
         </label>
         <br>
-        <label for="date">Date début :</label>
+        <label for="date">Start Date :</label>
         <input type="date" id="date" name="date_d" required>
-        <label for="date">Date fin :</label>
+        <label for="date">End Date :</label>
         <input type="date" id="date" name="date_f" required>
         <br>
-        Lien avec une autre maladie 
+        Link to another disease
         <input type="text" id="form1" placeholder="Corrélation maladie ?" name="correlation">
         <br>
         <button type="submit" name="consult">Sing In</button>
@@ -429,7 +429,7 @@
             // Fermer le statement
             $stmt->close();
         } else {
-            echo "Erreur lors de la génération de l'ID unique.";
+            echo "Error on the id.";
         }
 
         $_SESSION["id_Maladie"] = "$newId";

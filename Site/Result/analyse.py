@@ -1,7 +1,9 @@
 import sys
 import pandas as pd
-import matplotlib.pyplot as plt
 
+
+print('ok')
+'''
 medicament = sys.argv[1]
 nom_maladie = sys.argv[2]
 sexe_patient = sys.argv[3]
@@ -56,3 +58,4 @@ plt.show()
 print(utilisation, lien1)
 
 
+'''

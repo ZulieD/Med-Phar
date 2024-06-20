@@ -37,10 +37,14 @@ if (isset($_POST['signin'])) {
         $row = $result->fetch_assoc();
         $_SESSION["id_Medecin"] = $row['id'];
         $_SESSION['Nom_medecin'] = $row['nom'];
-        header("Location: ../Accueil/accueil.php");
+        header("Location: ../Accueil/accueil.html");
     } else {
         echo 'Invalid username or password, please try again';
     }
+}
+
+if (isset($_POST['password_change'])) {
+    header("Location: ../Login/password.html");
 }
 
 function generateUniqueId($conn) {
@@ -50,7 +54,24 @@ function generateUniqueId($conn) {
         $uniqueId = $i;
         
         // Préparer une requête pour vérifier si cet ID est déjà utilisé
-        $sql="SELECT COUNT(*) as count FROM patient WHERE id_patient= $uniqueId";
+        $sql="SELECT COUNT(*) as count FROM Medecin WHERE id= $uniqueId";
+        $result = $conn->query($sql);
+        // Si l'ID n'est pas utilisé, quitter la boucle
+        $i++;
+        $row = $result->fetch_assoc();
+        $count = $row['count'];
+    } while ($count > 0);
+    
+    return $uniqueId;
+}
+function generateUniqueId2($conn) {
+    $i=1;
+    do {
+        // Générer un ID unique
+        $uniqueId = $i;
+        
+        // Préparer une requête pour vérifier si cet ID est déjà utilisé
+        $sql="SELECT COUNT(*) as count FROM adresse_cabinet WHERE id= $uniqueId";
         $result = $conn->query($sql);
         // Si l'ID n'est pas utilisé, quitter la boucle
         $i++;
@@ -68,8 +89,31 @@ if (isset($_POST['signup'])) {
     $email = $_POST['email'];
     $password = $_POST['password'];
     $speciality = $_POST['speciality'];
+    $number=$_POST['numbrt'];
+    $street=$_POST['street'];
+    $city=$_POST['city'];
+    $state=$_POST['state'];
+    $country=$_POST['country'];
 
-    $date_naissance_formatted = date('Y-m-d', strtotime($date_naissance));
+    // Verif adresse : 
+
+    $sql="SELECT * from adresse_cabinet where numero = ? and rue = ? and ville = ? and Departement = ? and Pays = ?";
+    $stmt=$conn->prepare($sql);
+    $stmt->bind_param("issss", $number, $street , $city, $state, $country);
+    $stmt->execute();
+    $result = $stmt->get_result();
+    if ($result->num_rows == 0) {
+        $id_adresse=generateUniqueId2($conn);
+        $sql = "INSERT into adresse_cabinet (id, numero, rue, ville, Departement, Pays) values (?,?,?,?,?,?)";
+        $stmt=$conn->prepare($sql);
+        $stmt->bind_param("iissss", $id_adresse, $number, $street , $city, $state, $country);
+        $stmt->execute();
+    }else {
+        $row = $result->fetch_assoc();
+        $id_adresse=$row['id'];
+    }
+
+    // Verif medecin 
 
     $sql = "SELECT * FROM Medecin WHERE adresse_email = ?";
     $stmt = $conn->prepare($sql);
@@ -79,14 +123,16 @@ if (isset($_POST['signup'])) {
 
     if ($result->num_rows == 0) {
         $newid=generateUniqueId($conn);
-        $sql = "INSERT INTO Medecin (id, prenom, nom, date_naissance, adresse_email, mot_de_passe, specialite) VALUES (?, ?, ?, ?, ?,?,?)";
+        $sql = "INSERT INTO Medecin (id, prenom, nom, date_naissance, adresse_email, mot_de_passe, specialite, id_adresse) VALUES (?, ?, ?, ?, ?,?,?,?)";
         $stmt = $conn->prepare($sql);
-        $stmt->bind_param("issssss", $newid, $fname, $lname, $date_naissance_formatted, $email, $password, $speciality);
+        $stmt->bind_param("issssssi", $newid, $fname, $lname, $date_naissance, $email, $password, $speciality,$id_adresse);
         $stmt->execute();
         echo 'Registration successful';
         $stmt->close();
         $conn->close();
         $_SESSION["id_Medecin"] = $newid;
+        $_SESSION['Nom_medecin'] = $lname;
+        header("Location: ../Accueil/accueil.html");
     } else {
         echo 'Email already registered';
         $stmt->close();

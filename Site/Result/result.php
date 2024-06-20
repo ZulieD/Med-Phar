@@ -16,8 +16,8 @@
 <!DOCTYPE html>
 <head>
 	<meta charset="utf-8">
-	<title> Resultat  </title> <!--Nom de la page -->
-
+	<title> Result  </title> <!--Nom de la page -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 	<link rel= "stylesheet" href="style.css">
 </head>
 <body>
@@ -55,7 +55,7 @@
     }
     
     ?>
-    <h2>Voici les médicaments recommander pour la pathologie de M/Mme 
+    <h2>Here are the medications recommended for Mr/Mrs’ pathology
         <?php $id_patient = $_SESSION["id_Patient"];
             $sql="SELECT nom from patient 
                 where id_patient=$id_patient";
@@ -95,7 +95,7 @@
         
                 // Si aucun médicament correspondant n'est trouvé pour cet ID
                 if (!$medicament_trouve) {
-                    echo "Aucun médicament trouvé pour l'ID : $id_recherche<br>";
+                    echo "No medecine found of the id : $id_recherche<br>";
                 }
         
                 // Réinitialiser le pointeur du fichier CSV pour la prochaine recherche
@@ -104,12 +104,13 @@
         fclose($handle); // Fermer le fichier CSV
         }
     } else {
-        echo "Erreur lors de l'ouverture du fichier CSV.";
+        echo "Error on the opening of the csv.";
     }
     ?>
+    <hr class="hr-line">
     <br>
     <form action="#" method="post">
-    <label for="search">Choississez le medicament à prescrire:</label>
+    <label for="search">Choose the medication to prescribe:</label>
         <input type="text" id="search" name="search" list="suggestions" autocomplete="off">
         <datalist id="suggestions"></datalist>
         <script>
@@ -146,7 +147,7 @@
             });
         </script>
         <br>
-        <button type="submit" name="consult">Prescrire</button>
+        <button type="submit" name="consult">Prescribe</button>
     </form>
     <?php
     if (isset($_POST['consult'])) {
@@ -154,28 +155,21 @@
         $id_patient = $_SESSION["id_Patient"];
         //echo $medicament;
         $sql="SELECT * from patient where id_patient= $id_patient";
-        $result_2=$connection->query($sql);
+        $result_3=$connection->query($sql);
         
-        if ($result_2->num_rows > 0) {
-            $row_2 = $result_2->fetch_assoc();
+        if ($result_3->num_rows > 0) {
+            $row_3 = $result_3->fetch_assoc();
 
-            // Construction de la commande pour exécuter le script Python
-            $command = escapeshellcmd('python3 analyse.py ' . 
-                        escapeshellarg($medicament) . ' ' . 
-                        escapeshellarg($row_2['nom']) . ' ' . 
-                        escapeshellarg($row_2['sexe']) . ' ' . 
-                        escapeshellarg($row_2['date_naissance']) . ' ' . 
-                        escapeshellarg($row_2['poids']) . ' ' . 
-                        escapeshellarg($row_2['taille']) . ' 2>&1');
+            $command = escapeshellcmd('python3 test.py ');
             
             // Exécution de la commande
             $output = shell_exec($command);
             echo "Output: <pre>$output</pre>";
         }
-
         
     }
     ?>
+
 
 
 </body>
