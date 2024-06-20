@@ -2,85 +2,110 @@
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
-    <title>Login</title>
+    <title>Log In Page</title>
     <link rel="stylesheet" href="C:/Users/marie/Documents/GitHub/Med-Phar/Site/styles.css">
 </head>
 
 <body>
-    <header>
-        <div class="Menu">
-            <ul class="menu">
-                <li class="menuli"><a href="form.php"><center><h2>Formulaire Patient</h2></center></a></li>
-                <li class="menuli"><a href="login.php"><h2>Se connecter</h2></a></li>
-            </ul>
+    <div class="navbar">
+        <a href="#" class="logo">Med&Phar</a>
+        <div class="navbar-right">
+            <a href="C:/Users/marie/Documents/GitHub/Med-Phar/Site/Login/homepage.html"> Accueil</a>
+            <a href = "C:/Users/marie/Documents/GitHub/Med-Phar/Site/Form/form.html">Formulaire Patient</a>
         </div>
-    </header>
-
-    <div class="signin form-container">
-        <h1>Sign In</h1>
-        <form action="login.php" method="post">
-            <div class="form-group">
-                <label for="uname">Username</label>
-                <input type="text" id="uname" name="uname" placeholder="Enter Username" required>
-            </div>
-            <div class="form-group">
-                <label for="password">Password</label>
-                <input type="password" id="password" name="password" placeholder="Enter Password" required>
-            </div>
-            <button type="submit" name="signin">Sign In</button>
-        </form>
     </div>
 
-    <div class="signup form-container">
-        <h1>Sign Up</h1>
-        <form action="login.php" method="post">
-            <div class="form-group">
-                <label for="fname">First Name</label>
-                <input type="text" id="fname" name="fname" placeholder="Enter your Firstname" required>
-            </div>
-            <div class="form-group">
-                <label for="lname">Last Name</label>
-                <input type="text" id="lname" name="lname" placeholder="Enter your Lastname" required>
-            </div>
-            <div class="form-group">
-                <label for="email">Email</label>
-                <input type="email" id="email" name="email" placeholder="Enter your Email" required>
-            </div>
-            <div class="form-group">
-                <label for="password">Password</label>
-                <input type="password" id="password" name="password" placeholder="Enter your Password" required>
-            </div>
-            <div class="form-group">
-                <label for="speciality">Speciality</label>
-                <input type="text" id="speciality" name="speciality" placeholder="Enter your Speciality" required>
-            </div>
-            <div class="form-group">
-                <label for="gender">Gender</label>
-                <select id="gender" name="gender" required>
-                    <option value="" disabled selected>Select your gender</option>
-                    <option value="male">Male</option>
-                    <option value="female">Female</option>
-                    <option value="prefer-not-to-say">Prefer not to say</option>
-                </select>
-            </div>
-            <div class="form-group">
-                <label for="job-type">Job Type</label>
-                <select id="job-type" name="job-type" required>
-                    <option value="" disabled selected>Select your job type</option>
-                    <option value="student">Student</option>
-                    <option value="unemployed">Unemployed</option>
-                    <option value="employed">Employed</option>
-                    <option value="self-employed">Self-employed</option>
-                    <option value="retired">Retired</option>
-                    <option value="other">Other</option>
-                </select>
-            </div>
-            <button type="submit" name="signup">Sign Up</button>
-        </form>
-    </div>
+    <div class="container">
+        <div class="sidebar">
+                <h1>About Med&Phar</h1>
+                <p><strong>Who?</strong></p>
+                <p>Med&Phar is a dedicated team working towards enhancing the daily tasks of physicians, providing crucial support during consultations.</p>
+                
+                <p><strong>When?</strong></p>
+                <p>Med&Phar operates every day, providing continuous support for medical professionals.</p>
 
-    <footer>
-        <!-- Footer content -->
-    </footer>
+                <p><strong>How?</strong></p>
+                <p>By utilizing logistic and graphical data analysis, Med&Phar offers support through a web platform accessible to all specialties, employing technologies like SQL, Python, HTML, and PHP.</p>
+
+                <p><strong>What?</strong></p>
+                <p>Med&Phar provides daily support for doctors with:</p>
+                <ul>
+                    <li>Patient Form</li>
+                    <li>Logistic and graphical data analysis</li>
+                    <li>Medication information</li>
+                    <li>Personalized advice and follow-up</li>
+                    <li>Risk analysis associated with prescriptions</li>
+                    <li>Assistance in prescription and patient management</li>
+                    <li>Unique analysis for diagnostics</li>
+                </ul>
+
+                <p><strong>Why?</strong></p>
+                <p>The goal of Med&Phar is to improve the efficiency of medication prescriptions and to provide unique diagnostic analysis, supporting doctors in their daily practice.</p>
+        </div>
+        <div class="main-content">
+            <div class="signin form-container">
+                <h1>Sign In</h1>
+                <form action="login.php" method="post">
+                    <div class="form-group">
+                        <label for="uname">Username</label>
+                        <input type="text" id="uname" name="uname" placeholder="Enter Username" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="password">Password</label>
+                        <input type="password" id="password" name="password" placeholder="Enter Password" required>
+                    </div>
+                    <button type="submit" name="signin">Sign In</button>
+                </form>
+            </div>
+
+            <div class="signup form-container">
+                <h1>Sign Up</h1>
+                <form action="login.php" method="post">
+                    <div class="form-group">
+                        <label for="fname">First Name</label>
+                        <input type="text" id="fname" name="fname" placeholder="Enter your Firstname" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="lname">Last Name</label>
+                        <input type="text" id="lname" name="lname" placeholder="Enter your Lastname" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" placeholder="Enter your Email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="password">Password</label>
+                        <input type="password" id="password" name="password" placeholder="Enter your Password" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="speciality">Speciality</label>
+                        <input type="text" id="speciality" name="speciality" placeholder="Enter your Speciality" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="gender">Gender</label>
+                        <select id="gender" name="gender" required>
+                            <option value="" disabled selected>Select your gender</option>
+                            <option value="male">Male</option>
+                            <option value="female">Female</option>
+                            <option value="prefer-not-to-say">Prefer not to say</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="job-type">Job Type</label>
+                        <select id="job-type" name="job-type" required>
+                            <option value="" disabled selected>Select your job type</option>
+                            <option value="student">Student</option>
+                            <option value="unemployed">Unemployed</option>
+                            <option value="employed">Employed</option>
+                            <option value="self-employed">Self-employed</option>
+                            <option value="retired">Retired</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+                    <button type="submit" name="signup">Sign Up</button>
+                </form>
+            </div>
+        </div>
+    </div>
 </body>
 </html>

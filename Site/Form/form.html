@@ -5,81 +5,120 @@
     <title>Patient Information Form</title>
     <link rel="stylesheet" href="C:/Users/marie/Documents/GitHub/Med-Phar/Site/styles.css">
 </head>
+
 <body>
-    <div class="form-container">
-        <h1>Patient Information Form</h1>
-        <form action="form.php" method="post">
-            <div class="form-group">
-                <label for="prenom">First Name</label>
-                <input type="text" id="prenom" name="prenom" required>
+    <div class="navbar">
+        <a href="#" class="logo">Med&Phar</a>
+        <div class="navbar-right">
+            <a href="C:/Users/marie/Documents/GitHub/Med-Phar/Site/Login/homepage.html"> Accueil</a>
+            <a href = "C:/Users/marie/Documents/GitHub/Med-Phar/Site/Login/login.html"> Log In</a>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="sidebar"><h1>About Med&Phar</h1>
+            <p><strong>Who?</strong></p>
+            <p>Med&Phar is a dedicated team working towards enhancing the daily tasks of physicians, providing crucial support during consultations.</p>
+            
+            <p><strong>When?</strong></p>
+            <p>Med&Phar operates every day, providing continuous support for medical professionals.</p>
+
+            <p><strong>How?</strong></p>
+            <p>By utilizing logistic and graphical data analysis, Med&Phar offers support through a web platform accessible to all specialties, employing technologies like SQL, Python, HTML, and PHP.</p>
+
+            <p><strong>What?</strong></p>
+            <p>Med&Phar provides daily support for doctors with:</p>
+            <ul>
+                <li>Patient Form</li>
+                <li>Logistic and graphical data analysis</li>
+                <li>Medication information</li>
+                <li>Personalized advice and follow-up</li>
+                <li>Risk analysis associated with prescriptions</li>
+                <li>Assistance in prescription and patient management</li>
+                <li>Unique analysis for diagnostics</li>
+            </ul>
+
+            <p><strong>Why?</strong></p>
+            <p>The goal of Med&Phar is to improve the efficiency of medication prescriptions and to provide unique diagnostic analysis, supporting doctors in their daily practice.</p>
+        </div>
+        <div class="main-content">
+            <div class="form-container">
+                <h1>Patient Information Form</h1>
+                <form action="form.php" method="post">
+                    <!-- Form content remains the same -->
+                    <div class="form-group">
+                        <label for="prenom">First Name</label>
+                        <input type="text" id="prenom" name="prenom" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="nom">Last Name</label>
+                        <input type="text" id="nom" name="nom" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="date_naissance">Date of Birth</label>
+                        <input type="date" id="date_naissance" name="date_naissance" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="sexe">Sex</label>
+                        <select id="sexe" name="sexe" required>
+                            <option value="" disabled selected>Select your sex</option>
+                            <option value="M">Male</option>
+                            <option value="F">Female</option>
+                            <option value="O">Other</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="contraception">Contraception</label>
+                        <input type="text" id="contraception" name="contraception">
+                    </div>
+                    <div class="form-group">
+                        <label for="poids">Weight (kg)</label>
+                        <input type="number" id="poids" name="poids" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="taille">Height (cm)</label>
+                        <input type="number" id="taille" name="taille" step="0.01" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="allergie">Allergies</label>
+                        <textarea id="allergie" name="allergie" rows="3"></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="job-type">Work</label>
+                        <select id="job-type" name="job-type" required>
+                            <option value="" disabled selected>Select your job type</option>
+                            <option value="student">Student</option>
+                            <option value="unemployed">Unemployed</option>
+                            <option value="employed">Employed</option>
+                            <option value="self-employed">Self-employed</option>
+                            <option value="retired">Retired</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="risque_metier">Job Risk Level</label>
+                        <select id="risque_metier" name="risque_metier" required>
+                            <option value="" disabled selected>Select your risk level</option>
+                            <option value="low">Low</option>
+                            <option value="medium">Medium</option>
+                            <option value="high">High</option>
+                            <option value="very-high">Very High</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="activite_quotidienne">Daily Activity Level</label>
+                        <input type="number" id="activite_quotidienne" name="activite_quotidienne" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="qualite_alimentation">Quality of Diet</label>
+                        <input type="number" id="qualite_alimentation" name="qualite_alimentation" required>
+                    </div>
+                    <div class="form-group">
+                        <button type="submit">Submit</button>
+                    </div>
+                </form>
             </div>
-            <div class="form-group">
-                <label for="nom">Last Name</label>
-                <input type="text" id="nom" name="nom" required>
-            </div>
-            <div class="form-group">
-                <label for="date_naissance">Date of Birth</label>
-                <input type="date" id="date_naissance" name="date_naissance" required>
-            </div>
-            <div class="form-group">
-                <label for="sexe">Sex</label>
-                <select id="sexe" name="sexe" required>
-                    <option value="" disabled selected>Select your sex</option>
-                    <option value="M">Male</option>
-                    <option value="F">Female</option>
-                    <option value="O">Other</option>
-                </select>
-            </div>
-            <div class="form-group">
-                <label for="contraception">Contraception</label>
-                <input type="text" id="contraception" name="contraception">
-            </div>
-            <div class="form-group">
-                <label for="poids">Weight (kg)</label>
-                <input type="number" id="poids" name="poids" required>
-            </div>
-            <div class="form-group">
-                <label for="taille">Height (cm)</label>
-                <input type="number" id="taille" name="taille" step="0.01" required>
-            </div>
-            <div class="form-group">
-                <label for="allergie">Allergies</label>
-                <textarea id="allergie" name="allergie" rows="3"></textarea>
-            </div>
-            <div class="form-group">
-                <label for="job-type">Work</label>
-                <select id="job-type" name="job-type" required>
-                    <option value="" disabled selected>Select your job type</option>
-                    <option value="student">Student</option>
-                    <option value="unemployed">Unemployed</option>
-                    <option value="employed">Employed</option>
-                    <option value="self-employed">Self-employed</option>
-                    <option value="retired">Retired</option>
-                    <option value="other">Other</option>
-                </select>
-            </div>
-            <div class="form-group">
-                <label for="risque_metier">Job Risk Level</label>
-                <select id="risque_metier" name="risque_metier" required>
-                    <option value="" disabled selected>Select your risk level</option>
-                    <option value="low">Low</option>
-                    <option value="medium">Medium</option>
-                    <option value="high">High</option>
-                    <option value="very-high">Very High</option>
-                </select>
-            </div>
-            <div class="form-group">
-                <label for="activite_quotidienne">Daily Activity Level</label>
-                <input type="number" id="activite_quotidienne" name="activite_quotidienne" required>
-            </div>
-            <div class="form-group">
-                <label for="qualite_alimentation">Quality of Diet</label>
-                <input type="number" id="qualite_alimentation" name="qualite_alimentation" required>
-            </div>
-            <div class="form-group">
-                <button type="submit">Submit</button>
-            </div>
-        </form>
+        </div>
     </div>
 </body>
 </html>
