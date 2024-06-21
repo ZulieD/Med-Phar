@@ -92,11 +92,11 @@ INSERT INTO patient (id_patient, prenom, nom, date_naissance, sexe, contraceptio
 (5, 'Julie', 'Bertrand', '1995-02-10', 'F', 'Aucune', 50, 1.60, 'Acariens', 5, 1, 1, 2);
 
 INSERT INTO Maladie (id, symptome, nom, debut_prise, fin_prise, maladie_correle, hereditaire, cause, id_medicament) VALUES
-(1, 'Douleurs thoraciques, essoufflement', 'Cardiopathie', '2020-01-15', NULL, NULL, 1, 'Hypertension', NULL),
-(2, 'Éruption cutanée, démangeaisons', 'Dermatite', '2019-08-10', NULL, 'Psoriasis', 0, 'Allergies alimentaires', NULL),
-(3, 'Fièvre, toux persistante', 'Bronchite', '2023-02-20', NULL, NULL, 0, 'Infection virale', NULL),
-(4, 'Douleurs abdominales, nausées', 'Gastrite', '2022-11-05', NULL, NULL, 1, 'Mauvaise alimentation', NULL),
-(5, 'Maux de tête fréquents, fatigue', 'Migraine', '2021-04-30', NULL, NULL, 0, 'Stress', NULL);
+(1, 'Douleurs thoraciques, essoufflement', 'Cardiopathie', '2020-01-15', NULL, NULL, 1, 'Hypertension', 1),
+(2, 'Éruption cutanée, démangeaisons', 'Dermatite', '2019-08-10', NULL, 'Psoriasis', 0, 'Allergies alimentaires', 2),
+(3, 'Fièvre, toux persistante', 'Bronchite', '2023-02-20', NULL, NULL, 0, 'Infection virale', 3),
+(4, 'Douleurs abdominales, nausées', 'Gastrite', '2022-11-05', NULL, NULL, 1, 'Mauvaise alimentation', 4),
+(5, 'Maux de tête fréquents, fatigue', 'Migraine', '2021-04-30', NULL, NULL, 0, 'Stress', 5);
 
 INSERT INTO Consultation (id, date_consult, id_medecin, id_patient, id_maladie) VALUES
 (1, '2024-06-10', 1, 1, 1),
@@ -116,6 +116,5 @@ INSERT INTO Reaction (id, id_medicament, id_patient, id_effet_secondaire) VALUES
 (2, 2, 3, 2),  -- Patient 3 a eu l'effet secondaire 'Somnolence'
 (3, 3, 5, 3),  -- Patient 5 a eu l'effet secondaire 'Réaction allergique'
 (4, 4, 2, 4);  -- Patient 2 a eu l'effet secondaire 'Vertiges'
-
 
 

@@ -2,7 +2,7 @@
     $host='localhost:3306';
     $username='root';
     $password="Jdaniel2002";
-    $database="masterproject4";
+    $database="masterproject5";
     
     $conn=mysqli_connect($host,$username,$password,$database);
     // Check connection
@@ -37,7 +37,7 @@ if (isset($_POST['signin'])) {
         $row = $result->fetch_assoc();
         $_SESSION["id_Medecin"] = $row['id'];
         $_SESSION['Nom_medecin'] = $row['nom'];
-        header("Location: ../Accueil/accueil.html");
+        header("Location: ../Accueil/homepage.html");
     } else {
         echo 'Invalid username or password, please try again';
     }
@@ -132,7 +132,7 @@ if (isset($_POST['signup'])) {
         $conn->close();
         $_SESSION["id_Medecin"] = $newid;
         $_SESSION['Nom_medecin'] = $lname;
-        header("Location: ../Accueil/accueil.html");
+        header("Location: ../Accueil/homepage.html");
     } else {
         echo 'Email already registered';
         $stmt->close();

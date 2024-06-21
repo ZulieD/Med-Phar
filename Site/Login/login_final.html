@@ -3,18 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <title>Log In Page</title>
-    <link rel="stylesheet" href="C:/Users/marie/Documents/GitHub/Med-Phar/Site/styles.css">
+    <link rel="stylesheet" href="../styles.css">
 </head>
 
 <body>
-    <div class="navbar">
-        <a href="#" class="logo">Med&Phar</a>
-        <div class="navbar-right">
-            <a href="C:/Users/marie/Documents/GitHub/Med-Phar/Site/Login/homepage.html"> Accueil</a>
-            <a href = "C:/Users/marie/Documents/GitHub/Med-Phar/Site/Form/form.html">Formulaire Patient</a>
-        </div>
-    </div>
-
     <div class="container">
         <div class="sidebar">
                 <h1>About Med&Phar</h1>
@@ -47,17 +39,17 @@
                 <h1>Sign In</h1>
                 <form action="login.php" method="post">
                     <div class="form-group">
-                        <label for="uname">Username</label>
-                        <input type="text" id="uname" name="uname" placeholder="Enter Username" required>
+                        <label for="uname">Enter your email</label>
+                        <input type="text" id="uname" name="uname" placeholder="Enter your email">
                     </div>
                     <div class="form-group">
                         <label for="password">Password</label>
-                        <input type="password" id="password" name="password" placeholder="Enter Password" required>
+                        <input type="password" id="password" name="password" placeholder="Enter Password">
                     </div>
                     <button type="submit" name="signin">Sign In</button>
+                    <button type="submit" name="password_change">Forgot password ?</button>
                 </form>
             </div>
-
             <div class="signup form-container">
                 <h1>Sign Up</h1>
                 <form action="login.php" method="post">
@@ -68,6 +60,10 @@
                     <div class="form-group">
                         <label for="lname">Last Name</label>
                         <input type="text" id="lname" name="lname" placeholder="Enter your Lastname" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="date_naissance">Date of birth:</label>
+                        <input type="date" id="date_naissance" name="date_naissance" required><br><br>
                     </div>
                     <div class="form-group">
                         <label for="email">Email</label>
@@ -81,26 +77,28 @@
                         <label for="speciality">Speciality</label>
                         <input type="text" id="speciality" name="speciality" placeholder="Enter your Speciality" required>
                     </div>
+                    <br> 
+                    <h3> The address of your medical office: </h3>
+                    <br>
                     <div class="form-group">
-                        <label for="gender">Gender</label>
-                        <select id="gender" name="gender" required>
-                            <option value="" disabled selected>Select your gender</option>
-                            <option value="male">Male</option>
-                            <option value="female">Female</option>
-                            <option value="prefer-not-to-say">Prefer not to say</option>
-                        </select>
+                        <label for="num"> Number</label>
+                        <input type="int" id="numbrt" name="numbrt" placeholder="Enter your number" required>
                     </div>
                     <div class="form-group">
-                        <label for="job-type">Job Type</label>
-                        <select id="job-type" name="job-type" required>
-                            <option value="" disabled selected>Select your job type</option>
-                            <option value="student">Student</option>
-                            <option value="unemployed">Unemployed</option>
-                            <option value="employed">Employed</option>
-                            <option value="self-employed">Self-employed</option>
-                            <option value="retired">Retired</option>
-                            <option value="other">Other</option>
-                        </select>
+                        <label for="street"> Street</label>
+                        <input type="text" id="street" name="street" placeholder="Enter your name street" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="city">City</label>
+                        <input type="text" id="city" name="city" placeholder="Enter your city name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="state">State</label>
+                        <input type="text" id="state" name="state" placeholder="Enter your State name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="country">Country</label>
+                        <input type="text" id="country" name="country" placeholder="Enter your country name" required>
                     </div>
                     <button type="submit" name="signup">Sign Up</button>
                 </form>
@@ -109,3 +107,4 @@
     </div>
 </body>
 </html>
+                    

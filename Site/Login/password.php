@@ -2,7 +2,7 @@
     $host='localhost:3306';
     $username='root';
     $password="Jdaniel2002";
-    $database="masterproject4";
+    $database="masterproject5";
     
     $conn=mysqli_connect($host,$username,$password,$database);
     // Check connection
@@ -35,7 +35,7 @@
             $stmt_update->bind_param("si", $password, $id);
             $stmt_update->execute();
             echo 'Your new password is saved. You can go back to the login page.';
-            header("Location: ../Login/login.html");
+            header("Location: ../Login/login_final.html");
         } else {
             echo "We don't have an account registered under this information.";
         }
