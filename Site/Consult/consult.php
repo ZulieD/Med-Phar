@@ -311,6 +311,30 @@
             ?>
 
             <?php
+
+            function getMedicationsFromCSV($csvFilePath) {
+                $medications = array();
+                
+                if (($handle = fopen($csvFilePath, "r")) !== FALSE) {
+                    // Skip the header row
+                    fgetcsv($handle, 1000, ",");
+                    
+                    // Read the data rows
+                    while (($data = fgetcsv($handle, 1000, ",")) !== FALSE) {
+                        $id = $data[2]; // Assuming the ID is in the first column
+                        $name = $data[0]; // Assuming the name is in the second column
+                        $medications[$id] = $name;
+                    }
+                    
+                    fclose($handle);
+                }
+                
+                return $medications;
+            }
+
+            $medications = getMedicationsFromCSV('../../Analyse/df_medicament.csv');
+            $effet_secondaire= getMedicationsFromCSV('../../Analyse/df_effet_secondaire.csv');
+
             ob_start();
             $sql = "SELECT IFNULL(Consultation.date_consult, 'pas d\'information') as date_consult, 
                    IFNULL(Maladie.nom, 'pas d\'information') AS maladie_nom, 
@@ -324,6 +348,22 @@
             $result = $connection->query($sql);
             
             // Afficher les résultats dans un tableau HTML
+            // Read the CSV file to get the medications array
+
+            $sql = "SELECT IFNULL(Consultation.date_consult, 'pas d\'information') as date_consult, 
+                        IFNULL(Maladie.nom, 'pas d\'information') AS maladie_nom, 
+                        IFNULL(Maladie.id_medicament, 'pas d\'information') AS id_medicament, 
+                        IFNULL(patient.nom, 'pas d\'information') AS patient_nom,
+                        IFNULL(Reaction.id,'NON') AS side_effect
+                    FROM Consultation
+                    LEFT JOIN Maladie ON Consultation.id_maladie = Maladie.id
+                    LEFT JOIN patient ON Consultation.id_patient = patient.id_patient
+                    LEFT JOIN Reaction ON Consultation.id_patient = Reaction.id_patient
+                    WHERE Consultation.id_patient = $id_patient";
+
+            $result = $connection->query($sql);
+
+            // Afficher les résultats dans un tableau HTML
             if ($result->num_rows > 0) {
                 $row = $result->fetch_assoc();
                 echo "<h2>History of consultations for the patient : " . htmlspecialchars($row['patient_nom']) . "</h2>";
@@ -332,18 +372,26 @@
                             <th>Date of Consultation</th>
                             <th>Disease</th>
                             <th>Name Medicine</th>
+                            <th>Side Effect </th>
+                            <th>Add Side Effect</th>
                         </tr>";
                 do {
+                    $medicament_name = isset($medications[$row["id_medicament"]]) ? $medications[$row["id_medicament"]] : 'Unknown';
+                    $effet_secondaire_name = isset($effet_secondaire[$row["side_effect"]]) ? $effet_secondaire[$row["side_effect"]] : 'Unknown';
                     echo "<tr>
                             <td>" . htmlspecialchars($row["date_consult"]) . "</td>
                             <td>" . htmlspecialchars($row["maladie_nom"]) . "</td>
-                            <td>" . htmlspecialchars($row["id_medicament"]) . "</td>
+                            <td>" . htmlspecialchars($medicament_name) . "</td>
+                            <td>" . htmlspecialchars($effet_secondaire_name) . "</td>
+                            <td><a href=add_effect.html >Add Side Effect</a></td>
+            
                         </tr>";
                 } while ($row = $result->fetch_assoc());
                 echo "</table>";
             } else {
                 echo "No data found for this patient.";
             }
+
         }
         ob_end_flush();
         ?>
