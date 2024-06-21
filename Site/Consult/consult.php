@@ -48,17 +48,20 @@
         </div>
 
     </header>
+    <div class="main-content">
     <h1>Consultation </h1>
     <?php
         ob_start();
         if (empty($_SESSION['id_Patient'])){
+            $id_medecin = $_SESSION["id_Medecin"];
         ?>
             <form action="#" method="post">
+            <div class="form-group">
                 <label for="dropdown">Pick a patient :</label>
                 <select name="dropdown" id="dropdown">
+            </div>
                 <?php
-                    $id_medecin = $_SESSION["id_Medecin"];
-                    echo "ahhhhhh $id_medecin";
+                    
                     $sql = "SELECT patient.id_patient, prenom, nom FROM patient 
                             INNER JOIN Consultation ON Consultation.id_patient = patient.id_patient
                             WHERE Consultation.id_medecin = ?";
@@ -153,29 +156,37 @@
             <section class="faq-container">
                 <h3 class="faq-page"> Change patient's informations</h3>
                 <form action="#" method="post" class="faq-body">
-                    <label for="poids">Contraception :</label>
-                    <input type="text" id="contraception" name="contraception" placeholder="Entrez la nouvelle contraception ">
-                    <br>
-                    <label for="taille">Weight :</label>
-                    <input type="text" id="poids" name="poids" placeholder="Entrez la nouveau poids">
-                    <br>
-                    <label for="taille">Height :</label>
-                    <input type="text" id="taille" name="nouvelle_taille" placeholder="Entrez la nouvelle taille">
-                    <br>
-                    <label for="taille">Allergies :</label>
-                    <input type="text" id="allergie" name="allergie" placeholder="Entrez la nouvelle allergie">
+                    <div class="form-group">
+                        <label for="poids">Contraception :</label>
+                        <input type="text" id="contraception" name="contraception" placeholder="Entrez la nouvelle contraception ">
+                    </div>    
                     <br>
                     <div class="form-group">
-                    <label for="job-type">Work</label>
-                    <select id="job-type" name="job-type" >
-                        <option value="" disabled selected>Select your job type</option>
-                        <option value="student">Student</option>
-                        <option value="unemployed">Unemployed</option>
-                        <option value="employed">Employed</option>
-                        <option value="self-employed">Self-employed</option>
-                        <option value="retired">Retired</option>
-                        <option value="other">Other</option>
-                    </select>
+                        <label for="taille">Weight :</label>
+                        <input type="text" id="poids" name="poids" placeholder="Entrez la nouveau poids">
+                    </div>   
+                    <br>
+                    <div class="form-group">
+                        <label for="taille">Height :</label>
+                        <input type="text" id="taille" name="nouvelle_taille" placeholder="Entrez la nouvelle taille">
+                    </div>    
+                    <br>
+                    <div class="form-group">
+                        <label for="taille">Allergies :</label>
+                        <input type="text" id="allergie" name="allergie" placeholder="Entrez la nouvelle allergie">
+                    </div>  
+                    <br>
+                    <div class="form-group">
+                        <label for="job-type">Work</label>
+                        <select id="job-type" name="job-type" >
+                            <option value="" disabled selected>Select your job type</option>
+                            <option value="student">Student</option>
+                            <option value="unemployed">Unemployed</option>
+                            <option value="employed">Employed</option>
+                            <option value="self-employed">Self-employed</option>
+                            <option value="retired">Retired</option>
+                            <option value="other">Other</option>
+                        </select>
                     </div>
                     <div class="form-group">
                         <label for="activite_metier">Job Activity Level</label>
@@ -338,70 +349,85 @@
         ?>
     <br><br><br><br>
     <form action="#" method="post">
-        Symptoms
-        <input type="text" id="form1" placeholder="What are the symptoms ?" name="symptomes" required>
+        <div class="form-group">
+            Symptoms
+            <input type="text" id="form1" placeholder="What are the symptoms ?" name="symptomes" required>
+        </div> 
         <br>
-        <label for="search">Choose a pathology:</label>
-        <input type="text" id="search" name="search" list="suggestions" autocomplete="off">
-        <datalist id="suggestions"></datalist>
-        <script>
-            document.addEventListener("DOMContentLoaded", function() {
-                fetch('../../Analyse/df_medicament.csv')
-                    .then(response => response.text())
-                    .then(data => {
-                        // Séparer les lignes du fichier CSV
-                        let rows = data.split('\n');
-                        
-                        // Enlever la première ligne (l'entête)
-                        rows.shift();
-                        
-                        // Enlever les lignes vides et traiter les données restantes
-                        let options = new Set();
-                        rows.forEach(row => {
-                            let trimmedRow = row.trim();
-                            if (trimmedRow.length > 0) {
-                                let columns = trimmedRow.split(','); // Sépare les colonnes par la virgule
-                                if (columns.length > 1) {
-                                    options.add(columns[1].trim()); // Ajoute la valeur de la colonne 2 à l'ensemble
+        <div class="form-group">
+            <label for="search">Choose a pathology:</label>
+            <input type="text" id="search" name="search" list="suggestions" autocomplete="off">
+            <datalist id="suggestions"></datalist>
+            <script>
+                document.addEventListener("DOMContentLoaded", function() {
+                    fetch('../../Analyse/df_medicament.csv')
+                        .then(response => response.text())
+                        .then(data => {
+                            // Séparer les lignes du fichier CSV
+                            let rows = data.split('\n');
+                            
+                            // Enlever la première ligne (l'entête)
+                            rows.shift();
+                            
+                            // Enlever les lignes vides et traiter les données restantes
+                            let options = new Set();
+                            rows.forEach(row => {
+                                let trimmedRow = row.trim();
+                                if (trimmedRow.length > 0) {
+                                    let columns = trimmedRow.split(','); // Sépare les colonnes par la virgule
+                                    if (columns.length > 1) {
+                                        options.add(columns[1].trim()); // Ajoute la valeur de la colonne 2 à l'ensemble
+                                    }
                                 }
-                            }
-                        });
+                            });
 
-                        // Créer les options dans le datalist
-                        let datalist = document.getElementById('suggestions');
-                        options.forEach(item => {
-                            let option = document.createElement('option');
-                            option.value = item;
-                            datalist.appendChild(option);
+                            // Créer les options dans le datalist
+                            let datalist = document.getElementById('suggestions');
+                            options.forEach(item => {
+                                let option = document.createElement('option');
+                                option.value = item;
+                                datalist.appendChild(option);
+                            });
                         });
-                    });
-            });
-        </script>
+                });
+            </script>
+        </div>
         <br>
-        Cause of illness 
-        <input type="text" id="form1" placeholder="Cause of illness ?" name="cause">
+        <div class="form-group">
+            Cause of illness 
+            <input type="text" id="form1" placeholder="Cause of illness ?" name="cause">
+        </div>
         <br>
-        Is it a hereditary disease?
-        <label>
-            <input type="checkbox" id="oui" name="choix" value="oui">
-            Yes
-        </label>
+        <div class="form-group">
+            Is it a hereditary disease?
+            <label>
+                <input type="checkbox" id="oui" name="choix" value="oui">
+                Yes
+            </label>
 
-        <label>
-            <input type="checkbox" id="non" name="choix" value="non">
-            No
-        </label>
+            <label>
+                <input type="checkbox" id="non" name="choix" value="non">
+                No
+            </label>
+        </div>
         <br>
-        <label for="date">Start Date :</label>
-        <input type="date" id="date" name="date_d" required>
-        <label for="date">End Date :</label>
-        <input type="date" id="date" name="date_f" required>
+        <div class="form-group">
+            <label for="date">Start Date :</label>
+            <input type="date" id="date" name="date_d" required>
+        </div>
+        <div class="form-group">
+            <label for="date">End Date :</label>
+            <input type="date" id="date" name="date_f" required>
+        </div>
         <br>
-        Link to another disease
-        <input type="text" id="form1" placeholder="Corrélation maladie ?" name="correlation">
+        <div class="form-group">
+            Link to another disease
+            <input type="text" id="form1" placeholder="Corrélation maladie ?" name="correlation">
+        </div>
         <br>
-        <button type="submit" name="consult">Sing In</button>
+        <button type="submit" name="consult">Find medecine</button>
     </form>
+    </div>
     <?php
     ob_start();
     // Vérifier si une option a été sélectionnée
