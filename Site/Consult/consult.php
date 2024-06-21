@@ -43,7 +43,7 @@
     <header>
         <div class="Menu">
             <ul class="menu">
-                <li class="menuli"><a href="../Accueil/accueil.html">Go back</a></li>
+                <li class="menuli"><a href="../Accueil/homepage.html">Go back</a></li>
             </ul>
         </div>
 
@@ -58,6 +58,7 @@
                 <select name="dropdown" id="dropdown">
                 <?php
                     $id_medecin = $_SESSION["id_Medecin"];
+                    echo "ahhhhhh $id_medecin";
                     $sql = "SELECT patient.id_patient, prenom, nom FROM patient 
                             INNER JOIN Consultation ON Consultation.id_patient = patient.id_patient
                             WHERE Consultation.id_medecin = ?";

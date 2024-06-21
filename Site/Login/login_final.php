@@ -37,7 +37,7 @@ if (isset($_POST['signin'])) {
         $row = $result->fetch_assoc();
         $_SESSION["id_Medecin"] = $row['id'];
         $_SESSION['Nom_medecin'] = $row['nom'];
-        header("Location: ../Accueil/homepage.html");
+        header("Location: ../Login/password.html");
     } else {
         echo 'Invalid username or password, please try again';
     }
