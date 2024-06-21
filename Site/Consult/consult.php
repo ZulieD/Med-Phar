@@ -43,7 +43,7 @@
     <header>
         <div class="Menu">
             <ul class="menu">
-                <li class="menuli"><a href="../Accueil/accueil.php">Go back</a></li>
+                <li class="menuli"><a href="../Accueil/accueil.html">Go back</a></li>
             </ul>
         </div>
 
