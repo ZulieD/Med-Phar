@@ -58,19 +58,13 @@ create table Consultation (
     foreign key (id_maladie) references Maladie(id)
 ) ;
 
-create table Effet_secondaire(
-    id int primary key,
-    nom varchar(50),
-    duree varchar(50),
-    frequence varchar(100)
-);
+
 create table Reaction(
     id int primary key,
     id_medicament int, 
     id_patient int,
     id_effet_secondaire int,
-    foreign key (id_patient) references Patient(id_patient),
-    foreign key (id_effet_secondaire) references Effet_secondaire(id)
+    foreign key (id_patient) references Patient(id_patient)
 );
 
 INSERT INTO adresse_cabinet (id, numero, rue, ville, Departement, Pays) VALUES
@@ -105,11 +99,6 @@ INSERT INTO Consultation (id, date_consult, id_medecin, id_patient, id_maladie) 
 (4, '2024-06-15', 1, 4, 4),
 (5, '2024-06-16', 2, 5, 5);
 
-INSERT INTO Effet_secondaire (id, nom, duree, frequence) VALUES
-(1, 'Nausées', '1-2 jours', 'Fréquent'),
-(2, 'Somnolence', 'quelques heures', 'Occasionnel'),
-(3, 'Réaction allergique', 'variable', 'Rare'),
-(4, 'Vertiges', 'quelques minutes à heures', 'Occasionnel');
 
 INSERT INTO Reaction (id, id_medicament, id_patient, id_effet_secondaire) VALUES
 (1, 1, 1, 1),  -- Patient 1 a eu l'effet secondaire 'Nausées'

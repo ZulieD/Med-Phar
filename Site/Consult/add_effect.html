@@ -4,10 +4,10 @@
 	<title> Consultation </title> <!--Nom de la page -->
 
 	<link rel= "stylesheet" href="../styles.css">
-    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.0/papaparse.min.js"></script>
 </head>
 <body>
-    <form method="POST" action="">
+    <form method="POST" action="add_effect.php ">
         <input list="suggestions" id="inputField" name="search" placeholder="Type to search...">
         <datalist id="suggestions"></datalist>
         <input type="hidden" id="hiddenField" name="column2_value">
@@ -19,38 +19,32 @@
             fetch('../../Analyse/df_effet_secondaire.csv')
                 .then(response => response.text())
                 .then(data => {
-                    // Séparer les lignes du fichier CSV
-                    let rows = data.split('\n');
-                    
-                    // Enlever la première ligne (l'entête)
-                    rows.shift();
-                    
-                    // Enlever les lignes vides et traiter les données restantes
-                    let options = {};
-                    rows.forEach(row => {
-                        let trimmedRow = row.trim();
-                        if (trimmedRow.length > 0) {
-                            let columns = trimmedRow.split(','); // Sépare les colonnes par la virgule
-                            if (columns.length > 2) {
-                                options[columns[0].trim()] = columns[2].trim(); // Stocke la paire colonne 0 -> colonne 2
+                    Papa.parse(data, {
+                        header: true,
+                        skipEmptyLines: true,
+                        complete: function(results) {
+                            let options = {};
+                            results.data.forEach(row => {
+                                options[row.PT_NAME_FR.trim()] = row.id_effet_secondaire.trim();
+                            });
+        
+                            // Créer les options dans le datalist
+                            let datalist = document.getElementById('suggestions');
+                            for (let key in options) {
+                                let option = document.createElement('option');
+                                option.value = key;
+                                datalist.appendChild(option);
                             }
+        
+                            // Ajouter un événement pour mettre à jour le champ caché lors de la sélection
+                            document.getElementById('inputField').addEventListener('input', function() {
+                                let inputValue = this.value;
+                                document.getElementById('hiddenField').value = options[inputValue] || '';
+                            });
                         }
-                    });
-
-                    // Créer les options dans le datalist
-                    let datalist = document.getElementById('suggestions');
-                    for (let key in options) {
-                        let option = document.createElement('option');
-                        option.value = key;
-                        datalist.appendChild(option);
-                    }
-
-                    // Ajouter un événement pour mettre à jour le champ caché lors de la sélection
-                    document.getElementById('inputField').addEventListener('input', function() {
-                        let inputValue = this.value;
-                        document.getElementById('hiddenField').value = options[inputValue] || '';
                     });
                 });
         });
-    </script>
+        </script>
+        
 </body>

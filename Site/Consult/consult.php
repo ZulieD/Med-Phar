@@ -376,6 +376,8 @@
                             <th>Add Side Effect</th>
                         </tr>";
                 do {
+                    $id_medicament= $row["id_medicament"];
+                    $_SESSION['id_medicament']=$id_medicament;
                     $medicament_name = isset($medications[$row["id_medicament"]]) ? $medications[$row["id_medicament"]] : 'Unknown';
                     $effet_secondaire_name = isset($effet_secondaire[$row["side_effect"]]) ? $effet_secondaire[$row["side_effect"]] : 'Unknown';
                     echo "<tr>
