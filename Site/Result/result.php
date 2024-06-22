@@ -29,6 +29,7 @@
         
         return $uniqueId;
     }
+    $_SESSION['id_medicament']= null;
 ?>
 
 <!DOCTYPE html>
@@ -177,8 +178,13 @@
     <?php
     if (isset($_POST['consult'])) {
         $medicament=$_POST["search"];
+        echo $medicament;
         $id_medicament=$_POST['column2_value'];
+        echo $id_medicament;
+        
+        $_SESSION['medicament']=$medicament;
         $_SESSION['id_medicament'] = $id_medicament;
+        echo $_SESSION['id_medicament'];
         $id_patient = $_SESSION["id_Patient"];
 
         //echo $medicament;
@@ -205,24 +211,42 @@
     <?php
     if (isset($_POST['valid'])) {
 
+        $medicament=$_SESSION['medicament'];
         $id_maladie = $_SESSION["id_Maladie"];
         $id_unique = generateUniqueId($connection);
         $date_consult = date('Y-m-d'); // Par exemple, la date actuelle
         $id_medecin = $_SESSION["id_Medecin"];
         $id_patient = $_SESSION['id_Patient'];
         $id_medicament=$_SESSION['id_medicament'];
+        echo $id_medicament;
+        echo $id_maladie;
         $sql_update = "UPDATE Maladie SET id_medicament = ? WHERE id = ?";
         $stmt_update = $connection->prepare($sql_update);
         $stmt_update->bind_param("ii", $id_medicament, $id_maladie);
+        if ($stmt_update->execute()) {
+            echo "Mise à jour réussie<br>";
+        } else {
+            echo "Erreur lors de la mise à jour : " . $stmt_update->error . "<br>";
+        }
         $stmt_update->close();
 
-        $sql="INSERT into Consultation (id, date_consult, id_medecin, id_patient, id_maladie) values ( ?,?,?,?,?)";
+        $sql="SELECT * from Consultation where date_consult = ? and   id_medecin = ? and  id_patient = ? and  id_maladie = ?";
         $stmt = $connection->prepare($sql);
-        $stmt->bind_param("isiii", $id_unique, $date_consult, $id_medecin, $id_patient, $id_maladie);
+        $stmt->bind_param("siii", $date_consult, $id_medecin, $id_patient, $id_maladie);
         $stmt->execute();
+        $result = $stmt->get_result();
+                    
+        if ($result->num_rows == 0) {
+            $sql="INSERT into Consultation (id, date_consult, id_medecin, id_patient, id_maladie) values ( ?,?,?,?,?)";
+            $stmt = $connection->prepare($sql);
+            $stmt->bind_param("isiii", $id_unique, $date_consult, $id_medecin, $id_patient, $id_maladie);
+            $stmt->execute();
+            $stmt->close();
+        }
+
         echo $medicament, ' prescrit';
         // Fermer le statement
-        $stmt->close();
+        
     }
     ?>
     <li class="menuli"><a href="../Accueil/homepage.html">Finish prescription</a></li>
