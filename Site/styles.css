@@ -94,6 +94,9 @@ body {
     margin: 20px auto;
     transition: all 0.3s ease;
 }
+.hidden {
+    display: none;
+}
 
 .form-container:hover {
     box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);

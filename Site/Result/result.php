@@ -195,6 +195,11 @@
         $sql="SELECT * from patient where id_patient= $id_patient";
         $result_3=$connection->query($sql);
         
+        ?>
+        <img src="repartition_desability.png" alt="Description de l'image">
+        <img src="repartition_mort.png" alt="Description de l'image">
+        <img src="repartition_sexe.png" alt="Description de l'image">
+        <?php
         if ($result_3->num_rows > 0) {
             $row_3 = $result_3->fetch_assoc();
 
