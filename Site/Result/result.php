@@ -29,7 +29,7 @@
         
         return $uniqueId;
     }
-    $_SESSION['id_medicament']= null;
+    
 ?>
 
 <!DOCTYPE html>
@@ -177,14 +177,18 @@
     </script>
     <?php
     if (isset($_POST['consult'])) {
-        $medicament=$_POST["search"];
-        echo $medicament;
-        $id_medicament=$_POST['column2_value'];
-        echo $id_medicament;
-        
-        $_SESSION['medicament']=$medicament;
+        $medicament = $_POST["search"];
+        $id_medicament = $_POST['column2_value'];
+
+        // Stockage dans les variables de session
+        $_SESSION['medicament'] = $medicament;
         $_SESSION['id_medicament'] = $id_medicament;
-        echo $_SESSION['id_medicament'];
+
+        // Affichage des valeurs des sessions pour débogage
+        echo "Session Médicament: " . $_SESSION['medicament'] . "<br>";
+        echo "Session ID Médicament: " . $_SESSION['id_medicament'] . "<br>";
+
+        // Récupération de l'ID du patient
         $id_patient = $_SESSION["id_Patient"];
 
         //echo $medicament;
@@ -211,6 +215,8 @@
     <?php
     if (isset($_POST['valid'])) {
 
+        echo "Session Médicament: " . $_SESSION['medicament'] . "<br>";
+        echo "Session ID Médicament: " . $_SESSION['id_medicament'] . "<br>";
         $medicament=$_SESSION['medicament'];
         $id_maladie = $_SESSION["id_Maladie"];
         $id_unique = generateUniqueId($connection);
