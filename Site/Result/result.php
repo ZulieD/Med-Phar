@@ -196,88 +196,72 @@
         $result_3=$connection->query($sql);
         
         ?>
-        <h2>Répartition par sexe des utilisations de Diclectin</h2>
-        <canvas id="genderChart" width="40" height="40"></canvas>
+        <canvas id="genderChart"></canvas>
         
-        <h2>Répartition des décès de Diclectin</h2>
-        <canvas id="deathChart" width="40" height="40"></canvas>
+        <canvas id="deathChart"></canvas>
         
-        <h2>Anomalies congénitales de Diclectin</h2>
-        <canvas id="anomalyChart" width="40" height="40"></canvas>
+        <canvas id="anomalyChart"></canvas>
+            <?php
 
-        <script>
-            document.addEventListener('DOMContentLoaded', function() {
-            // Gender Chart
-            var genderCtx = document.getElementById('genderChart').getContext('2d');
-            var genderChart = new Chart(genderCtx, {
-                type: 'pie',
-                data: {
-                labels: ['Homme', 'Femme'],
-                datasets: [{
-                    data: [12, 8],  // Remplacer par les valeurs réelles de `sexe_counts`
-                    backgroundColor: ['lightblue', 'lightpink'],
-                    hoverOffset: 4
-                }]
-                },
-                options: {
-                plugins: {
-                    title: {
-                    display: true,
-                    text: 'Répartition par sexe des utilisations de Diclectin'
-                    }
-                }
-                }
-            });
+                echo "<script>
+                var medicament = '$medicament';
+                var id_medicament = '$id_medicament';
+                fetch('../../df_patient.csv')
+                    .then(response => response.text())
+                    .then(data => {
+                        let rows = data.split('\\n').map(row => row.split(','));
+                        let headers = rows[0];
+                        rows.shift();
 
-            // Death Chart
-            var deathCtx = document.getElementById('deathChart').getContext('2d');
-            var deathChart = new Chart(deathCtx, {
-                type: 'pie',
-                data: {
-                labels: ['Mort', 'Vivant'],
-                datasets: [{
-                    data: [5, 15],  // Remplacer par les valeurs réelles de `sexe_counts`
-                    backgroundColor: ['red', 'lightgreen'],
-                    hoverOffset: 4
-                }]
-                },
-                options: {
-                plugins: {
-                    title: {
-                    display: true,
-                    text: 'Répartition des décès de Diclectin'
-                    }
-                }
-                }
-            });
+                        let filteredRows = rows.filter(row => row[headers.indexOf('id_medicament')] == id_medicament);
+                        console.log('Filtered Rows:', data);
+                        let genderCounts = { 'Homme': 0, 'Femme': 0 };
+                        let deathCounts = { 'Mort': 0, 'Vivant': 0 };
+                        let anomalyCounts = { 'Oui': 0, 'Non': 0 };
 
-            // Anomaly Chart
-            var anomalyCtx = document.getElementById('anomalyChart').getContext('2d');
-            var anomalyChart = new Chart(anomalyCtx, {
-                type: 'pie',
-                data: {
-                labels: ['Oui', 'Non'],
-                datasets: [{
-                    data: [3, 17],  // Remplacer par les valeurs réelles de `sexe_counts`
-                    backgroundColor: ['pink', 'lightyellow'],
-                    hoverOffset: 4
-                }]
-                },
-                options: {
-                plugins: {
-                    title: {
-                    display: true,
-                    text: 'Anomalies congénitales de Diclectin'
-                    }
-                }
-                }
-            });
-            });
-        </script>
-        <?php
+                        filteredRows.forEach(row => {
+                            let gender = row[headers.indexOf('GENDER_FR_encoded')];
+                            let death = row[headers.indexOf('DEATH')];
+                            let anomaly = row[headers.indexOf('CONGENITAL_ANOMALY')];
 
-        
-        
+                            if (gender === '1.0') genderCounts['Homme']++;
+                            if (gender === '2.0') genderCounts['Femme']++;
+                            if (death === '1.0') deathCounts['Mort']++;
+                            if (death === '0.0') deathCounts['Vivant']++;
+                            if (anomaly === '1.0') anomalyCounts['Oui']++;
+                            if (anomaly === '0.0') anomalyCounts['Non']++;
+                        });
+
+                        createChart('genderChart', genderCounts, 'Répartition par sexe des utilisations de ' + medicament, ['lightblue', 'lightpink']);
+                        createChart('deathChart', deathCounts, 'Répartition des décès de ' + medicament, ['red', 'lightgreen']);
+                        createChart('anomalyChart', anomalyCounts, 'Anomalies congénitales de ' + medicament, ['pink', 'lightyellow']);
+                    });
+
+                function createChart(canvasId, data, title, colors) {
+                    let ctx = document.getElementById(canvasId).getContext('2d');
+                    new Chart(ctx, {
+                        type: 'pie',
+                        data: {
+                            labels: Object.keys(data),
+                            datasets: [{
+                                data: Object.values(data),
+                                backgroundColor: colors,
+                                hoverOffset: 4
+                            }]
+                        },
+                        options: {
+                            plugins: {
+                                title: {
+                                    display: true,
+                                    text: title
+                                }
+                            }
+                        }
+                    });
+                }
+                </script>";
+
+     
     }
     ?>
     <form method="POST" action="">
