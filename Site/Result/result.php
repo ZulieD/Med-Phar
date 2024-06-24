@@ -37,7 +37,7 @@
 	<meta charset="utf-8">
 	<title> Result  </title> <!--Nom de la page -->
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-	<link rel= "stylesheet" href="../styles.css">
+	<link rel= "stylesheet" href="styles_result.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.0/papaparse.min.js"></script>
 </head>
 <body>
@@ -185,8 +185,8 @@
         $_SESSION['id_medicament'] = $id_medicament;
 
         // Affichage des valeurs des sessions pour débogage
-        echo "Session Médicament: " . $_SESSION['medicament'] . "<br>";
-        echo "Session ID Médicament: " . $_SESSION['id_medicament'] . "<br>";
+        echo "Médicament: " . $_SESSION['medicament'] . "<br>";
+        echo "ID Médicament: " . $_SESSION['id_medicament'] . "<br>";
 
         // Récupération de l'ID du patient
         $id_patient = $_SESSION["id_Patient"];
@@ -196,19 +196,85 @@
         $result_3=$connection->query($sql);
         
         ?>
-        <img src="repartition_desability.png" alt="Description de l'image">
-        <img src="repartition_mort.png" alt="Description de l'image">
-        <img src="repartition_sexe.png" alt="Description de l'image">
-        <?php
-        if ($result_3->num_rows > 0) {
-            $row_3 = $result_3->fetch_assoc();
+        <h2>Répartition par sexe des utilisations de Diclectin</h2>
+        <canvas id="genderChart" width="40" height="40"></canvas>
+        
+        <h2>Répartition des décès de Diclectin</h2>
+        <canvas id="deathChart" width="40" height="40"></canvas>
+        
+        <h2>Anomalies congénitales de Diclectin</h2>
+        <canvas id="anomalyChart" width="40" height="40"></canvas>
 
-            $command = escapeshellcmd('python3 test.py ');
-            
-            // Exécution de la commande
-            $output = shell_exec($command);
-            echo "Output: <pre>$output</pre>";
-        }
+        <script>
+            document.addEventListener('DOMContentLoaded', function() {
+            // Gender Chart
+            var genderCtx = document.getElementById('genderChart').getContext('2d');
+            var genderChart = new Chart(genderCtx, {
+                type: 'pie',
+                data: {
+                labels: ['Homme', 'Femme'],
+                datasets: [{
+                    data: [12, 8],  // Remplacer par les valeurs réelles de `sexe_counts`
+                    backgroundColor: ['lightblue', 'lightpink'],
+                    hoverOffset: 4
+                }]
+                },
+                options: {
+                plugins: {
+                    title: {
+                    display: true,
+                    text: 'Répartition par sexe des utilisations de Diclectin'
+                    }
+                }
+                }
+            });
+
+            // Death Chart
+            var deathCtx = document.getElementById('deathChart').getContext('2d');
+            var deathChart = new Chart(deathCtx, {
+                type: 'pie',
+                data: {
+                labels: ['Mort', 'Vivant'],
+                datasets: [{
+                    data: [5, 15],  // Remplacer par les valeurs réelles de `sexe_counts`
+                    backgroundColor: ['red', 'lightgreen'],
+                    hoverOffset: 4
+                }]
+                },
+                options: {
+                plugins: {
+                    title: {
+                    display: true,
+                    text: 'Répartition des décès de Diclectin'
+                    }
+                }
+                }
+            });
+
+            // Anomaly Chart
+            var anomalyCtx = document.getElementById('anomalyChart').getContext('2d');
+            var anomalyChart = new Chart(anomalyCtx, {
+                type: 'pie',
+                data: {
+                labels: ['Oui', 'Non'],
+                datasets: [{
+                    data: [3, 17],  // Remplacer par les valeurs réelles de `sexe_counts`
+                    backgroundColor: ['pink', 'lightyellow'],
+                    hoverOffset: 4
+                }]
+                },
+                options: {
+                plugins: {
+                    title: {
+                    display: true,
+                    text: 'Anomalies congénitales de Diclectin'
+                    }
+                }
+                }
+            });
+            });
+        </script>
+        <?php
 
         
         
