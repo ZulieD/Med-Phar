@@ -1,0 +1,744 @@
+REPORT_ID,id_medicament,drug_name,indication_name,id_effet_secondaire,effect_name,soc_name
+300603,374,LABETALOL,Pression artérielle augmentée,111,Dyspnee,"Affections respiratoires, thoraciques et mediastinales"
+300603,374,LABETALOL,Pression artérielle augmentée,717,Saturation en oxygene diminuee,Investigations
+327158,1203,WELLBUTRIN XL,Dépression,1905,Desequilibre electrolytique,Troubles du metabolisme et de la nutrition
+327158,1203,WELLBUTRIN XL,Dépression,836,Crise tonicoclonique generalisee,Affections du systeme nerveux
+336011,1328,PAXIL TAB 20MG,Dépression,538,Idees suicidaires,Affections psychiatriques
+336011,1328,PAXIL TAB 20MG,Dépression,1566,Trouble bipolaire,Affections psychiatriques
+336011,1328,PAXIL TAB 20MG,Dépression,326,Affection aggravee,Troubles generaux et anomalies au site d'administration
+336011,1328,PAXIL TAB 20MG,Dépression,161,Cephalee,Affections du systeme nerveux
+336011,1328,PAXIL TAB 20MG,Dépression,170,Douleur,Troubles generaux et anomalies au site d'administration
+336011,1328,PAXIL TAB 20MG,Dépression,793,Syndrome de sevrage,Troubles generaux et anomalies au site d'administration
+336839,2190,PRISTIQ,Dépression,62,Nausee,Affections gastro-intestinales
+336839,2190,PRISTIQ,Dépression,536,Colere,Affections psychiatriques
+336839,2190,PRISTIQ,Dépression,47,Defauts visuels,Affections oculaires
+336839,2190,PRISTIQ,Dépression,157,Insomnie,Affections psychiatriques
+336839,2190,PRISTIQ,Dépression,785,Raªves anormaux,Affections psychiatriques
+336839,2190,PRISTIQ,Dépression,33,Irritabilite,Affections psychiatriques
+336839,2190,PRISTIQ,Dépression,540,Agression,Affections psychiatriques
+336839,2190,PRISTIQ,Dépression,673,Idees d'homicide,Affections psychiatriques
+336839,2190,PRISTIQ,Dépression,1434,Sensation de commotion electrique,Affections du systeme nerveux
+336839,2190,PRISTIQ,Dépression,148,Perturbation des mouvements,Affections du systeme nerveux
+336839,2190,PRISTIQ,Dépression,185,Labilite affective,Affections psychiatriques
+336839,2190,PRISTIQ,Dépression,162,Contractions fasciculaires,Affections musculosquelettiques et du tissu conjonctif
+336839,2190,PRISTIQ,Dépression,146,Troubles de la demarche,Troubles generaux et anomalies au site d'administration
+336839,2190,PRISTIQ,Dépression,271,Trouble de l'equilibre,Affections du systeme nerveux
+336839,2190,PRISTIQ,Dépression,230,Chute,"Lesions, intoxications et complications d'interventions"
+336839,2190,PRISTIQ,Dépression,155,Trouble de la parole,Affections du systeme nerveux
+336839,2190,PRISTIQ,Dépression,726,atouffement,"Affections respiratoires, thoraciques et mediastinales"
+336839,2190,PRISTIQ,Dépression,218,Sensation d'etat anormal,Troubles generaux et anomalies au site d'administration
+336839,2190,PRISTIQ,Dépression,943,Paranoia,Affections psychiatriques
+336839,2190,PRISTIQ,Dépression,50,Coordination anormale,Affections du systeme nerveux
+336839,2190,PRISTIQ,Dépression,1595,Changement de traitement,Actes medicaux et chirurgicaux
+336839,2190,PRISTIQ,Dépression,793,Syndrome de sevrage,Troubles generaux et anomalies au site d'administration
+336839,2190,PRISTIQ,Dépression,534,Desinhibition,Affections psychiatriques
+336839,2190,PRISTIQ,Dépression,515,Amnesie,Affections du systeme nerveux
+336839,2190,PRISTIQ,Dépression,30,Hypotension,Affections vasculaires
+336839,2190,PRISTIQ,Dépression,803,Manie,Affections psychiatriques
+336839,2190,PRISTIQ,Dépression,156,Sensation vertigineuse,Affections du systeme nerveux
+336839,2190,PRISTIQ,Dépression,1811,Appetit augmente,Troubles du metabolisme et de la nutrition
+343122,1772,SANDOZ BUPROPION SR,Dépression,211,Alopecie,Affections de la peau et du tissu sous-cutane
+348221,534,VENLAFAXINE XR,Dépression,751,Tentative de suicide,Affections psychiatriques
+352108,1331,PAXIL,Dépression,1469,Tension musculaire,Affections musculosquelettiques et du tissu conjonctif
+352108,1331,PAXIL,Dépression,162,Contractions fasciculaires,Affections musculosquelettiques et du tissu conjonctif
+352108,1331,PAXIL,Dépression,1940,Torticolis,Affections musculosquelettiques et du tissu conjonctif
+352108,1331,PAXIL,Dépression,3516,Spasme oropharynge,"Affections respiratoires, thoraciques et mediastinales"
+352108,1331,PAXIL,Dépression,532,Dyskinesie,Affections du systeme nerveux
+363266,3908,WELLBUTRIN,Dépression,836,Crise tonicoclonique generalisee,Affections du systeme nerveux
+365986,67,FLUOXETINE,Dépression,278,Dystonie,Affections du systeme nerveux
+365986,67,FLUOXETINE,Dépression,194,atat confusionnel,Affections psychiatriques
+365986,67,FLUOXETINE,Dépression,62,Nausee,Affections gastro-intestinales
+365986,67,FLUOXETINE,Dépression,71,Myalgie,Affections musculosquelettiques et du tissu conjonctif
+401976,552,CITALOPRAM,Dépression,221,Depression,Affections psychiatriques
+401976,552,CITALOPRAM,Dépression,284,Probleme de substitution du produit,Problemes de produit
+401976,552,CITALOPRAM,Dépression,326,Affection aggravee,Troubles generaux et anomalies au site d'administration
+435507,6795,ZOLOFT,Dépression périnatale,803,Manie,Affections psychiatriques
+435507,6795,ZOLOFT,Dépression périnatale,1170,Tachyphrenie,Affections psychiatriques
+435507,6795,ZOLOFT,Dépression périnatale,770,Hallucination,Affections psychiatriques
+442748,1755,SERTRALINE,Dépression,177,Anxiete,Affections psychiatriques
+442748,1755,SERTRALINE,Dépression,751,Tentative de suicide,Affections psychiatriques
+442748,1755,SERTRALINE,Dépression,674,Automutilation intentionnelle,Affections psychiatriques
+442748,1755,SERTRALINE,Dépression,221,Depression,Affections psychiatriques
+442748,1755,SERTRALINE,Dépression,125,Pleurs,Troubles generaux et anomalies au site d'administration
+442748,1755,SERTRALINE,Dépression,943,Paranoia,Affections psychiatriques
+442748,1755,SERTRALINE,Dépression,582,Attaque de panique,Affections psychiatriques
+442748,1755,SERTRALINE,Dépression,161,Cephalee,Affections du systeme nerveux
+442748,1755,SERTRALINE,Dépression,964,Sentiment de desespoir,Affections psychiatriques
+442748,1755,SERTRALINE,Dépression,178,Hyperhidrose,Affections de la peau et du tissu sous-cutane
+443636,501,CYMBALTA,Dépression,94,Tremblement,Affections du systeme nerveux
+443636,501,CYMBALTA,Dépression,130,Syndrome des jambes sans repos,Affections du systeme nerveux
+443636,501,CYMBALTA,Dépression,62,Nausee,Affections gastro-intestinales
+443636,501,CYMBALTA,Dépression,68,Vomissement,Affections gastro-intestinales
+443636,501,CYMBALTA,Dépression,161,Cephalee,Affections du systeme nerveux
+443636,501,CYMBALTA,Dépression,197,Fievre,Troubles generaux et anomalies au site d'administration
+443636,501,CYMBALTA,Dépression,793,Syndrome de sevrage,Troubles generaux et anomalies au site d'administration
+443636,501,CYMBALTA,Dépression,1434,Sensation de commotion electrique,Affections du systeme nerveux
+443636,501,CYMBALTA,Dépression,139,Hypoesthesie,Affections du systeme nerveux
+443636,501,CYMBALTA,Dépression,157,Insomnie,Affections psychiatriques
+443636,501,CYMBALTA,Dépression,153,Diarrhee,Affections gastro-intestinales
+443636,501,CYMBALTA,Dépression,70,Appetit diminue,Troubles du metabolisme et de la nutrition
+460498,552,CITALOPRAM,Dépression,431,Palpitations,Affections cardiaques
+460498,552,CITALOPRAM,Dépression,156,Sensation vertigineuse,Affections du systeme nerveux
+460498,552,CITALOPRAM,Dépression,1811,Appetit augmente,Troubles du metabolisme et de la nutrition
+460498,552,CITALOPRAM,Dépression,3223,Mesusage intentionnel du produit,"Lesions, intoxications et complications d'interventions"
+460498,552,CITALOPRAM,Dépression,66,Poids augmente,Investigations
+470943,1828,PMS-VENLAFAXINE XR,Dépression,250,Incontinence urinaire,Affections du rein et des voies urinaires
+472835,6072,DULOXETINE HYDROCHLORIDE,Dépression,70,Appetit diminue,Troubles du metabolisme et de la nutrition
+472835,6072,DULOXETINE HYDROCHLORIDE,Dépression,1935,Probleme d'omission d'administration,"Lesions, intoxications et complications d'interventions"
+472835,6072,DULOXETINE HYDROCHLORIDE,Dépression,161,Cephalee,Affections du systeme nerveux
+472835,6072,DULOXETINE HYDROCHLORIDE,Dépression,157,Insomnie,Affections psychiatriques
+472835,6072,DULOXETINE HYDROCHLORIDE,Dépression,139,Hypoesthesie,Affections du systeme nerveux
+472835,6072,DULOXETINE HYDROCHLORIDE,Dépression,62,Nausee,Affections gastro-intestinales
+472835,6072,DULOXETINE HYDROCHLORIDE,Dépression,263,Paresthesie,Affections du systeme nerveux
+472835,6072,DULOXETINE HYDROCHLORIDE,Dépression,197,Fievre,Troubles generaux et anomalies au site d'administration
+472835,6072,DULOXETINE HYDROCHLORIDE,Dépression,130,Syndrome des jambes sans repos,Affections du systeme nerveux
+472835,6072,DULOXETINE HYDROCHLORIDE,Dépression,94,Tremblement,Affections du systeme nerveux
+472835,6072,DULOXETINE HYDROCHLORIDE,Dépression,68,Vomissement,Affections gastro-intestinales
+472835,6072,DULOXETINE HYDROCHLORIDE,Dépression,793,Syndrome de sevrage,Troubles generaux et anomalies au site d'administration
+472835,6072,DULOXETINE HYDROCHLORIDE,Dépression,323,Vision trouble,Affections oculaires
+472835,6072,DULOXETINE HYDROCHLORIDE,Dépression,3223,Mesusage intentionnel du produit,"Lesions, intoxications et complications d'interventions"
+472835,6072,DULOXETINE HYDROCHLORIDE,Dépression,153,Diarrhee,Affections gastro-intestinales
+475352,3908,WELLBUTRIN,Dépression,538,Idees suicidaires,Affections psychiatriques
+475352,3908,WELLBUTRIN,Dépression,253,Trouble psychotique,Affections psychiatriques
+487610,473,CIPRALEX   -10MG,Dépression,69,Fatigue,Troubles generaux et anomalies au site d'administration
+487610,473,CIPRALEX   -10MG,Dépression,62,Nausee,Affections gastro-intestinales
+487610,473,CIPRALEX   -10MG,Dépression,33,Irritabilite,Affections psychiatriques
+487610,473,CIPRALEX   -10MG,Dépression,538,Idees suicidaires,Affections psychiatriques
+487610,473,CIPRALEX   -10MG,Dépression,70,Appetit diminue,Troubles du metabolisme et de la nutrition
+487610,473,CIPRALEX   -10MG,Dépression,964,Sentiment de desespoir,Affections psychiatriques
+487610,473,CIPRALEX   -10MG,Dépression,358,Perturbation de l'attention,Affections du systeme nerveux
+487610,473,CIPRALEX   -10MG,Dépression,175,Trouble affectif,Affections psychiatriques
+494140,742,CIPRALEX,Dépression,1682,Pression intracra¢nienne augmentee,Affections du systeme nerveux
+494140,742,CIPRALEX,Dépression,492,Oedeme papillaire,Affections oculaires
+494140,742,CIPRALEX,Dépression,161,Cephalee,Affections du systeme nerveux
+494140,742,CIPRALEX,Dépression,323,Vision trouble,Affections oculaires
+495005,1054,WELLBUTRIN SR,Dépression,751,Tentative de suicide,Affections psychiatriques
+507338,2190,PRISTIQ,Dépression,452,Mydriase,Affections oculaires
+507338,2190,PRISTIQ,Dépression,156,Sensation vertigineuse,Affections du systeme nerveux
+507338,2190,PRISTIQ,Dépression,54,Intervalle QT prolonge a  l'electrocardiogramme,Investigations
+507338,2190,PRISTIQ,Dépression,191,Syndrome serotoninergique,Affections du systeme nerveux
+507338,2190,PRISTIQ,Dépression,538,Idees suicidaires,Affections psychiatriques
+507338,2190,PRISTIQ,Dépression,919,Lipase augmentee,Investigations
+507338,2190,PRISTIQ,Dépression,704,Amylase augmentee,Investigations
+507338,2190,PRISTIQ,Dépression,3017,Gaz carbonique augmente,Investigations
+507338,2190,PRISTIQ,Dépression,70,Appetit diminue,Troubles du metabolisme et de la nutrition
+520604,8924,BUPROPION,Traitement antidépressif,753,Pensee anormale,Affections psychiatriques
+520604,8924,BUPROPION,Traitement antidépressif,538,Idees suicidaires,Affections psychiatriques
+539185,1203,WELLBUTRIN XL,Dépression,177,Anxiete,Affections psychiatriques
+539185,1203,WELLBUTRIN XL,Dépression,70,Appetit diminue,Troubles du metabolisme et de la nutrition
+539185,1203,WELLBUTRIN XL,Dépression,346,Douleur abdominale,Affections gastro-intestinales
+539185,1203,WELLBUTRIN XL,Dépression,326,Affection aggravee,Troubles generaux et anomalies au site d'administration
+539679,8924,BUPROPION,Traitement antidépressif,42,Convulsion,Affections du systeme nerveux
+539679,8924,BUPROPION,Traitement antidépressif,1373,Luxation articulaire,"Lesions, intoxications et complications d'interventions"
+549543,9780,WELLBUTRIN SR,Trouble dépressif persistant,327,Pression intraoculaire augmentee,Investigations
+552140,3551,MIRTAZAPINE,Dépression majeure,751,Tentative de suicide,Affections psychiatriques
+552140,3551,MIRTAZAPINE,Dépression majeure,695,Surdosage intentionnel,"Lesions, intoxications et complications d'interventions"
+583957,1203,WELLBUTRIN XL,Dépression,1996,Baisse de l'acuite visuelle,Affections oculaires
+594278,66,PROZAC,Dépression,353,Suicide,Affections psychiatriques
+619985,107,TRAZODONE,Dépression,1227,Tumefaction,Troubles generaux et anomalies au site d'administration
+619985,107,TRAZODONE,Dépression,1032,Maladie de Crohn,Affections gastro-intestinales
+619985,107,TRAZODONE,Dépression,2031,acoulement purulent,Infections et infestations
+619985,107,TRAZODONE,Dépression,1711,Perforation intestinale,Affections gastro-intestinales
+619985,107,TRAZODONE,Dépression,1732,Abces anal,Infections et infestations
+619985,107,TRAZODONE,Dépression,891,Inflammation,Troubles generaux et anomalies au site d'administration
+619985,107,TRAZODONE,Dépression,916,Colite ulcereuse,Affections gastro-intestinales
+619985,107,TRAZODONE,Dépression,1386,Plaie suintante,"Lesions, intoxications et complications d'interventions"
+619985,107,TRAZODONE,Dépression,1341,Pharyngite streptococcique,Infections et infestations
+619985,107,TRAZODONE,Dépression,170,Douleur,Troubles generaux et anomalies au site d'administration
+637527,4553,CIPRALEX   -20MG,Dépression,236,Mort subite cardiaque,Troubles generaux et anomalies au site d'administration
+641610,12951,TEVA-ESCITALOPRAM,Dépression,284,Probleme de substitution du produit,Problemes de produit
+641610,12951,TEVA-ESCITALOPRAM,Dépression,538,Idees suicidaires,Affections psychiatriques
+641610,12951,TEVA-ESCITALOPRAM,Dépression,751,Tentative de suicide,Affections psychiatriques
+641610,12951,TEVA-ESCITALOPRAM,Dépression,1078,Reponse therapeutique modifiee,Troubles generaux et anomalies au site d'administration
+646875,13162,CIPRALEX    -5MG,Dépression,69,Fatigue,Troubles generaux et anomalies au site d'administration
+646875,13162,CIPRALEX    -5MG,Dépression,498,Lethargie,Affections du systeme nerveux
+646875,13162,CIPRALEX    -5MG,Dépression,461,Sedation,Affections du systeme nerveux
+650412,13263,SANDOZ ESCITALOPRAM,Dépression,148,Perturbation des mouvements,Affections du systeme nerveux
+650412,13263,SANDOZ ESCITALOPRAM,Dépression,94,Tremblement,Affections du systeme nerveux
+650412,13263,SANDOZ ESCITALOPRAM,Dépression,740,Anomalie de l'oculomotricite,Affections oculaires
+650412,13263,SANDOZ ESCITALOPRAM,Dépression,93,Rigidite musculaire,Affections musculosquelettiques et du tissu conjonctif
+650922,742,CIPRALEX,Dépression,167,Douleur de la ma¢choire,Affections musculosquelettiques et du tissu conjonctif
+650922,742,CIPRALEX,Dépression,3090,Claquement de la ma¢choire,Affections musculosquelettiques et du tissu conjonctif
+652715,501,CYMBALTA,Dépression,63,Inefficacite medicamenteuse,Troubles generaux et anomalies au site d'administration
+652715,501,CYMBALTA,Dépression,170,Douleur,Troubles generaux et anomalies au site d'administration
+652715,501,CYMBALTA,Dépression,582,Attaque de panique,Affections psychiatriques
+652715,501,CYMBALTA,Dépression,177,Anxiete,Affections psychiatriques
+652715,501,CYMBALTA,Dépression,759,Sensation de bra»lure,Affections du systeme nerveux
+652843,2190,PRISTIQ,Dépression,685,Pancytopenie,Affections hematologiques et du systeme lymphatique
+669470,1755,SERTRALINE,Dépression,751,Tentative de suicide,Affections psychiatriques
+673899,67,FLUOXETINE,Dépression,6121,Sarcoidose cutanee,Affections de la peau et du tissu sous-cutane
+673899,67,FLUOXETINE,Dépression,1918,Ulcere cutane,Affections de la peau et du tissu sous-cutane
+676693,5311,ABILIFY,Dépression,1340,Prolactine sanguine augmentee,Investigations
+676842,534,VENLAFAXINE XR,Dépression,1303,Avortement spontane,"Affections gravidiques, puerperales et perinatales"
+697760,8296,LATUDA FILM-COATED TABLETS,Dépression,6330,Dermite solaire,Affections de la peau et du tissu sous-cutane
+697760,8296,LATUDA FILM-COATED TABLETS,Dépression,166,Extremites douloureuses,Affections musculosquelettiques et du tissu conjonctif
+697760,8296,LATUDA FILM-COATED TABLETS,Dépression,1701,Bra»lure solaire,"Lesions, intoxications et complications d'interventions"
+710566,16364,PRO-FLUOXETINE,Dépression majeure,2024,Galactorrhee,Affections des organes de reproduction et du sein
+711688,2023,CIPRALEX   -20MG,Dépression majeure,106,Somnolence,Affections du systeme nerveux
+711688,2023,CIPRALEX   -20MG,Dépression majeure,156,Sensation vertigineuse,Affections du systeme nerveux
+711688,2023,CIPRALEX   -20MG,Dépression majeure,1016,Hypotension orthostatique,Affections vasculaires
+714040,1755,SERTRALINE,Dépression,538,Idees suicidaires,Affections psychiatriques
+714040,1755,SERTRALINE,Dépression,156,Sensation vertigineuse,Affections du systeme nerveux
+714040,1755,SERTRALINE,Dépression,68,Vomissement,Affections gastro-intestinales
+718354,1341,CELEXA 20 MG,Dépression,62,Nausee,Affections gastro-intestinales
+718354,1341,CELEXA 20 MG,Dépression,538,Idees suicidaires,Affections psychiatriques
+718414,445,EFFEXOR XR,Dépression,753,Pensee anormale,Affections psychiatriques
+718414,445,EFFEXOR XR,Dépression,538,Idees suicidaires,Affections psychiatriques
+718414,445,EFFEXOR XR,Dépression,255,Agitation,Affections psychiatriques
+718414,445,EFFEXOR XR,Dépression,177,Anxiete,Affections psychiatriques
+718414,445,EFFEXOR XR,Dépression,2231,anergie augmentee,Troubles generaux et anomalies au site d'administration
+718414,445,EFFEXOR XR,Dépression,326,Affection aggravee,Troubles generaux et anomalies au site d'administration
+718414,445,EFFEXOR XR,Dépression,700,Sautes d'humeur,Affections psychiatriques
+718414,445,EFFEXOR XR,Dépression,65,Detresse emotionnelle,Affections psychiatriques
+718414,445,EFFEXOR XR,Dépression,963,Humeur euphorique,Affections psychiatriques
+718414,445,EFFEXOR XR,Dépression,582,Attaque de panique,Affections psychiatriques
+720318,13000,ESCITALOPRAM,Dépression,69,Fatigue,Troubles generaux et anomalies au site d'administration
+720318,13000,ESCITALOPRAM,Dépression,716,Ictere,Affections hepatobiliaires
+720318,13000,ESCITALOPRAM,Dépression,68,Vomissement,Affections gastro-intestinales
+720318,13000,ESCITALOPRAM,Dépression,62,Nausee,Affections gastro-intestinales
+720953,17145,ANAFRANIL,Dépression,686,Oedemes peripheriques,Troubles generaux et anomalies au site d'administration
+722968,17281,APO-DULOXETINE,Humeur dépressive,582,Attaque de panique,Affections psychiatriques
+722968,17281,APO-DULOXETINE,Humeur dépressive,125,Pleurs,Troubles generaux et anomalies au site d'administration
+722968,17281,APO-DULOXETINE,Humeur dépressive,177,Anxiete,Affections psychiatriques
+722968,17281,APO-DULOXETINE,Humeur dépressive,157,Insomnie,Affections psychiatriques
+722968,17281,APO-DULOXETINE,Humeur dépressive,538,Idees suicidaires,Affections psychiatriques
+722968,17281,APO-DULOXETINE,Humeur dépressive,34,Sensation de nervosite,Troubles generaux et anomalies au site d'administration
+722968,17281,APO-DULOXETINE,Humeur dépressive,106,Somnolence,Affections du systeme nerveux
+724371,1755,SERTRALINE,Dépression,72,Contractures musculaires,Affections musculosquelettiques et du tissu conjonctif
+724371,1755,SERTRALINE,Dépression,453,Ne repond pas aux stimuli,Affections du systeme nerveux
+724371,1755,SERTRALINE,Dépression,43,Diminution du niveau de conscience,Affections du systeme nerveux
+724371,1755,SERTRALINE,Dépression,42,Convulsion,Affections du systeme nerveux
+724371,1755,SERTRALINE,Dépression,467,Raideur musculosquelettique,Affections musculosquelettiques et du tissu conjonctif
+724371,1755,SERTRALINE,Dépression,532,Dyskinesie,Affections du systeme nerveux
+725762,1755,SERTRALINE,Dépression,538,Idees suicidaires,Affections psychiatriques
+725762,1755,SERTRALINE,Dépression,284,Probleme de substitution du produit,Problemes de produit
+725762,1755,SERTRALINE,Dépression,616,Humeur modifiee,Affections psychiatriques
+726996,13000,ESCITALOPRAM,Dépression,716,Ictere,Affections hepatobiliaires
+726996,13000,ESCITALOPRAM,Dépression,68,Vomissement,Affections gastro-intestinales
+726996,13000,ESCITALOPRAM,Dépression,62,Nausee,Affections gastro-intestinales
+726996,13000,ESCITALOPRAM,Dépression,69,Fatigue,Troubles generaux et anomalies au site d'administration
+729591,6419,TEVA-VENLAFAXINE XR,Dépression,284,Probleme de substitution du produit,Problemes de produit
+729591,6419,TEVA-VENLAFAXINE XR,Dépression,63,Inefficacite medicamenteuse,Troubles generaux et anomalies au site d'administration
+729591,6419,TEVA-VENLAFAXINE XR,Dépression,161,Cephalee,Affections du systeme nerveux
+729591,6419,TEVA-VENLAFAXINE XR,Dépression,68,Vomissement,Affections gastro-intestinales
+729591,6419,TEVA-VENLAFAXINE XR,Dépression,62,Nausee,Affections gastro-intestinales
+910747,18996,MYLAN-LAMOTRIGINE,Trouble dépressif persistant,1194,arytheme polymorphe,Affections de la peau et du tissu sous-cutane
+910747,18996,MYLAN-LAMOTRIGINE,Trouble dépressif persistant,432,Angioedeme,Affections de la peau et du tissu sous-cutane
+910747,18996,MYLAN-LAMOTRIGINE,Trouble dépressif persistant,338,Rash,Affections de la peau et du tissu sous-cutane
+910747,18996,MYLAN-LAMOTRIGINE,Trouble dépressif persistant,59,Rash maculopapuleux,Affections de la peau et du tissu sous-cutane
+910747,18996,MYLAN-LAMOTRIGINE,Trouble dépressif persistant,1435,Troubles mentaux,Affections psychiatriques
+910747,18996,MYLAN-LAMOTRIGINE,Trouble dépressif persistant,2772,Ulceration nasale,"Affections respiratoires, thoraciques et mediastinales"
+910747,18996,MYLAN-LAMOTRIGINE,Trouble dépressif persistant,6777,Lesion occupant la cavite orbitaire,Affections oculaires
+910747,18996,MYLAN-LAMOTRIGINE,Trouble dépressif persistant,6778,Greffe de membrane amniotique,Actes medicaux et chirurgicaux
+910747,18996,MYLAN-LAMOTRIGINE,Trouble dépressif persistant,575,Affection buccale,Affections gastro-intestinales
+913160,1203,WELLBUTRIN XL,Dépression,106,Somnolence,Affections du systeme nerveux
+913160,1203,WELLBUTRIN XL,Dépression,540,Agression,Affections psychiatriques
+913160,1203,WELLBUTRIN XL,Dépression,157,Insomnie,Affections psychiatriques
+913160,1203,WELLBUTRIN XL,Dépression,700,Sautes d'humeur,Affections psychiatriques
+913160,1203,WELLBUTRIN XL,Dépression,538,Idees suicidaires,Affections psychiatriques
+920177,6187,VENLAFAXINE XR,Dépression majeure,1332,Pre-eclampsie,"Affections gravidiques, puerperales et perinatales"
+922300,6187,VENLAFAXINE XR,Dépression majeure,1332,Pre-eclampsie,"Affections gravidiques, puerperales et perinatales"
+923640,20760,AVENTYL,Trouble dépressif persistant,53,Tachycardie supraventriculaire,Affections cardiaques
+930819,21536,PMS-SERTRALINE,Dépression,824,Gonflement du visage,Troubles generaux et anomalies au site d'administration
+930819,21536,PMS-SERTRALINE,Dépression,4854,Gonflement du palais,Affections gastro-intestinales
+935476,552,CITALOPRAM,Dépression,752,Tachycardie,Affections cardiaques
+935476,552,CITALOPRAM,Dépression,178,Hyperhidrose,Affections de la peau et du tissu sous-cutane
+935476,552,CITALOPRAM,Dépression,255,Agitation,Affections psychiatriques
+935476,552,CITALOPRAM,Dépression,191,Syndrome serotoninergique,Affections du systeme nerveux
+935476,552,CITALOPRAM,Dépression,197,Fievre,Troubles generaux et anomalies au site d'administration
+935476,552,CITALOPRAM,Dépression,1643,Clonus,Affections du systeme nerveux
+935476,552,CITALOPRAM,Dépression,467,Raideur musculosquelettique,Affections musculosquelettiques et du tissu conjonctif
+936611,795,PMS-CITALOPRAM,Dépression,214,Pression arterielle augmentee,Investigations
+936611,795,PMS-CITALOPRAM,Dépression,429,Arythmie,Affections cardiaques
+936611,795,PMS-CITALOPRAM,Dépression,179,Frequence cardiaque augmentee,Investigations
+936611,795,PMS-CITALOPRAM,Dépression,197,Fievre,Troubles generaux et anomalies au site d'administration
+936611,795,PMS-CITALOPRAM,Dépression,250,Incontinence urinaire,Affections du rein et des voies urinaires
+936611,795,PMS-CITALOPRAM,Dépression,269,Sensation de modification de la temperature corporelle,Troubles generaux et anomalies au site d'administration
+936611,795,PMS-CITALOPRAM,Dépression,69,Fatigue,Troubles generaux et anomalies au site d'administration
+936611,795,PMS-CITALOPRAM,Dépression,131,Ba¢illement,"Affections respiratoires, thoraciques et mediastinales"
+936611,795,PMS-CITALOPRAM,Dépression,62,Nausee,Affections gastro-intestinales
+936611,795,PMS-CITALOPRAM,Dépression,178,Hyperhidrose,Affections de la peau et du tissu sous-cutane
+943073,22505,BUPROPION,Trouble dépressif persistant,63,Inefficacite medicamenteuse,Troubles generaux et anomalies au site d'administration
+943073,22505,BUPROPION,Trouble dépressif persistant,221,Depression,Affections psychiatriques
+943073,22505,BUPROPION,Trouble dépressif persistant,84,Reponse therapeutique diminuee,Troubles generaux et anomalies au site d'administration
+948514,2190,PRISTIQ,Dépression,3918,Anorgasmie,Affections psychiatriques
+948514,2190,PRISTIQ,Dépression,5838,Masse dans l'annexe uterine,Affections des organes de reproduction et du sein
+962494,12951,TEVA-ESCITALOPRAM,Dépression,539,Humeur depressive,Affections psychiatriques
+962494,12951,TEVA-ESCITALOPRAM,Dépression,1337,Brouillard mental,Affections du systeme nerveux
+962494,12951,TEVA-ESCITALOPRAM,Dépression,221,Depression,Affections psychiatriques
+962494,12951,TEVA-ESCITALOPRAM,Dépression,177,Anxiete,Affections psychiatriques
+962659,23559,JAMP-ESCITALOPRAM,Dépression,284,Probleme de substitution du produit,Problemes de produit
+962659,23559,JAMP-ESCITALOPRAM,Dépression,221,Depression,Affections psychiatriques
+962659,23559,JAMP-ESCITALOPRAM,Dépression,177,Anxiete,Affections psychiatriques
+962659,23559,JAMP-ESCITALOPRAM,Dépression,1337,Brouillard mental,Affections du systeme nerveux
+962659,23559,JAMP-ESCITALOPRAM,Dépression,539,Humeur depressive,Affections psychiatriques
+968442,23723,OLANZAPINE,Trouble de l'adaptation avec humeur dépressive et anxiété associée,62,Nausee,Affections gastro-intestinales
+968442,23723,OLANZAPINE,Trouble de l'adaptation avec humeur dépressive et anxiété associée,68,Vomissement,Affections gastro-intestinales
+968442,23723,OLANZAPINE,Trouble de l'adaptation avec humeur dépressive et anxiété associée,6807,Refus alimentaire,Troubles du metabolisme et de la nutrition
+968442,23723,OLANZAPINE,Trouble de l'adaptation avec humeur dépressive et anxiété associée,144,Douleur abdominale haute,Affections gastro-intestinales
+968442,23723,OLANZAPINE,Trouble de l'adaptation avec humeur dépressive et anxiété associée,956,Lithiase biliaire,Affections hepatobiliaires
+968442,23723,OLANZAPINE,Trouble de l'adaptation avec humeur dépressive et anxiété associée,4017,Trouble de la vidange gastrique,Affections gastro-intestinales
+968442,23723,OLANZAPINE,Trouble de l'adaptation avec humeur dépressive et anxiété associée,1230,Hepatite,Affections hepatobiliaires
+968442,23723,OLANZAPINE,Trouble de l'adaptation avec humeur dépressive et anxiété associée,1905,Desequilibre electrolytique,Troubles du metabolisme et de la nutrition
+970817,13000,ESCITALOPRAM,Dépression,751,Tentative de suicide,Affections psychiatriques
+970817,13000,ESCITALOPRAM,Dépression,536,Colere,Affections psychiatriques
+970817,13000,ESCITALOPRAM,Dépression,789,Idee d'automutilation,Affections psychiatriques
+970817,13000,ESCITALOPRAM,Dépression,538,Idees suicidaires,Affections psychiatriques
+976944,24106,ODAN BUPROPION SR,Humeur dépressive,177,Anxiete,Affections psychiatriques
+976944,24106,ODAN BUPROPION SR,Humeur dépressive,132,Pa¢leur,Affections vasculaires
+976944,24106,ODAN BUPROPION SR,Humeur dépressive,42,Convulsion,Affections du systeme nerveux
+981242,17902,RAN-BUPROPION XL,Dépression,279,Prurit,Affections de la peau et du tissu sous-cutane
+981242,17902,RAN-BUPROPION XL,Dépression,338,Rash,Affections de la peau et du tissu sous-cutane
+982282,13000,ESCITALOPRAM,Dépression,360,Surdosage,"Lesions, intoxications et complications d'interventions"
+982282,13000,ESCITALOPRAM,Dépression,42,Convulsion,Affections du systeme nerveux
+995465,1755,SERTRALINE,Dépression,178,Hyperhidrose,Affections de la peau et du tissu sous-cutane
+995465,1755,SERTRALINE,Dépression,207,Frissons,Troubles generaux et anomalies au site d'administration
+995465,1755,SERTRALINE,Dépression,752,Tachycardie,Affections cardiaques
+995465,1755,SERTRALINE,Dépression,318,Syncope,Affections du systeme nerveux
+995465,1755,SERTRALINE,Dépression,156,Sensation vertigineuse,Affections du systeme nerveux
+1030284,27009,ESCITALOPRAM,Symptôme dépressif,1434,Sensation de commotion electrique,Affections du systeme nerveux
+1030284,27009,ESCITALOPRAM,Symptôme dépressif,1337,Brouillard mental,Affections du systeme nerveux
+1030284,27009,ESCITALOPRAM,Symptôme dépressif,274,Vertige,Affections de l'oreille et du labyrinthe
+1030284,27009,ESCITALOPRAM,Symptôme dépressif,177,Anxiete,Affections psychiatriques
+1030284,27009,ESCITALOPRAM,Symptôme dépressif,839,Insomnie de debut de nuit,Affections psychiatriques
+1030284,27009,ESCITALOPRAM,Symptôme dépressif,326,Affection aggravee,Troubles generaux et anomalies au site d'administration
+1032230,5656,VENLAFAXINE HYDROCHLORIDE,Dépression,538,Idees suicidaires,Affections psychiatriques
+1032230,5656,VENLAFAXINE HYDROCHLORIDE,Dépression,106,Somnolence,Affections du systeme nerveux
+1032230,5656,VENLAFAXINE HYDROCHLORIDE,Dépression,785,Raªves anormaux,Affections psychiatriques
+1032230,5656,VENLAFAXINE HYDROCHLORIDE,Dépression,6772,Modification de l'attention soutenue,Affections psychiatriques
+1032230,5656,VENLAFAXINE HYDROCHLORIDE,Dépression,1434,Sensation de commotion electrique,Affections du systeme nerveux
+1032230,5656,VENLAFAXINE HYDROCHLORIDE,Dépression,1891,Pharmacodependance,Affections psychiatriques
+1032230,5656,VENLAFAXINE HYDROCHLORIDE,Dépression,184,Trouble de l'appetit,Troubles du metabolisme et de la nutrition
+1032230,5656,VENLAFAXINE HYDROCHLORIDE,Dépression,287,Reflux gastro-oesophagien,Affections gastro-intestinales
+1032230,5656,VENLAFAXINE HYDROCHLORIDE,Dépression,62,Nausee,Affections gastro-intestinales
+1032230,5656,VENLAFAXINE HYDROCHLORIDE,Dépression,68,Vomissement,Affections gastro-intestinales
+1032230,5656,VENLAFAXINE HYDROCHLORIDE,Dépression,317,Deshydratation,Troubles du metabolisme et de la nutrition
+1032230,5656,VENLAFAXINE HYDROCHLORIDE,Dépression,905,Constipation,Affections gastro-intestinales
+1032230,5656,VENLAFAXINE HYDROCHLORIDE,Dépression,153,Diarrhee,Affections gastro-intestinales
+1032230,5656,VENLAFAXINE HYDROCHLORIDE,Dépression,156,Sensation vertigineuse,Affections du systeme nerveux
+1032230,5656,VENLAFAXINE HYDROCHLORIDE,Dépression,161,Cephalee,Affections du systeme nerveux
+1032230,5656,VENLAFAXINE HYDROCHLORIDE,Dépression,791,Blepharospasme,Affections oculaires
+1032230,5656,VENLAFAXINE HYDROCHLORIDE,Dépression,162,Contractions fasciculaires,Affections musculosquelettiques et du tissu conjonctif
+1032230,5656,VENLAFAXINE HYDROCHLORIDE,Dépression,47,Defauts visuels,Affections oculaires
+1032230,5656,VENLAFAXINE HYDROCHLORIDE,Dépression,169,Photophobie,Affections oculaires
+1032230,5656,VENLAFAXINE HYDROCHLORIDE,Dépression,218,Sensation d'etat anormal,Troubles generaux et anomalies au site d'administration
+1032230,5656,VENLAFAXINE HYDROCHLORIDE,Dépression,263,Paresthesie,Affections du systeme nerveux
+1032230,5656,VENLAFAXINE HYDROCHLORIDE,Dépression,71,Myalgie,Affections musculosquelettiques et du tissu conjonctif
+1032230,5656,VENLAFAXINE HYDROCHLORIDE,Dépression,138,Cervicalgie,Affections musculosquelettiques et du tissu conjonctif
+1032230,5656,VENLAFAXINE HYDROCHLORIDE,Dépression,199,Stress,Affections psychiatriques
+1032230,5656,VENLAFAXINE HYDROCHLORIDE,Dépression,539,Humeur depressive,Affections psychiatriques
+1032230,5656,VENLAFAXINE HYDROCHLORIDE,Dépression,753,Pensee anormale,Affections psychiatriques
+1036942,27339,VENLAFAXINE HYDROCHLORIDE,Dépression majeure,524,Depression majeure,Affections psychiatriques
+1036942,27339,VENLAFAXINE HYDROCHLORIDE,Dépression majeure,674,Automutilation intentionnelle,Affections psychiatriques
+1036942,27339,VENLAFAXINE HYDROCHLORIDE,Dépression majeure,538,Idees suicidaires,Affections psychiatriques
+1036942,27339,VENLAFAXINE HYDROCHLORIDE,Dépression majeure,1782,Gastrite,Affections gastro-intestinales
+1036942,27339,VENLAFAXINE HYDROCHLORIDE,Dépression majeure,5248,Anxiete generalisee,Affections psychiatriques
+1036942,27339,VENLAFAXINE HYDROCHLORIDE,Dépression majeure,4082,Trouble d'angoisse sociale,Affections psychiatriques
+1036942,27339,VENLAFAXINE HYDROCHLORIDE,Dépression majeure,670,Anhedonie,Affections psychiatriques
+1036942,27339,VENLAFAXINE HYDROCHLORIDE,Dépression majeure,70,Appetit diminue,Troubles du metabolisme et de la nutrition
+1036942,27339,VENLAFAXINE HYDROCHLORIDE,Dépression majeure,6543,Acces hyperphagique,Affections psychiatriques
+1036942,27339,VENLAFAXINE HYDROCHLORIDE,Dépression majeure,69,Fatigue,Troubles generaux et anomalies au site d'administration
+1036942,27339,VENLAFAXINE HYDROCHLORIDE,Dépression majeure,1935,Probleme d'omission d'administration,"Lesions, intoxications et complications d'interventions"
+1036942,27339,VENLAFAXINE HYDROCHLORIDE,Dépression majeure,214,Pression arterielle augmentee,Investigations
+1036942,27339,VENLAFAXINE HYDROCHLORIDE,Dépression majeure,179,Frequence cardiaque augmentee,Investigations
+1036942,27339,VENLAFAXINE HYDROCHLORIDE,Dépression majeure,178,Hyperhidrose,Affections de la peau et du tissu sous-cutane
+1036942,27339,VENLAFAXINE HYDROCHLORIDE,Dépression majeure,7163,Syndrome d'arraªt d'antidepresseur,Troubles generaux et anomalies au site d'administration
+1036942,27339,VENLAFAXINE HYDROCHLORIDE,Dépression majeure,1541,Utilisation non conforme au document de reference,"Lesions, intoxications et complications d'interventions"
+1036942,27339,VENLAFAXINE HYDROCHLORIDE,Dépression majeure,395,Insomnie de milieu de nuit,Affections psychiatriques
+1036942,27339,VENLAFAXINE HYDROCHLORIDE,Dépression majeure,84,Reponse therapeutique diminuee,Troubles generaux et anomalies au site d'administration
+1036942,27339,VENLAFAXINE HYDROCHLORIDE,Dépression majeure,157,Insomnie,Affections psychiatriques
+1036942,27339,VENLAFAXINE HYDROCHLORIDE,Dépression majeure,106,Somnolence,Affections du systeme nerveux
+1036942,27339,VENLAFAXINE HYDROCHLORIDE,Dépression majeure,71,Myalgie,Affections musculosquelettiques et du tissu conjonctif
+1036942,27339,VENLAFAXINE HYDROCHLORIDE,Dépression majeure,163,Nevralgie,Affections du systeme nerveux
+1036942,27339,VENLAFAXINE HYDROCHLORIDE,Dépression majeure,128,Malaise,Troubles generaux et anomalies au site d'administration
+1036942,27339,VENLAFAXINE HYDROCHLORIDE,Dépression majeure,62,Nausee,Affections gastro-intestinales
+1036942,27339,VENLAFAXINE HYDROCHLORIDE,Dépression majeure,63,Inefficacite medicamenteuse,Troubles generaux et anomalies au site d'administration
+1073800,17109,FLUOXETINE,Dépression majeure,930,Diminution de la libido,Affections psychiatriques
+1073800,17109,FLUOXETINE,Dépression majeure,4692,Gaªne genitale,Affections des organes de reproduction et du sein
+1073800,17109,FLUOXETINE,Dépression majeure,3918,Anorgasmie,Affections psychiatriques
+1073800,17109,FLUOXETINE,Dépression majeure,1600,Dysfonction sexuelle,Affections des organes de reproduction et du sein
+1073800,17109,FLUOXETINE,Dépression majeure,62,Nausee,Affections gastro-intestinales
+1073800,17109,FLUOXETINE,Dépression majeure,929,Dissociation,Affections psychiatriques
+1073800,17109,FLUOXETINE,Dépression majeure,620,Impatiences,Affections psychiatriques
+1073800,17109,FLUOXETINE,Dépression majeure,310,Gaªne abdominale,Affections gastro-intestinales
+1076533,6146,SERTRALINE,Dépression majeure,139,Hypoesthesie,Affections du systeme nerveux
+1076533,6146,SERTRALINE,Dépression majeure,3918,Anorgasmie,Affections psychiatriques
+1076533,6146,SERTRALINE,Dépression majeure,1600,Dysfonction sexuelle,Affections des organes de reproduction et du sein
+1076533,6146,SERTRALINE,Dépression majeure,62,Nausee,Affections gastro-intestinales
+1076533,6146,SERTRALINE,Dépression majeure,929,Dissociation,Affections psychiatriques
+1076533,6146,SERTRALINE,Dépression majeure,620,Impatiences,Affections psychiatriques
+1076533,6146,SERTRALINE,Dépression majeure,751,Tentative de suicide,Affections psychiatriques
+1076533,6146,SERTRALINE,Dépression majeure,144,Douleur abdominale haute,Affections gastro-intestinales
+1076533,6146,SERTRALINE,Dépression majeure,170,Douleur,Troubles generaux et anomalies au site d'administration
+1076533,6146,SERTRALINE,Dépression majeure,670,Anhedonie,Affections psychiatriques
+1076919,29302,TEVA-BUPROPION XL,Humeur dépressive,1131,Oedeme genital,Affections des organes de reproduction et du sein
+1076919,29302,TEVA-BUPROPION XL,Humeur dépressive,2301,Pertes vaginales,Affections des organes de reproduction et du sein
+900249248,309,VENLAFAXINE,Dépression,465,Ulcere aphteux,Affections gastro-intestinales
+900249248,309,VENLAFAXINE,Dépression,633,Douleur buccale,Affections gastro-intestinales
+900249248,309,VENLAFAXINE,Dépression,82,Hemoglobine diminuee,Investigations
+900249248,309,VENLAFAXINE,Dépression,1605,Hospitalisation,Actes medicaux et chirurgicaux
+900249248,309,VENLAFAXINE,Dépression,1032,Maladie de Crohn,Affections gastro-intestinales
+900249248,309,VENLAFAXINE,Dépression,1672,Herpes buccal,Infections et infestations
+900249248,309,VENLAFAXINE,Dépression,772,Globules blancs augmentes,Investigations
+900265944,3908,WELLBUTRIN,Dépression,63,Inefficacite medicamenteuse,Troubles generaux et anomalies au site d'administration
+900265944,3908,WELLBUTRIN,Dépression,408,Schema d'administration du produit inapproprie,"Lesions, intoxications et complications d'interventions"
+900415622,501,CYMBALTA,Dépression,62,Nausee,Affections gastro-intestinales
+900415622,501,CYMBALTA,Dépression,221,Depression,Affections psychiatriques
+900415622,501,CYMBALTA,Dépression,511,Bouffee de chaleur,Affections vasculaires
+900415622,501,CYMBALTA,Dépression,177,Anxiete,Affections psychiatriques
+900415622,501,CYMBALTA,Dépression,118,Asthenie,Troubles generaux et anomalies au site d'administration
+900415622,501,CYMBALTA,Dépression,255,Agitation,Affections psychiatriques
+900415622,501,CYMBALTA,Dépression,279,Prurit,Affections de la peau et du tissu sous-cutane
+900755211,742,CIPRALEX,Dépression,1185,amission de selles sanglantes,Affections gastro-intestinales
+900755211,742,CIPRALEX,Dépression,500,Deterioration generale de l'etat de sante,Troubles generaux et anomalies au site d'administration
+900755211,742,CIPRALEX,Dépression,72,Contractures musculaires,Affections musculosquelettiques et du tissu conjonctif
+900856706,33410,FLUOXETINE,Traitement antidépressif,1331,Exposition pendant la grossesse,"Lesions, intoxications et complications d'interventions"
+900856706,33410,FLUOXETINE,Traitement antidépressif,158,Grippe,Infections et infestations
+900865473,5311,ABILIFY,Dépression,4166,Expulsion du dispositif,Problemes de produit
+900865473,5311,ABILIFY,Dépression,2639,Hemorragie post intervention,"Lesions, intoxications et complications d'interventions"
+901017092,5693,TRAZODONE HYDROCHLORIDE,Dépression,5641,Exposition maternelle avant la grossesse,"Lesions, intoxications et complications d'interventions"
+901017092,5693,TRAZODONE HYDROCHLORIDE,Dépression,2714,Avortement provoque,Actes medicaux et chirurgicaux
+901062692,67,FLUOXETINE,Dépression,207,Frissons,Troubles generaux et anomalies au site d'administration
+901062692,67,FLUOXETINE,Dépression,62,Nausee,Affections gastro-intestinales
+901062692,67,FLUOXETINE,Dépression,151,Douleur thoracique,Troubles generaux et anomalies au site d'administration
+901062692,67,FLUOXETINE,Dépression,832,Temperature augmentee,Investigations
+901062692,67,FLUOXETINE,Dépression,71,Myalgie,Affections musculosquelettiques et du tissu conjonctif
+901062692,67,FLUOXETINE,Dépression,161,Cephalee,Affections du systeme nerveux
+901062692,67,FLUOXETINE,Dépression,256,Bouffee congestive,Affections vasculaires
+901062692,67,FLUOXETINE,Dépression,156,Sensation vertigineuse,Affections du systeme nerveux
+901062692,67,FLUOXETINE,Dépression,402,Gaªne thoracique,Troubles generaux et anomalies au site d'administration
+901062692,67,FLUOXETINE,Dépression,111,Dyspnee,"Affections respiratoires, thoraciques et mediastinales"
+901062692,67,FLUOXETINE,Dépression,367,Urticaire,Affections de la peau et du tissu sous-cutane
+901062692,67,FLUOXETINE,Dépression,279,Prurit,Affections de la peau et du tissu sous-cutane
+901062692,67,FLUOXETINE,Dépression,258,Toux,"Affections respiratoires, thoraciques et mediastinales"
+901062692,67,FLUOXETINE,Dépression,144,Douleur abdominale haute,Affections gastro-intestinales
+901062692,67,FLUOXETINE,Dépression,68,Vomissement,Affections gastro-intestinales
+901062692,67,FLUOXETINE,Dépression,153,Diarrhee,Affections gastro-intestinales
+901062692,67,FLUOXETINE,Dépression,69,Fatigue,Troubles generaux et anomalies au site d'administration
+901062692,67,FLUOXETINE,Dépression,170,Douleur,Troubles generaux et anomalies au site d'administration
+901062692,67,FLUOXETINE,Dépression,379,Zona,Infections et infestations
+901062692,67,FLUOXETINE,Dépression,580,Infection fongique,Infections et infestations
+901062692,67,FLUOXETINE,Dépression,40,Bradycardie,Affections cardiaques
+901062692,67,FLUOXETINE,Dépression,865,Trouble de l'alimentation,Troubles du metabolisme et de la nutrition
+901062692,67,FLUOXETINE,Dépression,693,Hemoptysie,"Affections respiratoires, thoraciques et mediastinales"
+901062692,67,FLUOXETINE,Dépression,1227,Tumefaction,Troubles generaux et anomalies au site d'administration
+901062692,67,FLUOXETINE,Dépression,51,Hypertension,Affections vasculaires
+901062692,67,FLUOXETINE,Dépression,132,Pa¢leur,Affections vasculaires
+901062692,67,FLUOXETINE,Dépression,675,Sensation de froid,Troubles generaux et anomalies au site d'administration
+901209936,309,VENLAFAXINE,Dépression,292,Selles frequentes,Affections gastro-intestinales
+901209936,309,VENLAFAXINE,Dépression,543,Incontinence anale,Affections gastro-intestinales
+901209936,309,VENLAFAXINE,Dépression,1061,Infection a  Clostridium difficile,Infections et infestations
+901209936,309,VENLAFAXINE,Dépression,150,Infection des voies aeriennes inferieures,Infections et infestations
+901209936,309,VENLAFAXINE,Dépression,841,Osteomyelite,Infections et infestations
+901209936,309,VENLAFAXINE,Dépression,570,Hemorragie rectale,Affections gastro-intestinales
+901209936,309,VENLAFAXINE,Dépression,1444,Arthrite infectieuse,Infections et infestations
+901209936,309,VENLAFAXINE,Dépression,153,Diarrhee,Affections gastro-intestinales
+901209936,309,VENLAFAXINE,Dépression,916,Colite ulcereuse,Affections gastro-intestinales
+901209936,309,VENLAFAXINE,Dépression,1185,amission de selles sanglantes,Affections gastro-intestinales
+901209936,309,VENLAFAXINE,Dépression,1541,Utilisation non conforme au document de reference,"Lesions, intoxications et complications d'interventions"
+901209936,309,VENLAFAXINE,Dépression,2351,Grossesse,"Affections gravidiques, puerperales et perinatales"
+901209936,309,VENLAFAXINE,Dépression,2155,Non repondeur au traitement,Troubles generaux et anomalies au site d'administration
+901209936,309,VENLAFAXINE,Dépression,289,Defecation imperieuse,Affections gastro-intestinales
+901209936,309,VENLAFAXINE,Dépression,728,Fibromyalgie,Affections musculosquelettiques et du tissu conjonctif
+901209936,309,VENLAFAXINE,Dépression,632,Infection de l'oreille,Infections et infestations
+901209936,309,VENLAFAXINE,Dépression,69,Fatigue,Troubles generaux et anomalies au site d'administration
+901209936,309,VENLAFAXINE,Dépression,583,Pharyngite,Infections et infestations
+901294862,47333,APO-DULOXETINE,Dépression majeure,284,Probleme de substitution du produit,Problemes de produit
+901294862,47333,APO-DULOXETINE,Dépression majeure,63,Inefficacite medicamenteuse,Troubles generaux et anomalies au site d'administration
+901294862,47333,APO-DULOXETINE,Dépression majeure,221,Depression,Affections psychiatriques
+901300348,18323,ACETAZOLAMIDE,Pression intracrânienne augmentée,226,Utilisation du produit dans une indication non approuvee,"Lesions, intoxications et complications d'interventions"
+901300348,18323,ACETAZOLAMIDE,Pression intracrânienne augmentée,4190,Diabete gestationnel,"Affections gravidiques, puerperales et perinatales"
+901427447,37164,LITHIUM,Dépression,157,Insomnie,Affections psychiatriques
+901427447,37164,LITHIUM,Dépression,161,Cephalee,Affections du systeme nerveux
+901427447,37164,LITHIUM,Dépression,177,Anxiete,Affections psychiatriques
+901427447,37164,LITHIUM,Dépression,62,Nausee,Affections gastro-intestinales
+901427447,37164,LITHIUM,Dépression,200,Douleur au site d'injection,Troubles generaux et anomalies au site d'administration
+901427447,37164,LITHIUM,Dépression,7419,Probleme d'assurance,Caracteristiques socio-environnementales
+901427447,37164,LITHIUM,Dépression,5842,Incapacite de payer le medicament,Caracteristiques socio-environnementales
+901427447,37164,LITHIUM,Dépression,1935,Probleme d'omission d'administration,"Lesions, intoxications et complications d'interventions"
+901427447,37164,LITHIUM,Dépression,408,Schema d'administration du produit inapproprie,"Lesions, intoxications et complications d'interventions"
+901427447,37164,LITHIUM,Dépression,158,Grippe,Infections et infestations
+901427447,37164,LITHIUM,Dépression,233,Syndrome grippal,Troubles generaux et anomalies au site d'administration
+901427447,37164,LITHIUM,Dépression,793,Syndrome de sevrage,Troubles generaux et anomalies au site d'administration
+901427447,37164,LITHIUM,Dépression,5319,Nodule au site d'injection,Troubles generaux et anomalies au site d'administration
+901427447,37164,LITHIUM,Dépression,538,Idees suicidaires,Affections psychiatriques
+901427447,37164,LITHIUM,Dépression,1578,Trouble schizoaffectif,Affections psychiatriques
+901427447,37164,LITHIUM,Dépression,359,avenement indesirable,Troubles generaux et anomalies au site d'administration
+901427447,37164,LITHIUM,Dépression,128,Malaise,Troubles generaux et anomalies au site d'administration
+901586100,5693,TRAZODONE HYDROCHLORIDE,Dépression,2714,Avortement provoque,Actes medicaux et chirurgicaux
+901586100,5693,TRAZODONE HYDROCHLORIDE,Dépression,5641,Exposition maternelle avant la grossesse,"Lesions, intoxications et complications d'interventions"
+901614571,5311,ABILIFY,Dépression,1340,Prolactine sanguine augmentee,Investigations
+901634952,5693,TRAZODONE HYDROCHLORIDE,Dépression,5641,Exposition maternelle avant la grossesse,"Lesions, intoxications et complications d'interventions"
+901634952,5693,TRAZODONE HYDROCHLORIDE,Dépression,2714,Avortement provoque,Actes medicaux et chirurgicaux
+901715036,6673,DESVENLAFAXINE SUCCINATE,Dépression,255,Agitation,Affections psychiatriques
+901715036,6673,DESVENLAFAXINE SUCCINATE,Dépression,538,Idees suicidaires,Affections psychiatriques
+901715036,6673,DESVENLAFAXINE SUCCINATE,Dépression,751,Tentative de suicide,Affections psychiatriques
+901715036,6673,DESVENLAFAXINE SUCCINATE,Dépression,674,Automutilation intentionnelle,Affections psychiatriques
+901716801,2190,PRISTIQ,Dépression,538,Idees suicidaires,Affections psychiatriques
+901716801,2190,PRISTIQ,Dépression,70,Appetit diminue,Troubles du metabolisme et de la nutrition
+901716801,2190,PRISTIQ,Dépression,3017,Gaz carbonique augmente,Investigations
+901716801,2190,PRISTIQ,Dépression,704,Amylase augmentee,Investigations
+901716801,2190,PRISTIQ,Dépression,452,Mydriase,Affections oculaires
+901716801,2190,PRISTIQ,Dépression,191,Syndrome serotoninergique,Affections du systeme nerveux
+901716801,2190,PRISTIQ,Dépression,54,Intervalle QT prolonge a  l'electrocardiogramme,Investigations
+901716801,2190,PRISTIQ,Dépression,156,Sensation vertigineuse,Affections du systeme nerveux
+901716801,2190,PRISTIQ,Dépression,919,Lipase augmentee,Investigations
+901716808,2190,PRISTIQ,Dépression,134,Probleme d'utilisation du produit,"Lesions, intoxications et complications d'interventions"
+901716808,2190,PRISTIQ,Dépression,685,Pancytopenie,Affections hematologiques et du systeme lymphatique
+901716828,6673,DESVENLAFAXINE SUCCINATE,Dépression,177,Anxiete,Affections psychiatriques
+901716828,6673,DESVENLAFAXINE SUCCINATE,Dépression,702,Trouble alimentaire,Affections psychiatriques
+901716828,6673,DESVENLAFAXINE SUCCINATE,Dépression,69,Fatigue,Troubles generaux et anomalies au site d'administration
+901716828,6673,DESVENLAFAXINE SUCCINATE,Dépression,157,Insomnie,Affections psychiatriques
+901716828,6673,DESVENLAFAXINE SUCCINATE,Dépression,94,Tremblement,Affections du systeme nerveux
+901716828,6673,DESVENLAFAXINE SUCCINATE,Dépression,582,Attaque de panique,Affections psychiatriques
+901716828,6673,DESVENLAFAXINE SUCCINATE,Dépression,943,Paranoia,Affections psychiatriques
+901716828,6673,DESVENLAFAXINE SUCCINATE,Dépression,1600,Dysfonction sexuelle,Affections des organes de reproduction et du sein
+901716828,6673,DESVENLAFAXINE SUCCINATE,Dépression,267,Trouble du sommeil,Affections psychiatriques
+901716828,6673,DESVENLAFAXINE SUCCINATE,Dépression,750,Nervosite,Affections psychiatriques
+901718535,2190,PRISTIQ,Dépression,1811,Appetit augmente,Troubles du metabolisme et de la nutrition
+901718535,2190,PRISTIQ,Dépression,146,Troubles de la demarche,Troubles generaux et anomalies au site d'administration
+901718535,2190,PRISTIQ,Dépression,162,Contractions fasciculaires,Affections musculosquelettiques et du tissu conjonctif
+901718535,2190,PRISTIQ,Dépression,536,Colere,Affections psychiatriques
+901718535,2190,PRISTIQ,Dépression,156,Sensation vertigineuse,Affections du systeme nerveux
+901718535,2190,PRISTIQ,Dépression,803,Manie,Affections psychiatriques
+901718535,2190,PRISTIQ,Dépression,30,Hypotension,Affections vasculaires
+901718535,2190,PRISTIQ,Dépression,515,Amnesie,Affections du systeme nerveux
+901718535,2190,PRISTIQ,Dépression,534,Desinhibition,Affections psychiatriques
+901718535,2190,PRISTIQ,Dépression,793,Syndrome de sevrage,Troubles generaux et anomalies au site d'administration
+901718535,2190,PRISTIQ,Dépression,1595,Changement de traitement,Actes medicaux et chirurgicaux
+901718535,2190,PRISTIQ,Dépression,50,Coordination anormale,Affections du systeme nerveux
+901718535,2190,PRISTIQ,Dépression,943,Paranoia,Affections psychiatriques
+901718535,2190,PRISTIQ,Dépression,218,Sensation d'etat anormal,Troubles generaux et anomalies au site d'administration
+901718535,2190,PRISTIQ,Dépression,726,atouffement,"Affections respiratoires, thoraciques et mediastinales"
+901718535,2190,PRISTIQ,Dépression,155,Trouble de la parole,Affections du systeme nerveux
+901718535,2190,PRISTIQ,Dépression,230,Chute,"Lesions, intoxications et complications d'interventions"
+901718535,2190,PRISTIQ,Dépression,185,Labilite affective,Affections psychiatriques
+901718535,2190,PRISTIQ,Dépression,148,Perturbation des mouvements,Affections du systeme nerveux
+901718535,2190,PRISTIQ,Dépression,263,Paresthesie,Affections du systeme nerveux
+901718535,2190,PRISTIQ,Dépression,673,Idees d'homicide,Affections psychiatriques
+901718535,2190,PRISTIQ,Dépression,540,Agression,Affections psychiatriques
+901718535,2190,PRISTIQ,Dépression,33,Irritabilite,Affections psychiatriques
+901718535,2190,PRISTIQ,Dépression,785,Raªves anormaux,Affections psychiatriques
+901718535,2190,PRISTIQ,Dépression,157,Insomnie,Affections psychiatriques
+901718535,2190,PRISTIQ,Dépression,47,Defauts visuels,Affections oculaires
+901718535,2190,PRISTIQ,Dépression,271,Trouble de l'equilibre,Affections du systeme nerveux
+901718535,2190,PRISTIQ,Dépression,62,Nausee,Affections gastro-intestinales
+901839453,14449,DULOXETINE,Dépression,3386,Grossesse extra-uterine,"Affections gravidiques, puerperales et perinatales"
+901839453,14449,DULOXETINE,Dépression,504,Gastroenterite,Infections et infestations
+901839453,14449,DULOXETINE,Dépression,161,Cephalee,Affections du systeme nerveux
+901839453,14449,DULOXETINE,Dépression,1082,Infection des voies aeriennes superieures,Infections et infestations
+901839453,14449,DULOXETINE,Dépression,1341,Pharyngite streptococcique,Infections et infestations
+901839453,14449,DULOXETINE,Dépression,62,Nausee,Affections gastro-intestinales
+902012372,13000,ESCITALOPRAM,Dépression,1638,Onde T inversee a  l'electrocardiogramme,Investigations
+902012372,13000,ESCITALOPRAM,Dépression,63,Inefficacite medicamenteuse,Troubles generaux et anomalies au site d'administration
+902250312,1772,SANDOZ BUPROPION SR,Dépression,270,Hyperacousie,Affections de l'oreille et du labyrinthe
+902250312,1772,SANDOZ BUPROPION SR,Dépression,928,Douleur auriculaire,Affections de l'oreille et du labyrinthe
+902250312,1772,SANDOZ BUPROPION SR,Dépression,161,Cephalee,Affections du systeme nerveux
+902250312,1772,SANDOZ BUPROPION SR,Dépression,355,Acouphene,Affections de l'oreille et du labyrinthe
+902250312,1772,SANDOZ BUPROPION SR,Dépression,629,Douleur oculaire,Affections oculaires
+902250312,1772,SANDOZ BUPROPION SR,Dépression,138,Cervicalgie,Affections musculosquelettiques et du tissu conjonctif
+902250312,1772,SANDOZ BUPROPION SR,Dépression,467,Raideur musculosquelettique,Affections musculosquelettiques et du tissu conjonctif
+902250312,1772,SANDOZ BUPROPION SR,Dépression,137,Migraine,Affections du systeme nerveux
+902255898,5920,CIPRALEX,Dépression majeure,106,Somnolence,Affections du systeme nerveux
+902255898,5920,CIPRALEX,Dépression majeure,156,Sensation vertigineuse,Affections du systeme nerveux
+902255898,5920,CIPRALEX,Dépression majeure,1016,Hypotension orthostatique,Affections vasculaires
+902262472,1755,SERTRALINE,Dépression,156,Sensation vertigineuse,Affections du systeme nerveux
+902262472,1755,SERTRALINE,Dépression,68,Vomissement,Affections gastro-intestinales
+902262472,1755,SERTRALINE,Dépression,538,Idees suicidaires,Affections psychiatriques
+902322602,5656,VENLAFAXINE HYDROCHLORIDE,Dépression,48,Tachycardie sinusale,Affections cardiaques
+902322602,5656,VENLAFAXINE HYDROCHLORIDE,Dépression,111,Dyspnee,"Affections respiratoires, thoraciques et mediastinales"
+902322602,5656,VENLAFAXINE HYDROCHLORIDE,Dépression,1427,Modifications ST-T a  l'electrocardiogramme,Investigations
+902422388,16669,DESVENLAFAXINE,Dépression,284,Probleme de substitution du produit,Problemes de produit
+902422388,16669,DESVENLAFAXINE,Dépression,185,Labilite affective,Affections psychiatriques
+902422388,16669,DESVENLAFAXINE,Dépression,63,Inefficacite medicamenteuse,Troubles generaux et anomalies au site d'administration
+902422388,16669,DESVENLAFAXINE,Dépression,33,Irritabilite,Affections psychiatriques
+902422388,16669,DESVENLAFAXINE,Dépression,927,Troubles affectifs,Affections psychiatriques
+902422388,16669,DESVENLAFAXINE,Dépression,326,Affection aggravee,Troubles generaux et anomalies au site d'administration
+902603042,17784,TRINTELLIX,Dépression majeure,2351,Grossesse,"Affections gravidiques, puerperales et perinatales"
+902603042,17784,TRINTELLIX,Dépression majeure,161,Cephalee,Affections du systeme nerveux
+902603042,17784,TRINTELLIX,Dépression majeure,62,Nausee,Affections gastro-intestinales
+902603042,17784,TRINTELLIX,Dépression majeure,317,Deshydratation,Troubles du metabolisme et de la nutrition
+902619619,5656,VENLAFAXINE HYDROCHLORIDE,Dépression,255,Agitation,Affections psychiatriques
+902619619,5656,VENLAFAXINE HYDROCHLORIDE,Dépression,177,Anxiete,Affections psychiatriques
+902619619,5656,VENLAFAXINE HYDROCHLORIDE,Dépression,326,Affection aggravee,Troubles generaux et anomalies au site d'administration
+902619619,5656,VENLAFAXINE HYDROCHLORIDE,Dépression,65,Detresse emotionnelle,Affections psychiatriques
+902619619,5656,VENLAFAXINE HYDROCHLORIDE,Dépression,2231,anergie augmentee,Troubles generaux et anomalies au site d'administration
+902619619,5656,VENLAFAXINE HYDROCHLORIDE,Dépression,963,Humeur euphorique,Affections psychiatriques
+902619619,5656,VENLAFAXINE HYDROCHLORIDE,Dépression,700,Sautes d'humeur,Affections psychiatriques
+902619619,5656,VENLAFAXINE HYDROCHLORIDE,Dépression,582,Attaque de panique,Affections psychiatriques
+902619619,5656,VENLAFAXINE HYDROCHLORIDE,Dépression,538,Idees suicidaires,Affections psychiatriques
+902619619,5656,VENLAFAXINE HYDROCHLORIDE,Dépression,753,Pensee anormale,Affections psychiatriques
+902624981,5656,VENLAFAXINE HYDROCHLORIDE,Dépression,284,Probleme de substitution du produit,Problemes de produit
+902624981,5656,VENLAFAXINE HYDROCHLORIDE,Dépression,63,Inefficacite medicamenteuse,Troubles generaux et anomalies au site d'administration
+902628342,3113,PRISTIQ,Dépression majeure,751,Tentative de suicide,Affections psychiatriques
+902628342,3113,PRISTIQ,Dépression majeure,695,Surdosage intentionnel,"Lesions, intoxications et complications d'interventions"
+902634383,5656,VENLAFAXINE HYDROCHLORIDE,Dépression,752,Tachycardie,Affections cardiaques
+902634383,5656,VENLAFAXINE HYDROCHLORIDE,Dépression,1617,Hyperreflexie,Affections du systeme nerveux
+902634383,5656,VENLAFAXINE HYDROCHLORIDE,Dépression,1260,Hyperthermie,Troubles generaux et anomalies au site d'administration
+902634383,5656,VENLAFAXINE HYDROCHLORIDE,Dépression,191,Syndrome serotoninergique,Affections du systeme nerveux
+902634383,5656,VENLAFAXINE HYDROCHLORIDE,Dépression,93,Rigidite musculaire,Affections musculosquelettiques et du tissu conjonctif
+902634383,5656,VENLAFAXINE HYDROCHLORIDE,Dépression,197,Fievre,Troubles generaux et anomalies au site d'administration
+902634383,5656,VENLAFAXINE HYDROCHLORIDE,Dépression,128,Malaise,Troubles generaux et anomalies au site d'administration
+902683007,2907,SERTRALINE HYDROCHLORIDE,Dépression,156,Sensation vertigineuse,Affections du systeme nerveux
+902683007,2907,SERTRALINE HYDROCHLORIDE,Dépression,68,Vomissement,Affections gastro-intestinales
+902683007,2907,SERTRALINE HYDROCHLORIDE,Dépression,538,Idees suicidaires,Affections psychiatriques
+902687921,13000,ESCITALOPRAM,Dépression,2972,Purpura de Henoch-Scha¶nlein,Affections de la peau et du tissu sous-cutane
+902687921,13000,ESCITALOPRAM,Dépression,3173,Syndrome de type lupus,Affections musculosquelettiques et du tissu conjonctif
+902687921,13000,ESCITALOPRAM,Dépression,7728,Lupus erythemateux cutane chronique,Affections de la peau et du tissu sous-cutane
+902687921,13000,ESCITALOPRAM,Dépression,1631,Lupus erythemateux systemique,Affections musculosquelettiques et du tissu conjonctif
+902691171,2907,SERTRALINE HYDROCHLORIDE,Dépression,134,Probleme d'utilisation du produit,"Lesions, intoxications et complications d'interventions"
+902691171,2907,SERTRALINE HYDROCHLORIDE,Dépression,1541,Utilisation non conforme au document de reference,"Lesions, intoxications et complications d'interventions"
+902691171,2907,SERTRALINE HYDROCHLORIDE,Dépression,751,Tentative de suicide,Affections psychiatriques
+902750968,552,CITALOPRAM,Dépression,396,Bronchite,Infections et infestations
+902750968,552,CITALOPRAM,Dépression,203,Pneumonie,Infections et infestations
+902943081,67,FLUOXETINE,Dépression,695,Surdosage intentionnel,"Lesions, intoxications et complications d'interventions"
+902943081,67,FLUOXETINE,Dépression,616,Humeur modifiee,Affections psychiatriques
+902943081,67,FLUOXETINE,Dépression,221,Depression,Affections psychiatriques
+902943081,67,FLUOXETINE,Dépression,161,Cephalee,Affections du systeme nerveux
+902943081,67,FLUOXETINE,Dépression,358,Perturbation de l'attention,Affections du systeme nerveux
+902943081,67,FLUOXETINE,Dépression,62,Nausee,Affections gastro-intestinales
+902943081,67,FLUOXETINE,Dépression,538,Idees suicidaires,Affections psychiatriques
+903069909,3113,PRISTIQ,Dépression majeure,751,Tentative de suicide,Affections psychiatriques
+903069909,3113,PRISTIQ,Dépression majeure,695,Surdosage intentionnel,"Lesions, intoxications et complications d'interventions"
+903230178,1755,SERTRALINE,Dépression,751,Tentative de suicide,Affections psychiatriques
+903230178,1755,SERTRALINE,Dépression,360,Surdosage,"Lesions, intoxications et complications d'interventions"
+903230178,1755,SERTRALINE,Dépression,477,Hemorragie,Affections vasculaires
+903230178,1755,SERTRALINE,Dépression,3351,Effet du produit therapeutique incomplet,Troubles generaux et anomalies au site d'administration
+903230178,1755,SERTRALINE,Dépression,1541,Utilisation non conforme au document de reference,"Lesions, intoxications et complications d'interventions"
+903230178,1755,SERTRALINE,Dépression,2426,Probleme d'utilisation intentionnelle du produit,"Lesions, intoxications et complications d'interventions"
+903230178,1755,SERTRALINE,Dépression,408,Schema d'administration du produit inapproprie,"Lesions, intoxications et complications d'interventions"
+903230178,1755,SERTRALINE,Dépression,821,Variation de la pression arterielle,Affections vasculaires
+903230178,1755,SERTRALINE,Dépression,266,Frequence cardiaque irreguliere,Investigations
+903230178,1755,SERTRALINE,Dépression,156,Sensation vertigineuse,Affections du systeme nerveux
+903230178,1755,SERTRALINE,Dépression,402,Gaªne thoracique,Troubles generaux et anomalies au site d'administration
+903230178,1755,SERTRALINE,Dépression,256,Bouffee congestive,Affections vasculaires
+903230178,1755,SERTRALINE,Dépression,111,Dyspnee,"Affections respiratoires, thoraciques et mediastinales"
+903230178,1755,SERTRALINE,Dépression,326,Affection aggravee,Troubles generaux et anomalies au site d'administration
+903230178,1755,SERTRALINE,Dépression,218,Sensation d'etat anormal,Troubles generaux et anomalies au site d'administration
+903230178,1755,SERTRALINE,Dépression,141,Arthralgie,Affections musculosquelettiques et du tissu conjonctif
+903230178,1755,SERTRALINE,Dépression,137,Migraine,Affections du systeme nerveux
+903230178,1755,SERTRALINE,Dépression,651,Hypersensibilite medicamenteuse,Affections du systeme immunitaire
+903230178,1755,SERTRALINE,Dépression,161,Cephalee,Affections du systeme nerveux
+903230178,1755,SERTRALINE,Dépression,144,Douleur abdominale haute,Affections gastro-intestinales
+903230178,1755,SERTRALINE,Dépression,128,Malaise,Troubles generaux et anomalies au site d'administration
+903230178,1755,SERTRALINE,Dépression,389,Douleur oropharyngee,"Affections respiratoires, thoraciques et mediastinales"
+903230178,1755,SERTRALINE,Dépression,153,Diarrhee,Affections gastro-intestinales
+903230178,1755,SERTRALINE,Dépression,346,Douleur abdominale,Affections gastro-intestinales
+903230178,1755,SERTRALINE,Dépression,68,Vomissement,Affections gastro-intestinales
+903230178,1755,SERTRALINE,Dépression,2494,Vitamine D diminuee,Investigations
+903230178,1755,SERTRALINE,Dépression,365,arytheme,Affections de la peau et du tissu sous-cutane
+903230178,1755,SERTRALINE,Dépression,279,Prurit,Affections de la peau et du tissu sous-cutane
+903230178,1755,SERTRALINE,Dépression,1050,Douleur de peau,Affections de la peau et du tissu sous-cutane
+903230178,1755,SERTRALINE,Dépression,211,Alopecie,Affections de la peau et du tissu sous-cutane
+903230178,1755,SERTRALINE,Dépression,3735,arytheme noueux,Affections de la peau et du tissu sous-cutane
+903230178,1755,SERTRALINE,Dépression,66,Poids augmente,Investigations
+903230178,1755,SERTRALINE,Dépression,969,Trouble de la peau,Affections de la peau et du tissu sous-cutane
+903230178,1755,SERTRALINE,Dépression,4804,Dermatite psoriasiforme,Affections de la peau et du tissu sous-cutane
+903230178,1755,SERTRALINE,Dépression,783,Hyperhemie oculaire,Affections oculaires
+903230178,1755,SERTRALINE,Dépression,403,Secheresse oculaire,Affections oculaires
+903230178,1755,SERTRALINE,Dépression,221,Depression,Affections psychiatriques
+903230178,1755,SERTRALINE,Dépression,328,Uveite,Affections oculaires
+903669970,5656,VENLAFAXINE HYDROCHLORIDE,Dépression,769,Cellulite (infection),Infections et infestations
+903669970,5656,VENLAFAXINE HYDROCHLORIDE,Dépression,156,Sensation vertigineuse,Affections du systeme nerveux
+903669970,5656,VENLAFAXINE HYDROCHLORIDE,Dépression,1336,Accident ischemique transitoire,Affections du systeme nerveux
+903669970,5656,VENLAFAXINE HYDROCHLORIDE,Dépression,161,Cephalee,Affections du systeme nerveux
+903748188,31543,CICLOSPORIN,Immunosuppression,114,Administration d'une dose incorrecte,"Lesions, intoxications et complications d'interventions"
+903748188,31543,CICLOSPORIN,Immunosuppression,82,Hemoglobine diminuee,Investigations
+903748188,31543,CICLOSPORIN,Immunosuppression,69,Fatigue,Troubles generaux et anomalies au site d'administration
+903748188,31543,CICLOSPORIN,Immunosuppression,118,Asthenie,Troubles generaux et anomalies au site d'administration
+903748188,31543,CICLOSPORIN,Immunosuppression,157,Insomnie,Affections psychiatriques
+903748188,31543,CICLOSPORIN,Immunosuppression,42,Convulsion,Affections du systeme nerveux
+903748188,31543,CICLOSPORIN,Immunosuppression,1682,Pression intracra¢nienne augmentee,Affections du systeme nerveux
+903748188,31543,CICLOSPORIN,Immunosuppression,857,Anemie aplastique,Affections hematologiques et du systeme lymphatique
+903748188,31543,CICLOSPORIN,Immunosuppression,326,Affection aggravee,Troubles generaux et anomalies au site d'administration
+903748188,31543,CICLOSPORIN,Immunosuppression,183,Saignement menstruel abondant,Affections des organes de reproduction et du sein
+903748188,31543,CICLOSPORIN,Immunosuppression,478,Thrombose,Affections vasculaires
+903748188,31543,CICLOSPORIN,Immunosuppression,304,Numeration plaquettaire diminuee,Investigations
+903748188,31543,CICLOSPORIN,Immunosuppression,342,Chromaturie,Affections du rein et des voies urinaires
+903748188,31543,CICLOSPORIN,Immunosuppression,311,Fluctuation du glucose sanguin,Investigations
+903748188,31543,CICLOSPORIN,Immunosuppression,2250,Magnesium sanguin anormal,Investigations
+903748188,31543,CICLOSPORIN,Immunosuppression,1648,Potassium sanguin anormal,Investigations
+903748188,31543,CICLOSPORIN,Immunosuppression,2051,Calcium sanguin anormal,Investigations
+905444404,21732,TARO-BUPROPION XL,Dépression,125,Pleurs,Troubles generaux et anomalies au site d'administration
+905444404,21732,TARO-BUPROPION XL,Dépression,221,Depression,Affections psychiatriques
+905444404,21732,TARO-BUPROPION XL,Dépression,156,Sensation vertigineuse,Affections du systeme nerveux
+905444404,21732,TARO-BUPROPION XL,Dépression,218,Sensation d'etat anormal,Troubles generaux et anomalies au site d'administration
+905444404,21732,TARO-BUPROPION XL,Dépression,161,Cephalee,Affections du systeme nerveux
+905444404,21732,TARO-BUPROPION XL,Dépression,6299,Pensees intrusives,Affections psychiatriques
+905444404,21732,TARO-BUPROPION XL,Dépression,33,Irritabilite,Affections psychiatriques
+905444404,21732,TARO-BUPROPION XL,Dépression,255,Agitation,Affections psychiatriques
+905444404,21732,TARO-BUPROPION XL,Dépression,94,Tremblement,Affections du systeme nerveux
+905444404,21732,TARO-BUPROPION XL,Dépression,538,Idees suicidaires,Affections psychiatriques
+905444404,21732,TARO-BUPROPION XL,Dépression,461,Sedation,Affections du systeme nerveux
+905444404,21732,TARO-BUPROPION XL,Dépression,582,Attaque de panique,Affections psychiatriques
+905444404,21732,TARO-BUPROPION XL,Dépression,431,Palpitations,Affections cardiaques
+905444404,21732,TARO-BUPROPION XL,Dépression,700,Sautes d'humeur,Affections psychiatriques
+905444404,21732,TARO-BUPROPION XL,Dépression,62,Nausee,Affections gastro-intestinales
+905712035,23723,OLANZAPINE,Trouble de l'adaptation avec humeur dépressive et anxiété associée,68,Vomissement,Affections gastro-intestinales
+905712035,23723,OLANZAPINE,Trouble de l'adaptation avec humeur dépressive et anxiété associée,62,Nausee,Affections gastro-intestinales
+905712035,23723,OLANZAPINE,Trouble de l'adaptation avec humeur dépressive et anxiété associée,144,Douleur abdominale haute,Affections gastro-intestinales
+905712035,23723,OLANZAPINE,Trouble de l'adaptation avec humeur dépressive et anxiété associée,6807,Refus alimentaire,Troubles du metabolisme et de la nutrition
+905712035,23723,OLANZAPINE,Trouble de l'adaptation avec humeur dépressive et anxiété associée,1905,Desequilibre electrolytique,Troubles du metabolisme et de la nutrition
+905712035,23723,OLANZAPINE,Trouble de l'adaptation avec humeur dépressive et anxiété associée,4017,Trouble de la vidange gastrique,Affections gastro-intestinales
+905712035,23723,OLANZAPINE,Trouble de l'adaptation avec humeur dépressive et anxiété associée,1230,Hepatite,Affections hepatobiliaires
+905712035,23723,OLANZAPINE,Trouble de l'adaptation avec humeur dépressive et anxiété associée,956,Lithiase biliaire,Affections hepatobiliaires
+905720117,21732,TARO-BUPROPION XL,Dépression,338,Rash,Affections de la peau et du tissu sous-cutane
+905720117,21732,TARO-BUPROPION XL,Dépression,279,Prurit,Affections de la peau et du tissu sous-cutane
+906137808,582,NORTRIPTYLINE,Dépression,82,Hemoglobine diminuee,Investigations
+906202859,37565,VENLAFAXINE,Dépression majeure,674,Automutilation intentionnelle,Affections psychiatriques
+906202859,37565,VENLAFAXINE,Dépression majeure,4116,Repondeur partiel a  la therapie,Troubles generaux et anomalies au site d'administration
+906202859,37565,VENLAFAXINE,Dépression majeure,178,Hyperhidrose,Affections de la peau et du tissu sous-cutane
+906202859,37565,VENLAFAXINE,Dépression majeure,214,Pression arterielle augmentee,Investigations
+906202859,37565,VENLAFAXINE,Dépression majeure,54,Intervalle QT prolonge a  l'electrocardiogramme,Investigations
+906202859,37565,VENLAFAXINE,Dépression majeure,7163,Syndrome d'arraªt d'antidepresseur,Troubles generaux et anomalies au site d'administration
+906206854,37565,VENLAFAXINE,Dépression majeure,674,Automutilation intentionnelle,Affections psychiatriques
+906206854,37565,VENLAFAXINE,Dépression majeure,114,Administration d'une dose incorrecte,"Lesions, intoxications et complications d'interventions"
+906206854,37565,VENLAFAXINE,Dépression majeure,54,Intervalle QT prolonge a  l'electrocardiogramme,Investigations
+906206854,37565,VENLAFAXINE,Dépression majeure,752,Tachycardie,Affections cardiaques
+906206854,37565,VENLAFAXINE,Dépression majeure,400,Pression arterielle systolique augmentee,Investigations
+906206854,37565,VENLAFAXINE,Dépression majeure,178,Hyperhidrose,Affections de la peau et du tissu sous-cutane
+906212163,37565,VENLAFAXINE,Dépression majeure,4116,Repondeur partiel a  la therapie,Troubles generaux et anomalies au site d'administration
+906308037,11828,CANDESARTAN,Pression artérielle anormale,316,Diminution de la mobilite,Affections musculosquelettiques et du tissu conjonctif
+906308037,11828,CANDESARTAN,Pression artérielle anormale,838,Dystasie,Affections du systeme nerveux
+906308037,11828,CANDESARTAN,Pression artérielle anormale,1024,Prodromes de syncope,Affections du systeme nerveux
+906308037,11828,CANDESARTAN,Pression artérielle anormale,156,Sensation vertigineuse,Affections du systeme nerveux
+906308037,11828,CANDESARTAN,Pression artérielle anormale,756,Perte de l'independance dans les activites quotidiennes,Caracteristiques socio-environnementales
+906308037,11828,CANDESARTAN,Pression artérielle anormale,271,Trouble de l'equilibre,Affections du systeme nerveux
+906308037,11828,CANDESARTAN,Pression artérielle anormale,230,Chute,"Lesions, intoxications et complications d'interventions"
+906308037,11828,CANDESARTAN,Pression artérielle anormale,287,Reflux gastro-oesophagien,Affections gastro-intestinales
+906308037,11828,CANDESARTAN,Pression artérielle anormale,752,Tachycardie,Affections cardiaques
+906308037,11828,CANDESARTAN,Pression artérielle anormale,125,Pleurs,Troubles generaux et anomalies au site d'administration
+906308037,11828,CANDESARTAN,Pression artérielle anormale,170,Douleur,Troubles generaux et anomalies au site d'administration
+906308037,11828,CANDESARTAN,Pression artérielle anormale,11807,achange de produits vaccinaux,Actes medicaux et chirurgicaux
+906308037,11828,CANDESARTAN,Pression artérielle anormale,2215,Tenosynovite,Affections musculosquelettiques et du tissu conjonctif
+906308037,11828,CANDESARTAN,Pression artérielle anormale,859,Syndrome du ca´lon irritable,Affections gastro-intestinales
+906308037,11828,CANDESARTAN,Pression artérielle anormale,1520,Obesite,Troubles du metabolisme et de la nutrition
+906308037,11828,CANDESARTAN,Pression artérielle anormale,124,Asthme,"Affections respiratoires, thoraciques et mediastinales"
+906308037,11828,CANDESARTAN,Pression artérielle anormale,1830,Dysmenorrhee,Affections des organes de reproduction et du sein
+906542235,534,VENLAFAXINE XR,Dépression,752,Tachycardie,Affections cardiaques
+906542235,534,VENLAFAXINE XR,Dépression,111,Dyspnee,"Affections respiratoires, thoraciques et mediastinales"
+906597044,27339,VENLAFAXINE HYDROCHLORIDE,Dépression majeure,4116,Repondeur partiel a  la therapie,Troubles generaux et anomalies au site d'administration
+906645498,27339,VENLAFAXINE HYDROCHLORIDE,Dépression majeure,6543,Acces hyperphagique,Affections psychiatriques
+906645498,27339,VENLAFAXINE HYDROCHLORIDE,Dépression majeure,214,Pression arterielle augmentee,Investigations
+906645498,27339,VENLAFAXINE HYDROCHLORIDE,Dépression majeure,1782,Gastrite,Affections gastro-intestinales
+906645498,27339,VENLAFAXINE HYDROCHLORIDE,Dépression majeure,5248,Anxiete generalisee,Affections psychiatriques
+906645498,27339,VENLAFAXINE HYDROCHLORIDE,Dépression majeure,524,Depression majeure,Affections psychiatriques
+906645498,27339,VENLAFAXINE HYDROCHLORIDE,Dépression majeure,163,Nevralgie,Affections du systeme nerveux
+906645498,27339,VENLAFAXINE HYDROCHLORIDE,Dépression majeure,1541,Utilisation non conforme au document de reference,"Lesions, intoxications et complications d'interventions"
+906645498,27339,VENLAFAXINE HYDROCHLORIDE,Dépression majeure,1935,Probleme d'omission d'administration,"Lesions, intoxications et complications d'interventions"
+906645498,27339,VENLAFAXINE HYDROCHLORIDE,Dépression majeure,4082,Trouble d'angoisse sociale,Affections psychiatriques
+906645498,27339,VENLAFAXINE HYDROCHLORIDE,Dépression majeure,674,Automutilation intentionnelle,Affections psychiatriques
+906645498,27339,VENLAFAXINE HYDROCHLORIDE,Dépression majeure,71,Myalgie,Affections musculosquelettiques et du tissu conjonctif
+906645498,27339,VENLAFAXINE HYDROCHLORIDE,Dépression majeure,63,Inefficacite medicamenteuse,Troubles generaux et anomalies au site d'administration
+906645498,27339,VENLAFAXINE HYDROCHLORIDE,Dépression majeure,179,Frequence cardiaque augmentee,Investigations
+906645498,27339,VENLAFAXINE HYDROCHLORIDE,Dépression majeure,32,Syndrome de sevrage de drogue ou de medicament,Troubles generaux et anomalies au site d'administration
+906645498,27339,VENLAFAXINE HYDROCHLORIDE,Dépression majeure,670,Anhedonie,Affections psychiatriques
+906645498,27339,VENLAFAXINE HYDROCHLORIDE,Dépression majeure,62,Nausee,Affections gastro-intestinales
+906645498,27339,VENLAFAXINE HYDROCHLORIDE,Dépression majeure,538,Idees suicidaires,Affections psychiatriques
+906645498,27339,VENLAFAXINE HYDROCHLORIDE,Dépression majeure,106,Somnolence,Affections du systeme nerveux
+906645498,27339,VENLAFAXINE HYDROCHLORIDE,Dépression majeure,395,Insomnie de milieu de nuit,Affections psychiatriques
+906645498,27339,VENLAFAXINE HYDROCHLORIDE,Dépression majeure,128,Malaise,Troubles generaux et anomalies au site d'administration
+906645498,27339,VENLAFAXINE HYDROCHLORIDE,Dépression majeure,178,Hyperhidrose,Affections de la peau et du tissu sous-cutane
+906645498,27339,VENLAFAXINE HYDROCHLORIDE,Dépression majeure,69,Fatigue,Troubles generaux et anomalies au site d'administration
+906645498,27339,VENLAFAXINE HYDROCHLORIDE,Dépression majeure,70,Appetit diminue,Troubles du metabolisme et de la nutrition
+906645498,27339,VENLAFAXINE HYDROCHLORIDE,Dépression majeure,157,Insomnie,Affections psychiatriques
