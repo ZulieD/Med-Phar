@@ -1,4 +1,8 @@
-
+canvas {
+    max-width: 300px;
+    max-height: 300px;
+    margin: 20px;
+  } 
 
 body {
     font-family: 'Arial', sans-serif;
