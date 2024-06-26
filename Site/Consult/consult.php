@@ -71,7 +71,8 @@
 
                 <p><strong>Why?</strong></p>
                 <p>The goal of Med&Phar is to improve the efficiency of medication prescriptions and to provide unique diagnostic analysis, supporting doctors in their daily practice.</p>
-        </div>
+                <br>        
+            </div>
         <div class="main-content">
             <?php
                 ob_start();

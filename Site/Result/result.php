@@ -73,10 +73,12 @@
 
                 <p><strong>Why?</strong></p>
                 <p>The goal of Med&Phar is to improve the efficiency of medication prescriptions and to provide unique diagnostic analysis, supporting doctors in their daily practice.</p>
-        </div>
+                <br>
+            </div>
     </div>
 
     <?php
+    ob_start();
     //echo $_SESSION["id_Maladie"];
     $id_maladie = $_SESSION["id_Maladie"];
     
@@ -108,7 +110,7 @@
         }
 
     }
-    
+    ob_end_flush();
     ?>
     <div class="main-content">
         <div class="analyse form-container">
@@ -123,6 +125,7 @@
                         echo $row['nom'];
                     }?></h2>
             <?php
+            ob_start();
             $chemin_fichier_csv = '../../Analyse/df_medicament.csv';
             if (($handle = fopen($chemin_fichier_csv, "r")) !== false) {
                 $result = json_decode($output);
@@ -163,6 +166,7 @@
             } else {
                 echo "Error on the opening of the csv.";
             }
+            ob_end_flush();
             ?>
         </div>
         <br>
@@ -172,7 +176,7 @@
                 <datalist id="suggestions"></datalist>
                 <input type="hidden" id="hiddenField" name="column2_value">
                 <button type="submit" name="consult">Prescribe</button>
-            
+            </form>
 
             <script>
                 document.addEventListener("DOMContentLoaded", function() {
@@ -214,6 +218,7 @@
                 });
             </script>
             <?php
+            ob_start();
             if (isset($_POST['consult'])) {
                 $medicament = $_POST["search"];
                 $id_medicament = $_POST['column2_value'];
@@ -283,6 +288,7 @@
                 $genderCounts_json = json_encode($genderCounts);
                 $deathCounts_json = json_encode($deathCounts);
                 $anomalyCounts_json = json_encode($anomalyCounts);
+                ob_end_flush();
                 ?>
 
                 <script>
@@ -329,6 +335,7 @@
                 <button type="submit" name="valid">Validate the prescription</button>
             </form>
             <?php
+            ob_start();
             if (isset($_POST['valid'])) {
 
                 echo "Session Médicament: " . $_SESSION['medicament'] . "<br>";
@@ -368,20 +375,22 @@
 
                 echo $medicament, ' prescrit';
                 // Fermer le statement
-                
+                ob_end_flush();
             }
             ?>
         </div>
         <div class="Finish form-container">
-        
-            <button type="submit" name="finish">Finish prescription</button>
-        </form>
+            <form method="POST" action="">
+                <button type="submit" name="finish">Finish prescription</button>
+            </form>
         </div>
         <?php
+        ob_start();
             if (isset($_POST['finish'])) {
-                header("Location:../Accueil/homepage.html");
+                header("Location: ../Accueil/homepage.html");
                 exit();
             }
+            ob_end_flush();
         ?>
     </div>
 </body>
