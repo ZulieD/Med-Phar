@@ -10,16 +10,18 @@
     {
         die('Error in connection' .mysqli_connect_error()); // echo plusieur fois et ferme le programme
     }
+    // Start output buffering at the very beginning of the script
+    ob_start();
     session_start(); // connection avec tous les pages pour passer variable
-
+    
     function generateUniqueId($conn) {
-        $i=1;
+        $i = 1;
         do {
             // Générer un ID unique
             $uniqueId = $i;
             
             // Préparer une requête pour vérifier si cet ID est déjà utilisé
-            $sql="SELECT COUNT(*) as count FROM Consultation WHERE id= $uniqueId";
+            $sql = "SELECT COUNT(*) as count FROM Consultation WHERE id= $uniqueId";
             $result = $conn->query($sql);
             // Si l'ID n'est pas utilisé, quitter la boucle
             $i++;
@@ -30,7 +32,13 @@
         return $uniqueId;
     }
     
-?>
+    if (isset($_POST['finish'])) {
+        header("Location: ../Accueil/homepage.html");
+        exit();
+    }
+    
+    ob_end_flush();
+    ?>
 
 <!DOCTYPE html>
 <head>
@@ -338,8 +346,8 @@
             ob_start();
             if (isset($_POST['valid'])) {
 
-                echo "Session Médicament: " . $_SESSION['medicament'] . "<br>";
-                echo "Session ID Médicament: " . $_SESSION['id_medicament'] . "<br>";
+                //echo "Session Médicament: " . $_SESSION['medicament'] . "<br>";
+                //echo "Session ID Médicament: " . $_SESSION['id_medicament'] . "<br>";
                 $medicament=$_SESSION['medicament'];
                 $id_maladie = $_SESSION["id_Maladie"];
                 $id_unique = generateUniqueId($connection);
@@ -347,8 +355,6 @@
                 $id_medecin = $_SESSION["id_Medecin"];
                 $id_patient = $_SESSION['id_Patient'];
                 $id_medicament=$_SESSION['id_medicament'];
-                echo $id_medicament;
-                echo $id_maladie;
                 $sql_update = "UPDATE Maladie SET id_medicament = ? WHERE id = ?";
                 $stmt_update = $connection->prepare($sql_update);
                 $stmt_update->bind_param("ii", $id_medicament, $id_maladie);

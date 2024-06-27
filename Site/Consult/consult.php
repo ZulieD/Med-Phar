@@ -210,37 +210,19 @@
                             </div>  
                             <br>
                             <div class="form-group">
-                                <label for="job-type">Work</label>
-                                <select id="job-type" name="job-type" >
-                                    <option value="" disabled selected>Select your job type</option>
-                                    <option value="student">Student</option>
-                                    <option value="unemployed">Unemployed</option>
-                                    <option value="employed">Employed</option>
-                                    <option value="self-employed">Self-employed</option>
-                                    <option value="retired">Retired</option>
-                                    <option value="other">Other</option>
-                                </select>
-                            </div>
-                            <div class="form-group">
-                                <label for="activite_metier">Job Activity Level</label>
+                                <label for="activite_metier">Job Level Activity - 1 to 5</label>
                                 <input type="number" id="activite_metier" name="activite_metier">
                             </div>
                             <div class="form-group">
-                                <label for="risque_metier">Job Risk Level</label>
-                                <select id="risque_metier" name="risque_metier">
-                                    <option value="" disabled selected>Select your risk level</option>
-                                    <option value="low">Low</option>
-                                    <option value="medium">Medium</option>
-                                    <option value="high">High</option>
-                                    <option value="very-high">Very High</option>
-                                </select>
+                                <label for="risque_metier">Job Risk Level - 1 to 5</label>
+                                <input type="number" id="risque_metier" name="risque_metier">
                             </div>
                             <div class="form-group">
-                                <label for="activite_quotidienne">Daily Activity Level</label>
+                                <label for="activite_quotidienne">Daily Activity Level - 1 to 5</label>
                                 <input type="number" id="activite_quotidienne" name="activite_quotidienne">
                             </div>
                             <div class="form-group">
-                                <label for="qualite_alimentation">Quality of Diet</label>
+                                <label for="qualite_alimentation">Quality of Diet - 1 to 5</label>
                                 <input type="number" id="qualite_alimentation" name="qualite_alimentation">
                             </div>
                             <button type="submit" name="modifier">Changes informations</button>
@@ -371,12 +353,12 @@
                     ob_start();
                     // Afficher les résultats dans un tableau HTML
                     // Read the CSV file to get the medications array
-
+                    
                     $sql = "SELECT IFNULL(Consultation.date_consult, 'pas d\'information') as date_consult, 
                                 IFNULL(Maladie.nom, 'pas d\'information') AS maladie_nom, 
                                 IFNULL(Maladie.id_medicament, 'pas d\'information') AS id_medicament, 
                                 IFNULL(patient.nom, 'pas d\'information') AS patient_nom,
-                                IFNULL(Reaction.id,'NON') AS side_effect
+                                IFNULL(Reaction.id_effet_secondaire,'pas d\'information') AS side_effect
                             FROM Consultation
                             LEFT JOIN Maladie ON Consultation.id_maladie = Maladie.id
                             LEFT JOIN patient ON Consultation.id_patient = patient.id_patient
@@ -384,11 +366,11 @@
                             WHERE Consultation.id_patient = $id_patient";
 
                     $result = $connection->query($sql);
-
+                    echo "<h2>History of consultations for the patient : </h2>";
                     // Afficher les résultats dans un tableau HTML
                     if ($result->num_rows > 0) {
                         $row = $result->fetch_assoc();
-                        echo "<h2>History of consultations for the patient : " . htmlspecialchars($row['patient_nom']) . "</h2>";
+                        
                         echo "<table border='1'>
                                 <tr>
                                     <th>Date of Consultation</th>

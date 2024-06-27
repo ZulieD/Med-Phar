@@ -69,19 +69,19 @@
                     </div>
                     <div class="form-group">
                         <label for="contraception">Contraception</label>
-                        <input type="text" id="contraception" name="contraception">
+                        <input type="text" id="contraception" name="contraception" required>
                     </div>
                     <div class="form-group">
                         <label for="poids">Weight (kg)</label>
                         <input type="number" id="poids" name="poids" required>
                     </div>
                     <div class="form-group">
-                        <label for="taille">Height (cm)</label>
+                        <label for="taille">Height (m)</label>
                         <input type="number" id="taille" name="taille" step="0.01" required>
                     </div>
                     <div class="form-group">
                         <label for="allergie">Allergies</label>
-                        <textarea id="allergie" name="allergie" rows="3"></textarea>
+                        <textarea id="allergie" name="allergie" rows="3" required></textarea>
                     </div>
                     <div class="form-group">
                         <label for="job-type">Work</label>
@@ -96,15 +96,19 @@
                         </select>
                     </div>
                     <div class="form-group">
-                        <label for="activite_quotidienne">Job Risk Level</label>
+                        <label for="activite_metier">Job Level Activity - 1 to 5</label>
+                        <input type="number" id="activite_metier" name="activite_metier" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="risque_metier">Job Risk Level - 1 to 5</label>
+                        <input type="number" id="risque_metier" name="risque_metier" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="activite_quotidienne">Daily Activity Level - 1 to 5</label>
                         <input type="number" id="activite_quotidienne" name="activite_quotidienne" required>
                     </div>
                     <div class="form-group">
-                        <label for="activite_quotidienne">Daily Activity Level</label>
-                        <input type="number" id="activite_quotidienne" name="activite_quotidienne" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="qualite_alimentation">Quality of Diet</label>
+                        <label for="qualite_alimentation">Quality of Diet - 1 to 5</label>
                         <input type="number" id="qualite_alimentation" name="qualite_alimentation" required>
                     </div>
                     <div class="form-group">
