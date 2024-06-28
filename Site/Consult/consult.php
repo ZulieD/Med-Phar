@@ -29,6 +29,23 @@
         
         return $uniqueId;
     }
+    function generateUniqueId2($conn) {
+        $i=1;
+        do {
+            // Générer un ID unique
+            $uniqueId = $i;
+            
+            // Préparer une requête pour vérifier si cet ID est déjà utilisé
+            $sql="SELECT COUNT(*) as count FROM Reaction WHERE id= $uniqueId";
+            $result = $conn->query($sql);
+            // Si l'ID n'est pas utilisé, quitter la boucle
+            $i++;
+            $row = $result->fetch_assoc();
+            $count = $row['count'];
+        } while ($count > 0);
+        
+        return $uniqueId;
+    }
 ?>
 <!DOCTYPE html>
 <html lang="fr">
@@ -36,13 +53,17 @@
     <meta charset="UTF-8">
     <title>Consultation</title>
     <link rel="stylesheet" href="../styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.0/papaparse.min.js"></script>
+
 </head>
 
 <body>
     <div class="navbar">
         <a href="#" class="logo">Med&Phar</a>
         <div class="navbar-right">
-            <a href = "../Accueil/homepage.html"> Go back</a>
+            <a href = "../Accueil/accueil.php"> Go back</a>
+            <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+
         </div>
     </div>
 
@@ -326,7 +347,7 @@
                     ?>
 
                     <?php
-
+                    ob_start();
                     function getMedicationsFromCSV($csvFilePath) {
                         $medications = array();
                         
@@ -350,7 +371,7 @@
                     $medications = getMedicationsFromCSV('../../Analyse/df_medicament.csv');
                     $effet_secondaire= getMedicationsFromCSV('../../Analyse/df_effet_secondaire.csv');
 
-                    ob_start();
+                    
                     // Afficher les résultats dans un tableau HTML
                     // Read the CSV file to get the medications array
                     
@@ -376,8 +397,7 @@
                                     <th>Date of Consultation</th>
                                     <th>Disease</th>
                                     <th>Name Medicine</th>
-                                    <th>Side Effect </th>
-                                    <th>Add Side Effect</th>
+                                    <th> Side effect </th>
                                 </tr>";
                         do {
                             $id_medicament= $row["id_medicament"];
@@ -389,139 +409,121 @@
                                     <td>" . htmlspecialchars($row["maladie_nom"]) . "</td>
                                     <td>" . htmlspecialchars($medicament_name) . "</td>
                                     <td>" . htmlspecialchars($effet_secondaire_name) . "</td>
-                                    <td><a href=add_effect.html >Add Side Effect</a></td>
-                    
                                 </tr>";
                         } while ($row = $result->fetch_assoc());
                         echo "</table>";
+                        ?>
+                        <section class="faq-container">
+                            <h3 class="faq-page">Add a side effect</h3>
+                            <form method="POST" action=" ">
+                                <div class="form-group">
+                        <?php
+                        $result->data_seek(0);
+
+                        echo "<select name='consultation_history'>";
+                        $is_first_row = true;
+                        do {
+                            if ($is_first_row) {
+                                // Ignorer la première ligne
+                                $is_first_row = false;
+                                continue;
+                            }
+                            $id_medicament = $row["id_medicament"];
+                            $medicament_name = isset($medications[$row["id_medicament"]]) ? $medications[$row["id_medicament"]] : 'Unknown';
+                            $option_text = htmlspecialchars($row["date_consult"]) . " - " . htmlspecialchars($row["maladie_nom"]) . " - " . htmlspecialchars($medicament_name);
+                            echo "<option value='" . htmlspecialchars($row["id_medicament"]) . "'>" . $option_text . "</option>";
+                        } while ($row = $result->fetch_assoc());
+                        echo "</select>";
+                        ?>
+                                </div>
+                                <div class="form-group">
+                                    <input list="suggestions" id="inputField" name="search" placeholder="Type to search...">
+                                    <datalist id="suggestions"></datalist>
+                                    <input type="hidden" id="hiddenField" name="column2_value">
+
+                                </div>
+                                <button type="submit" name="effect">Submit</button>
+
+                            </form>
+                        </section>
+                        <script>
+                            document.addEventListener("DOMContentLoaded", function() {
+                                fetch('../../Analyse/df_effet_secondaire.csv')
+                                    .then(response => response.text())
+                                    .then(data => {
+                                        Papa.parse(data, {
+                                            header: true,
+                                            skipEmptyLines: true,
+                                            complete: function(results) {
+                                                let options = {};
+                                                results.data.forEach(row => {
+                                                    options[row.PT_NAME_FR.trim()] = row.id_effet_secondaire.trim();
+                                                });
+                            
+                                                // Créer les options dans le datalist
+                                                let datalist = document.getElementById('suggestions');
+                                                for (let key in options) {
+                                                    let option = document.createElement('option');
+                                                    option.value = key;
+                                                    datalist.appendChild(option);
+                                                }
+                            
+                                                // Ajouter un événement pour mettre à jour le champ caché lors de la sélection
+                                                document.getElementById('inputField').addEventListener('input', function() {
+                                                    let inputValue = this.value;
+                                                    document.getElementById('hiddenField').value = options[inputValue] || '';
+                                                });
+                                            }
+                                        });
+                                    });
+                            });
+                            </script>
+                        <?php
                     } else {
                         echo "No data found for this patient.";
                     }
 
                 }
-                ob_end_flush();
+    
                 ?>
-            <br><br><br><br>
+                
+                <hr class="hr-line">
+                <br>
+                
+                
+                <?php 
+                    if (isset($_POST['effect'])) {
+            
+                        $id_unique = generateUniqueId2($connection);
+                        $id_medicament = $_POST['consultation_history'];
+                        $id_effet_secondaire = $_POST['column2_value'];
+                        //echo $_POST['search'];
+                        //echo $id_effet_secondaire;
+                        $id_patient=$_SESSION['id_Patient'];
+                        $sql="INSERT into Reaction (id, id_medicament, id_patient, id_effet_secondaire)  values(?,?,?,?) ";
+                        $stmt = $connection->prepare($sql);
+                        $stmt->bind_param("iiii", $id_unique, $id_medicament, $id_patient, $id_effet_secondaire);
+                        $stmt->execute();
+                        
+                        // Fermer le statement
+                        $stmt->close();
+                        header("Location: consult.php");
+                    }
+                    
+                ?>
             </div>
             <div class="consult form-container">
-                <h1> Consultation </h1>
-                <form action="#" method="post">
-                    <div class="form-group">
-                        Symptoms
-                        <input type="text" id="form1" placeholder="What are the symptoms ?" name="symptomes" required>
-                    </div> 
-                    <br>
-                    <div class="form-group">
-                        <label for="search">Choose a pathology:</label>
-                        <input type="text" id="search" name="search" list="suggestions" autocomplete="off">
-                        <datalist id="suggestions"></datalist>
-                        <script>
-                            document.addEventListener("DOMContentLoaded", function() {
-                                fetch('../../Analyse/df_medicament.csv')
-                                    .then(response => response.text())
-                                    .then(data => {
-                                        // Séparer les lignes du fichier CSV
-                                        let rows = data.split('\n');
-                                        
-                                        // Enlever la première ligne (l'entête)
-                                        rows.shift();
-                                        
-                                        // Enlever les lignes vides et traiter les données restantes
-                                        let options = new Set();
-                                        rows.forEach(row => {
-                                            let trimmedRow = row.trim();
-                                            if (trimmedRow.length > 0) {
-                                                let columns = trimmedRow.split(','); // Sépare les colonnes par la virgule
-                                                if (columns.length > 1) {
-                                                    options.add(columns[1].trim()); // Ajoute la valeur de la colonne 2 à l'ensemble
-                                                }
-                                            }
-                                        });
-
-                                        // Créer les options dans le datalist
-                                        let datalist = document.getElementById('suggestions');
-                                        options.forEach(item => {
-                                            let option = document.createElement('option');
-                                            option.value = item;
-                                            datalist.appendChild(option);
-                                        });
-                                    });
-                            });
-                        </script>
-                    </div>
-                    <br>
-                    <div class="form-group">
-                        Cause of illness 
-                        <input type="text" id="form1" placeholder="Cause of illness ?" name="cause">
-                    </div>
-                    <br>
-                    <div class="form-group">
-                        Is it a hereditary disease?
-                        <label>
-                            <input type="checkbox" id="oui" name="choix" value="oui">
-                            Yes
-                        </label>
-
-                        <label>
-                            <input type="checkbox" id="non" name="choix" value="non">
-                            No
-                        </label>
-                    </div>
-                    <br>
-                    <div class="form-group">
-                        <label for="date">Start Date :</label>
-                        <input type="date" id="date" name="date_d" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="date">End Date :</label>
-                        <input type="date" id="date" name="date_f" required>
-                    </div>
-                    <br>
-                    <div class="form-group">
-                        Link to another disease
-                        <input type="text" id="form1" placeholder="Corrélation maladie ?" name="correlation">
-                    </div>
-                    <br>
-                    <button type="submit" name="consult">Find medecine</button>
+                <form method="POST" action="">
+                    <button type="submit" name="finish">Consultation</button>
                 </form>
             </div>
             <?php
-            ob_start();
-            // Vérifier si une option a été sélectionnée
-            if (isset($_POST['consult'])) {
-
-                $symptomes=$_POST['symptomes'];
-                $nom=$_POST['search'];
-                $maladie_correle=$_POST['correlation'];
-                $hereditaire=$_POST['choix'];
-                $cause=$_POST['cause'];
-                $date_d = $_POST['date_d'];
-                $date_f = $_POST['date_f'];
-
-                $newId = generateUniqueId($connection);
-
-                if ($newId !== null) {
-                    // Préparer la requête d'insertion avec des placeholders sécurisés
-                    $sql = "INSERT INTO Maladie (id, symptome, nom, debut_prise, fin_prise, maladie_correle, hereditaire, cause) 
-                            VALUES (?, ?, ?, ?, ?, ?, ?, ?)";
-                    
-                    // Préparer et exécuter la requête préparée
-                    $stmt = $connection->prepare($sql);
-                    $stmt->bind_param("ssssssis", $newId, $symptomes, $nom, $date_d, $date_f, $maladie_correle, $hereditaire, $cause);
-                    $stmt->execute();
-                    
-                    // Fermer le statement
-                    $stmt->close();
-                } else {
-                    echo "Error on the id.";
+                if (isset($_POST['finish'])) {
+                    header("Location: ../Consult/consult2.php");
+                    exit();
                 }
-                $_SESSION['id_medicament']= null;
-                $_SESSION["id_Maladie"] = "$newId";
-                header("Location:../Result/result.php");
-                exit();
-            }
-            ob_end_flush();
-            ?>
+                ?>
         </div>
+            
     </div>
 </body>

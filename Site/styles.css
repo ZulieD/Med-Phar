@@ -2,11 +2,12 @@ canvas {
     max-width: 300px;
     max-height: 300px;
     margin: 20px;
+    align-items: center;
   } 
 
 body {
-    font-family: 'Arial', sans-serif;
-    background-color: #f4e6a2; /* Light yellow background */
+    font-family: 'Roboto', sans-serif;
+    background-color: #eef6ff; /* Light yellow background */
     color: #333;
     margin: 0;
     display: flex;
@@ -21,12 +22,12 @@ body {
 
 .navbar {
     width: 100%;
-    background-color: #4CAF50;
+    background-color: #212f87;
     overflow: hidden;
     position: fixed; /* Fix the navbar to the top */
     top: 0;
     z-index: 1000; /* Ensure it sits above other content */
-    height: 60px;
+    height: 80px;
 }
 
 .navbar a {
@@ -41,7 +42,7 @@ body {
 }
 
 .navbar a.logo {
-    font-size: 25px;
+    font-size: 50px;
     font-weight: bold;
 }
 
@@ -92,9 +93,9 @@ body {
 .form-container {
     background: white;
     padding: 30px 50px;
-    border-radius: 15px;
+    border-radius:15px;
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-    max-width: 600px;
+    max-width: 800px;
     width: 100%;
     text-align: center;
     margin: 20px auto;
@@ -111,16 +112,16 @@ body {
 h1 {
     font-size: 28px;
     margin-bottom: 20px;
-    color: #4CAF50;
+    color: #212f87;
     font-weight: bold;
 }
 
 h2, h3 {
-    color: #4CAF50;
+    color: #212f87;
 }
 
 ul {
-    text-align: left;
+    text-align: center;
 }
 
 .form-group {
@@ -156,13 +157,13 @@ ul {
 .form-group input:focus,
 .form-group select:focus,
 .form-group textarea:focus {
-    border-color: #4CAF50;
+    border-color: #212f87;
     box-shadow: 0 0 5px rgba(76, 175, 80, 0.3);
     outline: none;
 }
 
 button {
-    background-color: #4CAF50;
+    background-color: #212f87;
     color: white;
     border: none;
     padding: 15px 30px;
@@ -171,10 +172,12 @@ button {
     font-size: 18px;
     transition: all 0.3s ease;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-top: 30 px;
+    margin-bottom: 20px;
 }
 
 button:hover {
-    background-color: #45a049;
+    background-color: #a3edfe;
     transform: translateY(-2px);
 }
 
@@ -182,4 +185,45 @@ button:focus {
     outline: none;
 }
 
+.calendar {
+    margin-bottom: 20px; /* Ajoute une marge en bas de la section du calendrier */
+}
+
+.center-table {
+    width: 80%;
+    margin-left: 275px;
+    margin-bottom: 15px;
+}
+
+.ui-datepicker {
+    font-size: 12px;
+}
+/* CSS pour le carrousel */
+.slick-slide img {
+    max-width: 100%; /* Limite la largeur maximale de l'image */
+    height: 300px; /* Hauteur fixe pour toutes les images */
+    width: 300px; /* Largeur fixe pour toutes les images */
+    margin-top: 20px; /* Marge supérieure pour séparer les images */
+}
+
+/* Styles pour les diapositives */
+.slide-content {
+    display: flex; /* Utilisation de flexbox pour aligner les éléments côte à côte */
+    align-items: center; /* Centre verticalement le contenu */
+}
+
+.slide-content img {
+    flex: 0 0 300px; /* Fixe la largeur de l'image à 300px */
+    margin-right: 20px; /* Espacement entre l'image et le texte */
+}
+
+.slide-content .text {
+    flex: 1; /* Utilise le reste de l'espace disponible */
+}
+
+.slide-content .text h3,
+.slide-content .text p {
+    margin: 0; /* Supprime les marges par défaut */
+    padding-bottom: 10px; /* Espacement entre le titre et le paragraphe */
+}
 

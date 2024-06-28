@@ -37,7 +37,7 @@ if (isset($_POST['signin'])) {
         $row = $result->fetch_assoc();
         $_SESSION["id_Medecin"] = $row['id'];
         $_SESSION['Nom_medecin'] = $row['nom'];
-        header("Location: ../Accueil/homepage.html");
+        header("Location: ../Accueil/accueil.php");
     } else {
         echo 'Invalid username or password, please try again';
     }
@@ -132,7 +132,7 @@ if (isset($_POST['signup'])) {
         $conn->close();
         $_SESSION["id_Medecin"] = $newid;
         $_SESSION['Nom_medecin'] = $lname;
-        header("Location: ../Accueil/homepage.html");
+        header("Location: ../Accueil/accueil.php");
     } else {
         echo 'Email already registered';
         $stmt->close();

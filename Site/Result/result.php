@@ -33,7 +33,7 @@
     }
     
     if (isset($_POST['finish'])) {
-        header("Location: ../Accueil/homepage.html");
+        header("Location: ../Accueil/accueil.php");
         exit();
     }
     
@@ -52,7 +52,8 @@
     <div class="navbar">
         <a href="#" class="logo">Med&Phar</a>
         <div class="navbar-right">
-            <a href = "../Accueil/homepage.html"> Go back</a>
+            <a href = "../Consult/consult2.php"> Go back</a>
+            <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
         </div>
     </div>
 
@@ -390,13 +391,5 @@
                 <button type="submit" name="finish">Finish prescription</button>
             </form>
         </div>
-        <?php
-        ob_start();
-            if (isset($_POST['finish'])) {
-                header("Location: ../Accueil/homepage.html");
-                exit();
-            }
-            ob_end_flush();
-        ?>
     </div>
 </body>
