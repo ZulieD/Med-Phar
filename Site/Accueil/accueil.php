@@ -15,13 +15,7 @@
 
     $_SESSION['id_Patient'] = null;
 
-    if (isset($_SESSION['Nom_medecin'])) {
-        $nom = $_SESSION['Nom_medecin'];
-        $message = "Nice to see you, Docteur $nom";
-        echo $message;
-    } else {
-        echo "ID de médecin non défini";
-    }
+    
 
 ?>
 
@@ -29,7 +23,7 @@
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
-    <title>Patient Information Form</title>
+    <title>Main Page</title>
     <link rel="stylesheet" href="../styles.css">
 
     <!-- Inclure jQuery -->
@@ -84,7 +78,16 @@
         </div>
         <div class="main-content">
             <div class="content-section">
-                <h1 id="message"></h1>
+                <h1>
+                    <?php 
+                    if (isset($_SESSION['Nom_medecin'])) {
+                        $nom = $_SESSION['Nom_medecin'];
+                        $message = "Nice to see you, Docteur $nom";
+                        echo $message;
+                    } else {
+                        echo "ID de médecin non défini";
+                    } ?>
+                </h1>
                 <section class="appointments">
                     <h1>Your appointments</h1>
                     <!-- Tableau centré des rendez-vous -->
